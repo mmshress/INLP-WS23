@@ -1,0 +1,80 @@
+[project]
+name = "LLMLegalAssistant"
+description = "Not a Legal Advisor Legal Question and Answering Assistant"
+authors = [
+    {name = "Asma Motmem"},
+    {name = "Siddhant Tripathi"},
+    {name = "Mohit Shrestha"},
+    {name = "Kushal Gaywala"}
+]
+readme = "README.md"
+requires-python = ">=3.9"
+version = "0.0.1"
+urls = { GitHub = "https://github.com/mmshress/INLP-WS23" }
+dynamic = ["dependencies"]
+
+[project.optional-dependencies]
+dev = [
+    "requests",
+    "pre-commit",
+    "pytest",
+    "pytest-cov",
+    "mypy",
+    "flake8"
+]
+
+[project.scripts]
+llmlegalassistant = "llmlegalassistant.__main__:main"
+
+[tool.setuptools.dynamic]
+dependencies = {"file" = ["requirements.txt"]}
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[build-system]
+requires = [
+    "setuptools", 
+    "wheel",
+    "platformdirs==3.10.0"
+]
+build-backend = "setuptools.build_meta"
+ 
+[tool.black]
+target-version = ['py39', 'py310', 'py311']
+exclude = [
+    ".git",
+    "env_setup",
+    "__pycache__"
+]
+
+[tool.flake8]
+ignore = ["W501"]
+exclude = [
+    ".git",
+    "env_setup",
+    "__pycache__",
+    ".venv",
+    "venv",
+    "env",
+    "build",
+    "dist"
+]
+
+[tool.mypy]
+no_implicit_optional = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+explicit_package_bases = true
+ignore_missing_imports = true
+exclude = [
+    ".git",
+    "env_setup",
+    "__pycache__"
+]
+
+[tool.isort]
+multi_line_output = 2
