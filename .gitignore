@@ -5,3 +5,8 @@ dataset/
 __pycache__/
 
 LLMLegalAssistant.egg-info/
+
+.llmcoder.env/
+llmcoder.env/
+venv/
+.venv/
