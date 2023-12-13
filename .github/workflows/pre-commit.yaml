@@ -3,7 +3,7 @@ run-name: Pull Requests / Push from ${{ github.ref }} to main, created by by ${{
 
 on:
   push:
-  pull-request:
+  pull_request:
     branches: [main]
     paths: "**.py"
 
