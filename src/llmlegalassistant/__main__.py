@@ -22,4 +22,3 @@ def main() -> None:
             print(f"Unknown Command: {args.command}")
             print(f"Follow this command documentation:\n{parser.print_help()}")
             sys.exit(1)
-
