@@ -12,6 +12,8 @@ class ArticlesScraper:
         self.ARTICLE_URL = (
             "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:"
         )
+        # Because EUR-LEX does not return a 404 status code when the document doesn't exist
+        self.DOES_NOT_EXIST_STRING = "The requested document does not exist."
 
     def fetch(self, output_dir: str, output_file_type: str, no_samples: int) -> None:
         metadata_df = self.get_metadata()
@@ -45,7 +47,7 @@ class ArticlesScraper:
 
     def fetch_article(self, celex_number: str) -> str | None:
         response = requests.get("".join([self.ARTICLE_URL, celex_number]))
-        if response is not None:
+        if response is not None or self.DOES_NOT_EXIST_STRING in response.text:
             return response.text
         return None
 
