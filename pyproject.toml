@@ -52,6 +52,7 @@ exclude = [
 ]
 
 [tool.flake8]
+max-line-length = 200
 ignore = ["W501"]
 exclude = [
     ".git",
