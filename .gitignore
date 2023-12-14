@@ -4,6 +4,7 @@ LLMLegalAssistantDataset/
 dataset/
 
 __pycache__/
+.mypy_cache/
 
 LLMLegalAssistant.egg-info/
 
