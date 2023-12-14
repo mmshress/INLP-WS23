@@ -1,1 +1,7 @@
-.idea/*
+.idea/
+
+dataset/
+
+__pycache__/
+
+LLMLegalAssistant.egg-info/
