@@ -1,1 +1,1 @@
-from .articlesscraper import ArticlesScraper
+from .articlesscraper import ArticlesScraper # noqa: F401 
