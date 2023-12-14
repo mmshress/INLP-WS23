@@ -6,6 +6,7 @@ __pycache__/
 
 LLMLegalAssistant.egg-info/
 
+# add environment name here if created in project directory
 .llmcoder.env/
 llmcoder.env/
 venv/
