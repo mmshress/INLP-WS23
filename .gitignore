@@ -1,5 +1,6 @@
 .idea/
 
+LLMLegalAssistantDataset/
 dataset/
 
 __pycache__/
@@ -11,3 +12,4 @@ LLMLegalAssistant.egg-info/
 llmcoder.env/
 venv/
 .venv/
+
