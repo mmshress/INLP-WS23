@@ -37,12 +37,12 @@ where = ["src"]
 
 [build-system]
 requires = [
-    "setuptools", 
+    "setuptools",
     "wheel",
     "platformdirs==3.10.0"
 ]
 build-backend = "setuptools.build_meta"
- 
+
 [tool.black]
 target-version = ['py310', 'py311']
 exclude = '''
@@ -68,11 +68,11 @@ exclude = [
 ]
 
 [tool.mypy]
-no_implicit_optional = True
-disallow_untyped_defs = True
-disallow_incomplete_defs = True
-explicit_package_bases = True
-ignore_missing_imports = True
+no_implicit_optional = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+explicit_package_bases = true
+ignore_missing_imports = true
 exclude = [
     ".git",
     "env_setup",
