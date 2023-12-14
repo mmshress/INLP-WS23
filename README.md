@@ -1,6 +1,6 @@
-<h1 style="text-align: center"><em>LLM Legal Assistant</em> - A assistant that gives opinion on the questions that falls under EU law</h2>
+<h1 align="center" style="margin-top: 0px;"><b>LLM Legal Assistant</b> - A assistant that gives opinion on the questions that falls under EU law</h2>
 
-<h2 style="font-align: center">Natural Language Processing using Transformers</h2>
+<h2 align="center" style="margin-top: 0px;">Natural Language Processing using Transformers</h2>
 
 ### Requirements
 
@@ -62,7 +62,7 @@ source .llmcoder.env/bin/activate
 #### For development
 
 ```bash
- python -m pip install -e .[dev]
+ python -m pip install -e '.[dev]'
  pre-commit install
 ```
 
