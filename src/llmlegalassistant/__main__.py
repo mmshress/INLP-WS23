@@ -11,7 +11,11 @@ def main() -> None:
     fetchdata_parser.add_argument("-d", "--output-dir", dest="output_dir", type=str, help="Directory of the data to be exported.")
     fetchdata_parser.add_argument("-n", "--no-samples", dest="no_samples", type=int, help="Number of samples to be created.")
 
-    args = parser.parse_args()
+    try:
+        args = parser.parse_args()
+    except OSError:
+        parser.print_help(sys.stderr)
+        sys.exit(2)
 
     match args.command:
         case "fetch-data":
@@ -20,5 +24,5 @@ def main() -> None:
             articles_scraper.fetch(args.output_dir, args.export_type, args.no_samples)
         case _:
             print(f"Unknown Command: {args.command}")
-            print(f"Follow this command documentation:\n{parser.print_help()}")
+            parser.print_help(sys.stderr)
             sys.exit(1)

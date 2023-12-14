@@ -24,6 +24,8 @@ class ArticlesScraper:
 
         for celex_number in celex_column:
             origin_article = self.fetch_article(celex_number)
+            if origin_article is None:
+                continue
             article_content = self.parse_content(origin_article, output_file_type)
             article_location = self.generate_article_location(output_dir, celex_number, output_file_type)
             self.save_article(article_location, article_content)
@@ -44,7 +46,7 @@ class ArticlesScraper:
             return response
         return None
 
-    def generate_article_location(self, output_dir: str, celex: str, output_file_type: str):
+    def generate_article_location(self, output_dir: str, celex: str, output_file_type: str) -> str:
         return os.path.join(output_dir, ".".join([celex, output_file_type]))
 
     def save_article(self, file_name: str, article_content: str, mode: str = "w") -> bool:
@@ -52,7 +54,7 @@ class ArticlesScraper:
             with open(file_name, mode) as article:
                 article.write(article_content)
             return True
-        except error as error:
+        except OSError:
             return False
 
     def parse_content(self, article_content: str, export_type: str) -> str:
