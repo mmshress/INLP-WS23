@@ -62,7 +62,7 @@ source .llmcoder.env/bin/activate
 #### For development
 
 ```bash
- python -m pip install -e .[dev]
+ python -m pip install -e '.[dev]'
  pre-commit install
 ```
 
