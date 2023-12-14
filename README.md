@@ -1,6 +1,6 @@
 <h1 style="text-align: center"><em>LLM Legal Assistant</em> - A assistant that gives opinion on the questions that falls under EU law</h2>
 
-<h2 style="font-align: center">Natural Language Processing using Transformers</h2>
+<h2 style="text-align: center">Natural Language Processing using Transformers</h2>
 
 ### Requirements
 
