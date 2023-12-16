@@ -2,6 +2,7 @@
 
 LLMLegalAssistantDataset/
 dataset/
+datasets/
 
 __pycache__/
 .mypy_cache/
