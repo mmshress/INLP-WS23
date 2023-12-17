@@ -7,7 +7,7 @@ from llmlegalassistant.config import Config
 
 
 class Utils:
-    def __init__(self, verbose: bool):
+    def __init__(self, verbose: bool = False):
         self.verbose = verbose
 
         self.config = Config()
@@ -37,7 +37,6 @@ class Utils:
         self.ARTICLE_FILE_DIR = self.get_article_file_dir(
             self.ARTICLES_DIR, file_type + "s"
         )
-
         try:
             # makes article file type dir if doesn't exists
             os.makedirs(self.ARTICLE_FILE_DIR, exist_ok=False)
