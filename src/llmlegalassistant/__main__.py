@@ -22,7 +22,7 @@ def main() -> None:
         dest="no_samples",
         type=int,
         help="Number of samples to be created.",
-        default=0
+        default=0,
     )
 
     try:
