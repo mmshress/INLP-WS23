@@ -44,24 +44,26 @@ class Utils:
         except OSError:
             # If article file type dir already exists,
             # removes all old articles
-            article_path = os.path.join(self.ARTICLE_FILE_DIR, "{file}")
             if self.verbose:
                 print("[Utils] File directory already exists!")
 
             if self.verbose:
                 print("[Utils] Removing old articles...")
 
-            for file in os.listdir(self.ARTICLE_FILE_DIR):
-                file_path = article_path.format(file)
-                if os.path.isfile(file_path):
-                    os.remove(file_path)
-                elif os.path.isdir(file_path):
-                    shutil.rmtree(file_path)
+            shutil.rmtree(self.ARTICLE_FILE_DIR)
 
             if self.verbose:
                 print("[Utils] Removed old articles!")
-        finally:
-            return self.ARTICLE_FILE_DIR
+
+            if self.verbose:
+                print("[Utils] Creating new articles...")
+
+            os.makedirs(self.ARTICLE_FILE_DIR, exist_ok=True)
+
+            if self.verbose:
+                print("[Utils] Created new articles!")
+
+        return self.ARTICLE_FILE_DIR
 
     def get_metadata(self) -> pd.DataFrame | None:
         if self.verbose:

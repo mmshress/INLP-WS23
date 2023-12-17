@@ -61,6 +61,9 @@ class ArticlesScraper:
         if response is not None and self.DOES_NOT_EXIST_STRING not in response.text:
             return response
 
+        if self.verbose:
+            print(f"[ArticleScraper] Article {celex_number} doesn't exists!")
+
         return None
 
     def generate_article_location(
