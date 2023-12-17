@@ -3,7 +3,7 @@ run-name: This action ensures that the code quality is maintained.
 
 on:
   push:
-  pull_reqest:
+  pull_request:
     branches: [main]
     paths: "**.py"
 
