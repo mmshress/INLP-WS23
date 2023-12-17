@@ -1,8 +1,8 @@
-pandas
 beautifulsoup4
-requests
-pre-commit
+black
 flake8
 isort
-black
 markdownify
+pandas
+pre-commit
+requests
