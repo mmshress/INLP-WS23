@@ -25,6 +25,8 @@ def main() -> None:
         default=0,
     )
 
+    subparsers.add_parser("preprocess")
+
     try:
         args = parser.parse_args()
 
@@ -34,6 +36,11 @@ def main() -> None:
 
                 articles_scraper = ArticlesScraper(True)
                 articles_scraper.fetch(args.export_type, args.no_samples)
+            case "preprocess":
+                from llmlegalassistant.data.preprocessing import Preprocessor
+
+                preprocessor = Preprocessor()
+                preprocessor.clean_text_files()
             case _:
                 raise OSError(f"Unknown Command: {args.command}")
     except OSError:
