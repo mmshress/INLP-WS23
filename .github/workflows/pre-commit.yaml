@@ -1,5 +1,5 @@
 name: Code Quality
-run-name: Pull Requests / Push from ${{ github.ref }} to main, created by by ${{ github.actor }}. This action ensures that the code quality is maintained.
+run-name: This action ensures that the code quality is maintained.
 
 on:
   push:

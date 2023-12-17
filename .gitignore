@@ -2,8 +2,10 @@
 
 LLMLegalAssistantDataset/
 dataset/
+datasets/
 
 __pycache__/
+.mypy_cache/
 
 LLMLegalAssistant.egg-info/
 
@@ -12,4 +14,3 @@ LLMLegalAssistant.egg-info/
 llmcoder.env/
 venv/
 .venv/
-
