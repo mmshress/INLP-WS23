@@ -1,54 +1,65 @@
 import os
+import re
 
 import pandas as pd
 import requests
+
+from tqdm import tqdm
 from bs4 import BeautifulSoup
+from llmlegalassistant.utils import Utils
 from markdownify import markdownify as md
 
 
 class ArticlesScraper:
-    def __init__(self) -> None:
-        self.CSV_LOCATION = "data/metadata/CELEX-Category.csv"
-        self.ARTICLE_URL = (
-            "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:"
-        )
-        # Because EUR-LEX does not return a 404 status code when the document doesn't exist
-        self.DOES_NOT_EXIST_STRING = "The requested document does not exist."
+    def __init__(self, verbose: bool) -> None:
+        self.verbose = verbose
 
-    def fetch(self, output_dir: str, output_file_type: str, no_samples: int) -> None:
-        metadata_df = self.get_metadata()
-        celex_column = self.get_column(
+        # EUR-LEX doesn't return a 404 status code
+        self.DOES_NOT_EXIST_STRING = "<p>The requested document does not exist.</p>"
+
+        self.utils = Utils(self.verbose)
+
+    def fetch(self, output_file_type: str, no_samples: int) -> None:
+        # contains celex number and category of the article
+        metadata_df = self.utils.get_metadata()
+        if metadata_df is None:
+            return
+
+        # get all or specified number of samples
+        celex_column = self.utils.get_column(
             metadata_df.head(no_samples) if no_samples != 0 else metadata_df,
-            "celexnumber",
+            "celexnumber"
         )
 
         if len(celex_column) <= 0:
             return
 
-        for celex_number in celex_column:
+        if self.verbose:
+            print(f"[ArticlesScraper] Downloading articles...")
+        # Create output dir or remove all files inside it
+        output_dir = self.utils.get_file_dir(output_file_type)
+        for celex_number in tqdm(celex_column, desc="Downloading", unit="article"):
+            # fetch the articles
             origin_article = self.fetch_article(celex_number)
+
             if origin_article is None:
                 continue
+
             article_content = self.parse_content(origin_article, output_file_type)
             article_location = self.generate_article_location(
                 output_dir, celex_number, output_file_type
             )
+
             self.save_article(article_location, article_content)
 
-    def get_metadata(self) -> pd.DataFrame:
-        metadata_df = pd.read_csv(self.CSV_LOCATION)
-        metadata_df.columns = ["index", "celexnumber", "category"]
-        return metadata_df
-
-    def get_column(self, df: pd.Dataframe, column: str) -> pd.Series:
-        if column in df.columns:
-            return df[column]
-        return pd.Series()
+        if self.verbose:
+            print(f"[ArticleScraper] {output_file_type} Articles Downloaded!")
 
     def fetch_article(self, celex_number: str) -> str | None:
-        response = requests.get("".join([self.ARTICLE_URL, celex_number]))
-        if response is not None or self.DOES_NOT_EXIST_STRING in response.text:
-            return response.text
+        response = requests.get("".join([self.utils.get_articles_uri(), celex_number]))
+        if response is not None and self.DOES_NOT_EXIST_STRING not in response.text:
+            return response
+
         return None
 
     def generate_article_location(
@@ -62,14 +73,17 @@ class ArticlesScraper:
         try:
             with open(file_name, mode) as article:
                 article.write(article_content)
-            return True
-        except OSError:
+        except (OSError, TypeError):
             return False
 
-    def parse_content(self, article_content: str, export_type: str) -> str:
+        return True
+
+    def parse_content(self, article_content: requests.Response, export_type: str) -> str:
+        content = article_content.text
         if export_type == "md":
-            return md(article_content)
+            return md(content)
         elif export_type == "html":
-            return BeautifulSoup(article_content, "html.parser").prettify()
-        else:
-            return BeautifulSoup(article_content, "html.parser").get_text()
+            return BeautifulSoup(content, "html.parser").prettify()
+        elif export_type in ["text", "txt"]:
+            # return article_content.text
+            return BeautifulSoup(content, "html.parser").get_text()
