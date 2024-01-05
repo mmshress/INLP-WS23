@@ -35,7 +35,7 @@ class Utils:
 
     def get_file_dir(self, file_type: str) -> str:
         self.ARTICLE_FILE_DIR = self.get_article_file_dir(
-            self.ARTICLES_DIR, file_type + "s"
+            self.ARTICLES_DIR, "".join([file_type, "s"])
         )
         try:
             # makes article file type dir if doesn't exists
