@@ -16,7 +16,13 @@ class Config:
 
     ARTICLES_URI = "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:"  # don't change
 
+    # ARTICLES_URI = "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:"  # don't change
+
     ARTICLES_DIR = os.path.join(DATASET_DIR, "articles")  # don't change
+
+    REPLICATE_API_KEY = os.path.join(PROJECT_DIR, "replicate-api-key.txt")
+
+    HF_API_KEY = os.path.join(PROJECT_DIR, "hf-api-key.txt")
 
     def get_article_file_dir(self, articles_dir: str, file_type: str) -> str:
         return os.path.join(articles_dir, file_type)

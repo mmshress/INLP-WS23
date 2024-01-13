@@ -34,10 +34,11 @@ class ArticlesScraper:
 
         if self.verbose:
             print("[ArticlesScraper] Downloading articles...")
+
         # Create output dir or remove all files inside it
         output_dir = self.utils.get_file_dir(output_file_type)
         for celex_number in tqdm(celex_column, desc="Downloading", unit="article"):
-            # fetch the articles
+            # Fetch the articles
             origin_article = self.fetch_article(celex_number)
 
             if origin_article is None:
@@ -93,5 +94,5 @@ class ArticlesScraper:
         elif export_type in ["text", "txt"]:
             # return article_content.text
             return BeautifulSoup(content, "html.parser").get_text()
-        else:
-            return None
+
+        return None

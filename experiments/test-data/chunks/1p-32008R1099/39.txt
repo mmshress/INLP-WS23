@@ -1,0 +1,20 @@
+1.2. Of which: oil and gas extraction
+1.3. Of which: coke ovens1.4. Of which: blast furnaces1.5. Of which: gasworks1.6. Of which: power plants
+Electricity, CHP and heat plants.
+1.7. Of which: not elsewhere specified —energy
+2. Distribution losses
+Losses occurred outside the refinery due to transport and distribution.Includes pipeline losses.
+4.2.3. Energy end-use specification
+For the energy end-use specification the following aggregates apply for all fuels, except for refinery feedstocks,
+additives/oxygenates, biofuels and other hydrocarbons, but including fuels used for non-energy purposes(petroleum cokes and others, to be declared separately):
+1. Final energy consumption
+2. Industry sector
+2.1. Of which: iron and steel
+2.2. Of which: chemical and petrochemical2.3. Of which: non-ferrous metals2.4. Of which: non-metallic minerals2.5. Of which: transport equipment2.6. Of which: machinery
+2.7. Of which: mining and quarrying
+2.8. Of which: food, beverages and tobacco2.9. Of which: pulp, paper and printing2.10. Of which: wood and wood products2.11. Of which: construction2.12. Of which: textile and leather
+2.13. Of which: not elsewhere specified —industry
+3. Transport sector3.1. Of which: international aviation3.2. Of which: domestic aviation3.3. Of which: road
+3.4. Of which: rail
+3.5. Of which: domestic navigation3.6. Of which: pipeline transport3.7. Of which: not elsewhere specified —transport
+4. Other sectors4.1. Of which: commercial and public services14.11.2008 EN Official Journal of the European Union L 304/39

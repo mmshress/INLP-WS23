@@ -1,0 +1,36 @@
+Imports/exports
+For geographical definitions see ‘Geographical notes’ section.
+Unless specified differently, ‘imports’ refer to ultimate origin (the country in which the energy product was produced)
+for use in the country and ‘exports’ to the ultimate country of consumption of the produced energy product.
+Amounts are considered as imported or exported when they have crossed the political boundaries of the country,
+whether customs clearance has taken place or not.
+Where no origin or destination can be reported ‘other ’may be used.
+Statistical differences may arise if only total import and export are available on the above basis, while the geographical
+breakdown is based on a different survey, source or concept. In this case, differences shall be included under ‘other ’.
+International marine bunkers
+Quantities of fuels delivered to ships of all flags that are engaged in international navigation. The international
+navigation may take place at sea, on inland lakes and waterways, and in coastal waters. Excluded is:
+— consumption by ships engaged in domestic navigation. The domestic/international split should be determined
+on the basis of port of departure and port of arrival, and not by the flag or nationality of the ship,
+— consumption by fishing vessels,
+— consumption by military forces.
+Stock changes
+The difference between the opening stock level and closing stock level for stocks held on national territory.
+Gross consumption (calculated)
+Calculated value, defined as:indigenous production + from other sources + imports −exports −international marine bunkers + stock changes
+Gross consumption (observed)
+The quantity actually recorded in surveys of end-use sectors.
+Statistical differences
+Calculated value, defined as:calculated gross consumption —observed gross consumption.
+Includes changes in stocks at final consumers when this cannot be specified as part of the ‘stock changes’.
+Reasons for any major differences should be stated.
+Main activity producer electricity plants
+Fuel quantities used to produce electricity.Fuels used by plants containing at least one CHP unit are to be reported under Main activity producer CHP plants.
+Main activity producer combined heat and power (CHP) plants
+Quantities of fuels used to produce electricity and heat.
+Main activity producer heat plants
+Quantities of fuels used to produce heat.
+Autoproducer electricity plants
+Quantities of fuels used to produce electricity.Fuels used by plants containing at least one CHP unit are to be reported under Autoproducer CHP plants.
+Autoproducer combined heat and power (CHP) plants
+Quantities of fuels that correspond to the quantity of electricity produced and heat sold.14.11.2008 EN Official Journal of the European Union L 304/7

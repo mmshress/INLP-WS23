@@ -19,6 +19,9 @@ class Utils:
         self.ARTICLES_URI = self.config.ARTICLES_URI
         self.ARTICLE_FILE_DIR = self.ARTICLES_DIR
 
+        self.REPLICATE_API_KEY = self.config.REPLICATE_API_KEY
+        self.HF_API_KEY = self.config.HF_API_KEY
+
         self.get_article_file_dir = self.config.get_article_file_dir
 
     def get_project_dir(self) -> str:
@@ -96,3 +99,17 @@ class Utils:
             return None
 
         return column_series
+
+    def get_api_key(self, service: str) -> str | None:
+        api_key = ""
+        match service:
+            case "HuggingFace":
+                with open(self.HF_API_KEY, "r") as file:
+                    api_key = file.read()
+            case "Replicate":
+                with open(self.REPLICATE_API_KEY, "r") as file:
+                    api_key = file.read()
+            case _:
+                return None
+
+        return api_key

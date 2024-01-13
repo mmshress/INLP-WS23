@@ -1,0 +1,1 @@
+Quantities held by mines and importers.Excludes consumer stocks (e.g. those held in power stations and coking plants) except stocks held by

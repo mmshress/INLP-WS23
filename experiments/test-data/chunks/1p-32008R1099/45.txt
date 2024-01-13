@@ -1,0 +1,30 @@
+5.2.4. Energy end-use
+Quantities of energy products that are mentioned in Section 5.1 (except for hydro power, solar photovoltaic energy,
+energy from tides, waves and oceans and wind energy) must be declared for the following aggregates:
+1. Final energy consumption
+2. Industry sector2.1. Of which: iron and steel
+2.2. Of which: chemical and petrochemical
+2.3. Of which: non-ferrous metals2.4. Of which: non-metallic minerals
+2.5. Of which: transport equipment
+2.6. Of which: machinery2.7. Of which: mining and quarrying
+2.8. Of which: food, beverages and tobacco
+2.9. Of which: pulp, paper and printing2.10. Of which: wood and wood products
+2.11. Of which: construction
+2.12. Of which: textile and leather2.13. Of which: not elsewhere specified —industry
+3. Transport sector
+3.1. Of which: rail3.2. Of which: road
+3.3. Of which: domestic navigation
+3.4. Of which: not elsewhere specified —transport
+4. Other sectors
+4.1. Of which: commercial and public services
+4.2. Of which: residential4.3. Of which: agriculture/forestry
+4.4. Of which: fishing
+4.5. Of which: not elsewhere specified —other
+5.2.5. Technical characteristics of installations
+The following electricity generation capacities are to be declared as applicable at the end of the reported year:
+1. Hydro power
+Capacity must be reported for plant sizes of < 1 MW, 1 to < 10 MW, ≥10 MW and from pumped storage,
+as well as for all sizes combined. Detailed plant sizes should be reported net of pumped storage.
+2. Geothermal
+3. Solar photovoltaic
+4. Solar thermal14.11.2008 EN Official Journal of the European Union L 304/45

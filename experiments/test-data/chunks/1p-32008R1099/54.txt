@@ -1,0 +1,43 @@
+— Leaded motor gasoline: motor gasoline with TEL and/or TML added to enhance octane rating.
+‘Other products’ include both the quantities that correspond to the definition in Annex B Chapter 4 and in addition
+the quantities of white spirit and SBP, lubricants, bitumen and paraffin waxes; these products must not be declaredseparately.
+3.2. List of aggregates
+The following list of aggregates shall be declared for all energy products listed in the previous paragraph unless
+otherwise specified.
+3.2.1. Supply sector
+The following table applies only to crude oil, NGL, refinery feedstocks, additives/oxygenates, biofuels and other
+hydrocarbons only:
+1. Indigenous production
+Not applicable for refinery feedstocks.
+2. From other sources
+Additives, biofuels and other hydrocarbons, the production of which has already been covered in other fuel
+balances.
+Not applicable for crude oil, NGL and refinery feedstocks.
+3. Backflows from petrochemical sector
+Finished or semi-finished products which are returned from final consumers to refineries for processing,
+blending or sale.
+They are usually by-products of petrochemical manufacturing. Only applicable for refinery feedstocks.
+4. Products transferred
+Imported petroleum products which are reclassified as feedstocks for further processing in the refinery,
+without delivery to final consumers.
+Only applicable for refinery feedstocks.
+5. Imports and exports
+Includes quantities of crude oil and products imported or exported under processing agreements (i.e.
+refining on account). Crude oil and NGLs should be reported as coming from the country of ultimate
+origin; refinery feedstocks and finished products should be reported as coming from the country of last
+consignment.
+Includes any gas liquids (e.g. LPG) extracted during the regasification of imported liquefied natural gas and
+petroleum products imported or exported directly by the petrochemical industry.
+Note: all trade of biofuels which have not been blended with transport fuels (i.e. in their pure form) should
+be reported in the Renewables Questionnaire.
+6. Direct use
+Crude oil, NGL and other hydrocarbons used directly without being processed in petroleum refineries.Includes crude oil burned for electricity generation.
+7. Stock changes
+A stock build is shown as a positive number and a stock draw is shown as a negative number.
+8. Calculated refinery intake
+Total amount of product calculated to have entered the refinery process. It is defined as:indigenous production + from other sources + backflows from industry + products transferred + imports −
+exports −direct use −stock changes.
+9. Statistical differences
+Defined as the calculated refinery intake minus the observed one.
+10. Observed refinery intake
+Amounts measured as input to refineries.L 304/54 EN Official Journal of the European Union 14.11.2008

@@ -1,0 +1,1 @@
+fuelDistillate used for aviation turbine power units. It has the same distillation

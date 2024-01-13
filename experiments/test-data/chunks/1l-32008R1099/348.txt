@@ -1,0 +1,1 @@
+Includes changes in stocks at final consumers when this cannot be specified as part of the ‘stock changes’.

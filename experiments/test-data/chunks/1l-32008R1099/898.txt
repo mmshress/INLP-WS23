@@ -1,0 +1,1 @@
+through a country, the amount should be reported as both an import and an export.

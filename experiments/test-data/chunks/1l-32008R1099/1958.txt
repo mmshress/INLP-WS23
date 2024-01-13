@@ -1,0 +1,1 @@
+The transmission format shall conform to an appropriate interchange standard specified by Eurostat.

@@ -1,0 +1,1 @@
+Quantities used to produce fuels.Quantities used for heating and operation of equipment should not be declared here, but declared as consumption in

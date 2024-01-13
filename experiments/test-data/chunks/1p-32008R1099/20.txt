@@ -1,0 +1,22 @@
+2.2.2. Energy sector
+1. Total energy sector
+1.1. Of which: coal mines1.2. Of which: oil and gas extraction1.3. Of which: inputs to oil refineries
+1.4. Of which: coke ovens
+1.5. Of which: blast furnaces1.6. Of which: gasworks1.7. Of which: electricity, CHP and heat plants
+1.8. Of which: liquefaction (LNG) or gasification
+1.9. Of which: gas-to-liquids1.10. Of which: not elsewhere specified —energy
+2. Losses of distribution and transport
+2.2.3. Energy end-use specification
+Consumption of natural gas needs to be reported for both energy use and (wherever applicable) non-energy use
+separately, for all of the following aggregates:
+1. Total final consumption
+Final energy consumption and non-energy use to be declared separately under this heading.
+2. Transport sector2.1. Of which: transport by road
+Includes both CNG and biogas.
+2.1.1. Of which: biogas fraction in transport by road2.2. Of which: pipeline transport
+2.3. Of which: not elsewhere specified —transport
+3. Industry sector3.1. Of which: iron and steel3.2. Of which: chemical and petrochemical
+3.3. Of which: non-ferrous metals
+3.4. Of which: non-metallic minerals3.5. Of which: transport equipment3.6. Of which: machinery3.7. Of which: mining and quarrying
+3.8. Of which: food, beverages and tobacco
+3.9. Of which: pulp, paper and printing3.10. Of which: wood and wood products3.11. Of which: construction3.12. Of which: textile and leatherL 304/20 EN Official Journal of the European Union 14.11.2008

@@ -1,0 +1,30 @@
+The following aggregates apply to coke derived from hard coal, lignite coke, patent fuels and lignite briquettes:
+1. Production
+2. Imports
+3. Exports3.1. Of which: intra-EU exports4. Stock change
+Quantities held in coking plants (coke) and patent fuel plants (patent fuels) as well as at the importers.Excludes consumers' stocks excepted stocks held by consumers which import directly.A stock build is shown as a negative number and a stock draw is shown as a positive number.
+5. Calculated inland deliveries
+Total amount of product calculated to have been delivered for inland consumption. It is defined as:production + imports −exports + stock changes
+6. Observed internal deliveries
+Quantities delivered to the internal market. Equal to the total of the deliveries to the different types of
+consumers. A difference may occur between the calculated and observed deliveries.
+6.1. Of which: total industry (without iron and steel industry)
+6.2. Of which: iron and steel industry6.3. Of which: others (services, households, etc.)
+Quantities of fuel to households (including coke and patent fuels supplied to workers in mines and
+associated plants) and services (administrations, shops, etc.)
+7. Closing stocks
+Stocks are the quantities held:— by coking plants (applicable only to coke of coal and lignite),
+— patent fuel plants (applicable only to patent fuels of coal and lignite),
+— importers.
+1.2.2. Imports
+For lignite, lignite coke, patent fuels and lignite briquettes the total intra-EU and total extra-EU import quantities
+must be declared.
+For hard coal, imports must be declared from the following countries of origin:
+1. Intra-EU import quantities
+1.1. Of which: Germany
+1.2. Of which: United Kingdom1.3. Of which: Poland
+1.4. Of which: other EU
+The relevant countries must be specified.
+2. Extra-EU import quantities2.1. Of which: USA2.2. Of which: Australia
+2.3. Of which: South Africa
+2.4. Of which: CIS14.11.2008 EN Official Journal of the European Union L 304/51

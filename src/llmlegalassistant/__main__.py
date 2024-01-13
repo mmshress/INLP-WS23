@@ -35,7 +35,7 @@ def main() -> None:
         default="index_articles",
     )
     pushdata_parser.add_argument(
-        "-h",
+        "-n",
         "--host",
         dest="host",
         type=str,

@@ -1,0 +1,1 @@
+Quantities of natural gas must be declared in TJ, based on the gross calorific value.

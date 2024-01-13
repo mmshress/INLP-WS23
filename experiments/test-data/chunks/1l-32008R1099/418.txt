@@ -1,0 +1,1 @@
+Defined (calculated) as:= total non-energy use + final energy consumption (industry + transport + other sectors)It excludes deliveries for transformation, use by the energy producing industries, and distribution losses.

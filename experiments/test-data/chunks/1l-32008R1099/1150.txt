@@ -1,0 +1,1 @@
+Includes blending components. Several grades are available depending on uses.

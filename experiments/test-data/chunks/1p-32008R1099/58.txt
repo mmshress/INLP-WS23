@@ -1,0 +1,39 @@
+3. Exports
+4. Stock changes
+A stock build is shown as a positive number and a stock draw is shown as a negative number.
+5. Calculated gross inland deliveries
+This is defined as:indigenous production + imports −exports −stock change.
+6. Statistical difference
+Defined as the calculated gross inland delivery minus the observed one.
+7. Observed gross inland deliveries
+Includes gas used by the gas industry for heating and operation of their equipment (i.e. consumption in gas
+extraction, in the pipeline system and in processing plants) and losses in distribution.
+8. Opening and closing levels of stocks held on national territory
+Quantities stored in special storage facilities (depleted gas and/or oil field, aquifer, salt cavity, mixed caverns
+or other) as well as liquefied natural gas storage. By opening stocks are meant the stocks on the last day of
+the month preceding the reported one. By closing stocks are meant the stocks on the last day of the
+reported month.
+9. Own use and losses of the natural gas industry
+Own used quantities by the gas industry for heating and operation of its equipment (i.e. consumption in
+gas extraction, in the pipeline system and in processing plants).
+Includes losses in distribution.
+4.2.2. Imports and exports
+Imports by country of origin, and exports by country of destination.
+4.3. Units of measurement
+Quantities must be declared in two units:
+— in physical quantity, in 10
+6m3assuming reference gas conditions (15oC, 101,325 kPa),
+— in energy content, i.e. in TJ, based on the gross calorific value.
+4.4. Derogations and exemptions
+Not applicable.
+5. APPLICABLE PROVISIONS
+The following provisions apply for the data collection as described in all preceding chapters:
+1. Reported period:
+A calendar month.
+2. Frequency:
+Monthly.
+3. Deadline for transmission of data:
+Within three months following the reported month.
+4. Transmission format and method:
+The transmission format shall conform to an appropriate interchange standard specified by Eurostat.
+Data shall be transmitted or uploaded by electronic means to the single entry point for data at Eurostat.L 304/58 EN Official Journal of the European Union 14.11.2008

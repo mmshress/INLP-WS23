@@ -1,0 +1,45 @@
+2.3. Of which: from renewables
+Includes biofuels which are for blending with transport fuels.Production is declared as per Chapter 5, while amounts for blending are declared here.
+3. Backflows from petrochemical sector
+Finished or semi-finished products which are returned from final consumers to refineries for processing,
+blending or sale. They are usually by-products of petrochemical manufacturing.
+Only applicable for refinery feedstocks.
+4. Products transferred
+Imported petroleum products which are reclassified as feedstocks for further processing in the refinery,
+without delivery to final consumers.
+Only applicable for refinery feedstocks.
+5. Imports and exports
+Includes quantities of crude oil and products imported or exported under processing agreements (i.e.
+refining on account). Crude oil and NGLs should be reported as coming from the country of ultimate
+origin; refinery feedstocks and finished products should be reported as coming from the country of last
+consignment.
+Includes any gas liquids (e.g. LPG) extracted during the regasification of imported liquefied natural gas and
+petroleum products imported or exported directly by the petrochemical industry.
+Note: all trade of biofuels which have not been blended with transport fuels (i.e. in their pure form) should
+be reported in the Renewables Questionnaire.
+Re-exports of oil imported for processing within bonded areas should be included as an export of product
+from the processing country to the final destination.
+6. Direct use
+Crude oil, NGL, additives and oxygenates (and the part which are biofuels), and other hydrocarbons used
+directly without being processed in petroleum refineries.
+Includes crude oil burned for electricity generation.
+7. Stock changes
+A stock build is shown as a negative number and a stock draw is shown as a positive number.
+8. Calculated refinery intake
+Total amount of product calculated to have entered the refinery process. It is defined as:indigenous production + from other sources + backflows from industry + products transferred + imports −
+exports −direct use + stock changes
+9. Statistical differences
+Defined as the calculated refinery intake minus the observed one.
+10. Observed refinery intake
+Amounts measured as input to refineries
+11. Refinery losses
+The difference between refinery intake (observed) and gross refinery output. Losses may occur during the
+distillation processes due to evaporation. Reported losses are positive. There may be volumetric gains but
+no gains in mass.
+12. Opening and closing total stocks on national territory
+All stocks on national territory, including stocks held by governments, by major consumers or by
+stockholding organisations, stocks held on board incoming ocean vessels, stocks held in bonded areas and
+stocks held for others, whether under bilateral government agreement or not. Opening and closing refers
+to the first and to the last day of the reporting period respectively.
+13. Net calorific value
+Production, imports and exports, and overall average.L 304/36 EN Official Journal of the European Union 14.11.2008

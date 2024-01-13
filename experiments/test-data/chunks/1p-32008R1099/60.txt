@@ -1,0 +1,28 @@
+1.5. Derogations and exemptions
+Germany is exempted from this data collection.
+2. ELECTRICITY
+2.1. Applicable energy products
+This chapter covers electricity only.
+2.2. List of aggregates
+The following list of aggregates shall be declared.
+1. Total electricity production
+Total gross quantity of electricity generated.Includes own consumption of power plants.
+2. Imports3. Exports
+4. Gross electricity supply
+This is calculated as:
+total electricity production + imports −exports.
+2.3. Units of measurement
+Energy quantities must be expressed in GWh.
+2.4. Other applicable provisions
+1. Reported period:
+A calendar month.
+2. Frequency:
+Monthly.
+3. Deadline for transmission of data:
+Within one month following the reported month.
+4. Transmission format and method:
+The transmission format shall conform to an appropriate interchange standard specified by Eurostat.Data shall be transmitted or uploaded by electronic means to the single entry point for data at Eurostat.
+2.5. Derogations and exemptions
+Germany is exempted from this data collection.
+3. OIL AND PETROLEUM PRODUCTS
+This data collection is commonly known as the ‘JODI Questionnaire’.L 304/60 EN Official Journal of the European Union 14.11.2008

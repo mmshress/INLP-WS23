@@ -1,0 +1,1 @@
+thermalHeat from solar radiation; can consist of:

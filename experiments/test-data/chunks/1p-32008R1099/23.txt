@@ -1,0 +1,34 @@
+Annex A applies for explanations of terms for which a specific explanation is not supplied in this chapter. The
+definitions and units mentioned in Chapters 1, 2, 4 and 5 apply to energy products belonging to solid fuels andmanufactured gases, natural gas, oil and petroleum products, and renewable energy and energy from waste.
+3.2.1. Supply and transformation sectors
+The following specific definitions apply to aggregates for electricity and heat in this chapter:
+— Gross electricity production: the sum of the electrical energy production by all the generating sets concerned
+(including pumped storage) measured at the output terminals of the main generators.
+— Gross heat production: the total heat produced by the installation and includes the heat used by the
+installation's auxiliaries which use a hot fluid (space heating, liquid fuel heating etc.) and losses in theinstallation/network heat exchanges, as well as heat from chemical processes used as a primary energy form.
+— Net electricity production: the gross electricity production less the electrical energy absorbed by the
+generating auxiliaries and the losses in the main generator transformers.
+— Net heat production: the heat supplied to the distribution system as determined from measurements of the
+outgoing and return flows.
+The aggregates mentioned in the next table must be declared separately for main activity producer plants and for
+autoproducer plants. Within these two types of plants, both gross and net electricity and heat production must bedeclared for electricity only, for CHP and for heat-only plants separately wherever applicable, for the followingaggregates:
+1. Total production
+1.1. Of which: nuclear1.2. Of which: hydro1.2.1. Of which: part of hydro produced from pumped storage
+1.3. Of which: geothermal
+1.4. Of which: solar1.5. Of which: tide, wave, ocean1.6. Of which: wind1.7. Of which: combustible fuels
+Fuels capable of igniting or burning, i.e. reacting with oxygen to produce a significant rise in temperature
+and combusted directly for the production of electricity and/or heat.
+1.8. Of which: heat pumps
+Heat output from heat pumps only where the heat is sold to third parties (i.e. in cases where production
+occurs in the transformation sector).
+1.9. Of which: electric boilers
+Quantities of heat from electric boilers where the output is sold to third parties.
+1.10. Of which: heat from chemical processes
+Heat originating from processes without input energy, such as a chemical reaction.Excludes waste heat originating from energy-driven processes, which should be reported as heat produced
+from the corresponding fuel.
+1.11. Of which: other sources —electricity (please specify)
+The aggregates mentioned in the next table must be declared as totals, for electricity and heat separately, wherever
+applicable. For the three first aggregates in the next table, quantities should be calculated from and be compatible
+with the values declared according to the previous table.
+1. Total gross production
+2. Own use by plant14.11.2008 EN Official Journal of the European Union L 304/23

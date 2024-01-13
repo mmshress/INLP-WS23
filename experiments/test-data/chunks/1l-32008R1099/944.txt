@@ -1,0 +1,1 @@
+production are to be declared, for CHP plants, for electricity (only) plants and for heat (only) plants separately, in the

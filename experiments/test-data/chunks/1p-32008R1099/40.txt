@@ -1,0 +1,24 @@
+4.2. Of which: residential
+4.3. Of which: agriculture/forestry4.4. Of which: fishing4.5. Of which: not elsewhere specified —other
+5. Total non-energy use
+Quantities used as raw materials in the different sectors and not consumed as a fuel or transformed into
+another fuel. These quantities are included into the aggregates listed above.
+5.1. Of which: transformation sector5.2 Of which: energy sector5.3 Of which: transport sector5.4 Of which: industry sector
+5.4.1 Industry sector of which: chemical (inc. petrochemical)
+5.5 Of which: other sectors
+4.2.4. Imports and exports
+Imports by country of origin, and exports by country of destination. See also notes under point 4.2.1, aggregate 5.
+4.2.5. Inputs to autoproducers of electricity and heat generation
+Inputs to autoproducers of electricity and heat generation are to be declared separately for electricity-only plants, for
+CHP plants, and for heat-only plants.
+Excludes the following energy products: refinery feedstocks, additives/oxygenates, biofuels, other hydrocarbons,
+ethane, motor gasoline, biogasoline, aviation gasoline, gasoline type jet fuel (naphtha type jet fuel or JP4), whitespirit and SBP, and lubricants.
+Inputs apply to the following plants or activities:
+1. Total energy sector
+Total quantity used as energy in the energy sector
+1.1. Of which: coal mines
+1.2. Of which: oil and gas extraction1.3. Of which: coke ovens1.4. Of which: blast furnaces1.5. Of which: gasworks1.6. Of which: not elsewhere specified —energy
+2. Industry sector
+2.1. Of which: iron and steel2.2. Of which: chemical and petrochemical2.3. Of which: non-ferrous metals2.4. Of which: non-metallic minerals2.5. Of which: transport equipment
+2.6. Of which: machinery
+2.7. Of which: mining and quarryingL 304/40 EN Official Journal of the European Union 14.11.2008

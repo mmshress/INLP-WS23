@@ -1,0 +1,1 @@
+Defined as the calculated refinery intake minus the observed one.

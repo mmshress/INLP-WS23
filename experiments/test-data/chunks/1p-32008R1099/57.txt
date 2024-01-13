@@ -1,0 +1,31 @@
+In addition, a breakdown of quantities per corresponding country must be declared for:
+— closing stocks held for other countries under bilateral government agreements,
+— other closing stocks with known foreign destination,
+— closing stocks held abroad under bilateral government agreements,
+— other closing stocks held abroad designated definitely for import into the reporting country.
+By opening stocks are meant the stocks on the last day of the month preceding the reported one. By closing stocks
+are meant the stocks on the last day of the reported month.
+3.2.3. Imports and exports
+Imports by country of origin, and exports by country of destination.
+3.3. Units of measurement
+Energy quantities: 103tonnes.
+3.4. Geographical notes
+For statistical reporting purposes only, the clarifications of Annex A Chapter 1 apply with the following specific
+exceptions:
+1. Denmark includes the Faeroe Islands and Greenland.
+2. Switzerland includes Liechtenstein.
+3.5. Derogations and exemptions
+Not applicable.
+4. NATURAL GAS
+4.1. Applicable energy products
+Natural gas is defined in Annex B Chapter 2.
+4.2. List of aggregates
+The following list of aggregates shall be declared for all energy products listed in the previous paragraph unless
+otherwise specified.
+4.2.1. Supply sector
+1. Indigenous production
+All dry marketable production within national boundaries, including offshore production. Production is
+measured after purification and extraction of NGLs and sulphur.
+Excludes extraction losses and quantities reinjected, vented or flared.Includes quantities used within the natural gas industry; in gas extraction, pipeline systems and processing
+plants.
+2. Imports14.11.2008 EN Official Journal of the European Union L 304/57

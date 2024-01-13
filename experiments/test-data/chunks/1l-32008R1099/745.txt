@@ -1,0 +1,1 @@
+Excludes extraction losses and quantities reinjected, vented or flared.Includes quantities used within the natural gas industry; in gas extraction, pipeline systems and processing

@@ -1,0 +1,31 @@
+3.1. Applicable energy products
+Unless otherwise specified, this data collection applies to all of the following energy products, for which the
+definitions in Chapter 4 of Annex B apply: crude oil, LPG, gasoline (which is the sum of motor gasoline and aviationgasoline), kerosene (which is the sum of kerosene type jet fuel and other kerosene), gas/diesel oil and fuel oil (bothlow and high sulphur content).
+In addition, this data collection also applies to ‘total oil’, by which is meant the sum of all these products except
+crude oil, and must also include other petroleum products such as refinery gas, ethane, naphtha, petroleum coke,white spirit and SBP, paraffin waxes, bitumen, lubricants and others.
+3.2. List of aggregates
+The following list of aggregates shall be declared for all energy products listed in the previous paragraph unless
+otherwise specified.
+3.2.1. Supply sector
+The following table applies only to crude oil:
+1. Production
+2. Imports3. Exports
+4. Closing stock
+5. Stock change
+A stock build is shown as a positive number and a stock draw is shown as a negative number.
+6. Refinery intake
+Observed refinery throughput.
+The following table applies to crude oil, LPG, gasoline, kerosene, gas/diesel oil, fuel oil and total oil:
+1. Refinery output
+Gross output, including refinery fuel.
+2. Imports3. Exports4. Closing stock5. Stock change
+A stock build is shown as a positive number and a stock draw is shown as a negative number.
+6. Demand
+Deliveries or sales to the inland market (domestic consumption) plus refinery fuel plus international
+marine and aviation bunkers. Demand for total oil includes crude.
+3.3. Units of measurement
+Energy quantities: 10
+3tonnes
+3.4. Other applicable provisions
+1. Reported period:
+A calendar month.14.11.2008 EN Official Journal of the European Union L 304/61

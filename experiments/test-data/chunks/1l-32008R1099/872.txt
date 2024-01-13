@@ -1,0 +1,1 @@
+autoproducer plants. Within these two types of plants, both gross and net electricity and heat production must bedeclared for electricity only, for CHP and for heat-only plants separately wherever applicable, for the followingaggregates:

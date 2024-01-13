@@ -1,0 +1,55 @@
+ANNEX B
+ANNUAL ENERGY STATISTICS
+This Annex describes the scope, units, reported period, frequency, deadline and transmission modalities for the annual
+collection of energy statistics.
+Annex A applies for explanations of terms for which a specific explanation is not supplied in this Annex.
+1. SOLID FOSSIL FUELS AND MANUFACTURED GASES
+1.1. Applicable energy products
+Unless otherwise specified this data collection applies to all of the following energy products:
+Energy product Definition
+1. Anthracite High rank coal used for industrial and residential applications. It has generally less
+than 10 % volatile matter and a high carbon content (about 90 % fixed carbon). Its
+gross calorific value is greater than 23 865 kJ/kg (5 700 kcal/kg) on an ash-free but
+moist basis.
+2. Coking coal Bituminous coal with a quality that allows the production of a coke suitable to
+support a blast furnace charge. Its gross calorific value is greater than 23 865 kJ/kg
+(5 700 kcal/kg) on an ash-free but moist basis.
+3. Other bituminous
+coal
+(steam coal)Coal used for steam raising purposes and includes all bituminous coal that is neither
+included under coking coal nor anthracite. It is characterised by higher volatile
+matter than anthracite (more than 10 %) and lower carbon content (less than 90 %
+fixed carbon). Its gross calorific value is greater than 23 865 kJ/kg (5 700 kcal/kg) on
+an ash-free but moist basis. If bituminous coal is used in coke ovens it should be
+reported as coking coal.
+4. Sub-bituminous
+CoalRefers to non-agglomerating coal with a gross calorific value between 17 435 kJ/kg
+(4 165 kcal/kg) and 23 865 kJ/kg (5 700 kcal/kg) containing more than 31 %
+volatile matter on a dry mineral matter free basis.
+5. Lignite/brown coal Non-agglomerating coal with a gross calorific value less than 17 435 kJ/kg (4 165
+kcal/kg) and greater than 31 % volatile matter on a dry mineral matter free basis.
+Oil shale and tar sands produced and combusted directly should be reported in this
+category. Oil shale and tar sands used as inputs for other transformation processes
+should also be reported in this category.
+This includes the portion of the oil shale or tar sands consumed in the
+transformation process. Shale oil and other products derived from liquefaction
+should be reported on the Annual Oil Questionnaire.
+6. Peat A combustible soft, porous or compressed, sedimentary deposit of plant origin with
+high water content (up to 90 % in the raw state), easily cut, of light to dark brown
+colour. Peat used for non-energy purposes is not included.
+This definition is without prejudice to the definition of renewable energy sources in
+Directive 2001/77/EC and to the 2006 IPCC Guidelines for National Greenhouse
+Gas Inventories.
+7. Patent fuel A composition fuel manufactured from hard coal fines with the addition of a binding
+agent. The amount of patent fuel produced may, therefore, be slightly higher than the
+actual amount of coal consumed in the transformation process.
+8. Coke oven coke The solid product obtained from carbonisation of coal, principally coking coal, at
+high temperature, it is low in moisture and volatile matter. Coke oven coke is used
+mainly in the iron and steel industry acting as energy source and chemical agent.
+Coke breeze and foundry coke are included in this category.
+Semi-coke (a solid product obtained from carbonisation of coal at low temperature)
+should be included in this category. Semi-coke is used as a domestic fuel or by the
+transformation plant itself. This heading also includes coke, coke breeze and semi-
+coke made from lignite/brown coal.
+9. Gas coke By-product of hard coal used for production of town gas in gasworks. Gas coke is
+used for heating purposes.L 304/12 EN Official Journal of the European Union 14.11.2008

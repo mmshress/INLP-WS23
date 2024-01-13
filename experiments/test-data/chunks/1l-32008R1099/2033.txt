@@ -1,0 +1,1 @@
+2. Imports3. Exports4. Closing stock5. Stock change

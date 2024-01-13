@@ -1,0 +1,1 @@
+Includes biofuels which are for blending with transport fuels.Production is declared as per Chapter 5, while amounts for blending are declared here.

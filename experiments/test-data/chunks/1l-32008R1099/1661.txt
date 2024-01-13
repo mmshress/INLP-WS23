@@ -1,0 +1,1 @@
+Internal use in production units.Excludes consumption in pit-head power stations, pit-head patent fuel plants, pit-head coke oven plants

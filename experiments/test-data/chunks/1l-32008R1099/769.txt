@@ -1,0 +1,1 @@
+Quantities of gas available for delivery during any input-output cycle. This refers to recoverable natural gas

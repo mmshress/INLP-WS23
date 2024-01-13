@@ -1,0 +1,31 @@
+12.2. Of which: energy use in the petrochemical sector
+Quantities of oil used as fuel for petrochemical processes such as steam cracking.
+12.3. Of which: non-energy use in the petrochemical sector
+Quantities of oil used in the petrochemical sector for the purpose of producing ethylene, propylene,
+butylene, synthesis gas, aromatics, butadiene and other hydrocarbon-based raw materials in processes such
+as steam cracking, aromatics plants and steam reforming. Excludes amounts of oil used for fuel purposes.
+13. Backflows from petrochemical sector to refineries14. Opening and closing stock levels
+All stocks on national territory, including stocks held by governments, by major consumers or by
+stockholding organisations, stocks held on board incoming ocean vessels, stocks held in bonded areas and
+stocks held for others, whether under bilateral government agreement or not. Opening and closing refers
+to the first and to the last day of the reporting period respectively.
+15. Stock changes at public utilities
+Changes in stocks which are held by public utilities and not included in the stock levels and stock changes
+reported elsewhere. A stock build is shown as a negative number and a stock draw is shown as a positive
+number.
+Includes crude oil and NGL used for direct burn, if applicable.
+16. Net calorific value of gross inland deliveries
+For the transformation sector the following aggregates apply for all fuels, except for refinery feedstocks, additives/
+oxygenates, biofuels and other hydrocarbons, but including fuels used for non-energy purposes (petroleum cokesand others, to be declared separately):
+1. Total transformation sector
+Total quantities of fuels used for the primary or secondary conversion of energy.
+1.1. Of which: main activity producer electricity plants1.2. Of which: autoproducer electricity plants1.3. Of which: main activity producer CHP plants
+1.4. Of which: autoproducer CHP plants
+1.5. Of which: main activity producer heat plants1.6. Of which: autoproducer heat plants1.7. Of which: gasworks/gasification plants1.8. Of which: blended natural gas1.9. Of which: coke ovens1.10. Of which: blast furnaces1.11. Of which: petrochemical industry1.12. Of which: patent fuel plants1.13. Of which: not elsewhere specified —transformation
+4.2.2. Energy sector
+For the energy sector the following aggregates apply for all fuels, except for refinery feedstocks, additives/
+oxygenates, biofuels and other hydrocarbons, but including fuels used for non-energy purposes (petroleum cokes
+and others, to be declared separately):
+1. Total energy sector
+Total quantity used as energy in the energy sector.
+1.1. Of which: coal minesL 304/38 EN Official Journal of the European Union 14.11.2008

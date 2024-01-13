@@ -1,0 +1,1 @@
+This is calculated as:production + imports −exports + stock change.

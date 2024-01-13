@@ -1,0 +1,34 @@
+2.13. Of which: not elsewhere specified —industry
+3. Transport sector3.1. Of which: pipeline transport3.2. Of which: not elsewhere specified —transport
+4. Other sectors4.1. Of which: commercial and public services
+4.2. Of which: residential
+4.3. Of which: agriculture/forestry4.4. Of which: fishing4.5. Of which: not elsewhere specified
+2.2.6. Gas storage capacities
+1. Name
+Name of the site of the storage facility.
+2. Type
+Type of storage, such as depleted gas field, salt cavern, etc.
+3. Working capacity
+Total gas storage capacity, minus the cushion gas. The cushion gas is the total volume of gas required as a
+permanent inventory to maintain adequate underground storage reservoir pressures and deliverability rates
+throughout the output cycle.
+4. Peak output
+Maximum rate at which gas can be withdrawn from the concerned storage.
+2.3. Units of measurement
+1. Energy quantities Unless indicated differently, quantities of natural gas are declared by its energy
+content, i.e. in TJ, based on the gross calorific value.
+Where physical quantities are required, the unit is in 10
+6m3assuming reference gas
+conditions (15oC, 101,325 kPa).
+2. Calorific values KJ/m3, assuming reference gas conditions (15oC, 101,325 kPa).
+3. Storage working
+capacity106m3, assuming reference gas conditions (15oC, 101,325 kPa).
+4. Peak output 106m3/day, assuming reference gas conditions (15oC, 101,325 kPa).
+2.4. Derogations and exemptions
+Not applicable.
+3. ELECTRICITY AND HEAT
+3.1. Applicable energy products
+This chapter covers heat and electricity.
+3.2. List of aggregates
+The following list of aggregates shall be declared for all energy products listed in the previous paragraph unless
+otherwise specified.L 304/22 EN Official Journal of the European Union 14.11.2008

@@ -1,0 +1,1 @@
+Excludes mandatory stocks held by private companies.

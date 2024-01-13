@@ -1,0 +1,30 @@
+2.8. Of which: food, beverages and tobacco
+2.9. Of which: pulp, paper and printing2.10. Of which: wood and wood products2.11. Of which: construction2.12. Of which: textile and leather2.13. Of which: not elsewhere specified —industry
+3. Transport sector
+3.1. Of which: pipeline transport3.2. Of which: not elsewhere specified —transport
+4. Other sectors4.1. Of which: commercial and public services4.2. Of which: residential
+4.3. Of which: agriculture/forestry
+4.4. Of which: fishing4.5. Of which: not elsewhere specified —other
+4.3. Units of measurement
+1. Energy quantities 10
+3tonnes
+2. Calorific values MJ/tonne
+4.4. Derogations and exemptions
+Cyprus is exempted from reporting the aggregates defined in Section 4.2.3 under point 4 (Other sectors) and
+point 5 (Total non-energy use); only the total values shall be applicable.
+Cyprus has a derogation of 3 years following the date of entry into force of this Regulation, for reporting the
+aggregates defined in Section 4.2.3 under point 2 (Industry sector) and point 3 (Transport sector); only the total
+values shall be applicable during this derogation period.
+5. RENEWABLE ENERGY AND ENERGY FROM WASTE
+5.1. Applicable energy products
+Unless otherwise specified this data collection applies to all of the following energy products:
+Energy product Definition
+1. Hydro power Potential and kinetic energy of water converted into electricity in hydroelectric
+plants. Pumped storage must be included. Production must be reported for plant
+sizes of < 1 MW, 1 to < 10 MW, ≥10 MW and from pumped storage.
+2. Geothermal Energy available as heat emitted from within the earth's crust, usually in the form of
+hot water or steam. This energy production is the difference between the enthalpy of
+the fluid produced in the production borehole and that of the fluid eventually
+disposed of. It is exploited at suitable sites:
+— for electricity generation using dry steam or high enthalpy brine after flashing,
+— directly as heat for district heating, agriculture etc.14.11.2008 EN Official Journal of the European Union L 304/41

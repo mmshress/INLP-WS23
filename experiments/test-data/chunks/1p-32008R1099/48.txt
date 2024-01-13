@@ -1,0 +1,12 @@
+5.5. Derogations and exemptions
+Not applicable.
+6. APPLICABLE PROVISIONS
+The following provisions apply for the data collection as described in all preceding chapters:
+1. Reported period:
+A calendar year (1 January to 31 December).
+2. Frequency:
+Annual.
+3. Deadline for transmission of data:
+30 November of the year following the reported period.
+4. Transmission format and method:
+The transmission format shall conform to an appropriate interchange standard specified by Eurostat.Data shall be transmitted or uploaded by electronic means to the single entry point for data at Eurostat.L 304/48 EN Official Journal of the European Union 14.11.2008

@@ -1,0 +1,1 @@
+Quantities held in coking plants (coke) and patent fuel plants (patent fuels) as well as at the importers.Excludes consumers' stocks excepted stocks held by consumers which import directly.A stock build is shown as a negative number and a stock draw is shown as a positive number.
