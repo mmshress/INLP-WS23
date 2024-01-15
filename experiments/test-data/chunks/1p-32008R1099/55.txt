@@ -1,0 +1,46 @@
+11. Refinery losses
+The difference between refinery intake (observed) and gross refinery output. Losses may occur during the
+distillation processes due to evaporation. Reported losses are positive. There may be volumetric gains but
+no gains in mass.
+12. Production of oxygenates
+That part of production or from other sources which is ethers such as MTBE (methyl tertiary butyl ether),
+TAME (tertiary amyl methyl ether), alcohols such as ethanol and esters and which are used for blending
+into gasoline and gasoil.
+The following table does not apply to refinery feedstocks nor to additives/oxygenates:
+1. Primary product receipts
+Includes quantities of indigenous or imported crude oil (including condensate) and indigenous NGL used
+directly without being processed in a petroleum refinery and quantities of backflows from the
+petrochemical industry which, although not primary fuel, are used directly.
+2. Gross refinery output
+Production of finished products at a refinery or blending plant.Excludes refinery losses, but includes refinery fuel.
+3. Recycled products
+Finished products which pass a second time through the marketing network, after having been once
+delivered to final consumers (e.g. used lubricants which are reprocessed). These quantities should be
+distinguished from petrochemical backflows.
+4. Refinery fuel
+Petroleum products consumed in support of the operation of a refinery.Excludes products used by oil companies outside the refining process, e.g. bunkers or oil tankers.Includes fuels used for the production at the refineries of electricity and heat sold.
+5. Imports and exports
+6. International marine bunkers7. Interproduct transfers
+Quantities reclassified either because their specification has changed or because they are blended into
+another product.
+A negative entry for one product is compensated by a positive entry (or several entries) for one or several
+products and vice versa; the total net effect should be zero.
+8. Products transferred
+Imported petroleum products which are reclassified as feedstocks for further processing in the refinery,
+without delivery to final consumers.
+9. Stock changes
+A stock build is shown as a positive number and a stock draw is shown as a negative number.
+10. Calculated gross inland deliveries
+This is defined as:primary product receipts + gross refinery output + recycled products −refinery fuel + imports −exports −
+international marine bunkers + interproduct transfers −products transferred −stock changes.
+11. Statistical difference
+Defined as the calculated gross inland delivery minus the observed one.
+12. Observed gross inland deliveries
+The observed delivery of finished petroleum products from primary sources (e.g. refineries, blending
+plants, etc.) to the inland market.
+This figure may differ from the calculated figure due, for example, to differences in coverage and/or
+differences of definition in different reporting systems.
+12.1. Of which: deliveries to international civil aviation
+12.2. Of which: deliveries to public power plants
+12.3. Of which: deliveries of automotive LPG
+12.4. Of which: deliveries (gross) to petrochemical sector14.11.2008 EN Official Journal of the European Union L 304/55

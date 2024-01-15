@@ -1,0 +1,31 @@
+For the fuel consumption in main activity producer plants the following aggregates apply (refer to Annex B for the
+definitions of hard coal and lignite):
+6. Total fuel consumption in main activity producer plants
+Total quantity of fuel consumed for the purpose of producing electricity and also for the production of
+heat to be sold to third parties exclusively.
+6.1. Of which: hard coal
+6.2. Of which: lignite6.3. Of which: petroleum products6.4. Of which: natural gas6.5. Of which: derived gas (these are manufactured gases)6.6. Of which: other fuels
+2.2.2. Fuel stocks in main activity producers
+By main activity producers are meant public utilities generating electricity by using fuels. The following closing
+stocks (stocks at the end of the reported month) must be declared:
+1. Hard coal
+2. Lignite3. Petroleum products
+2.3. Units of measurement
+1. Energy quantities Electricity: GWh
+Hard coal, lignite and petroleum products: both in 10
+3tonnes and in TJ on the
+basis of the net calorific value.
+Natural gas and derived gases: TJ on the basis of the gross calorific value.Other fuels: TJ on the basis of the net calorific value.Nuclear heat: TJ.
+2. Stocks 10
+3tonnes
+2.4. Derogations and exemptions
+Not applicable.
+3. OIL AND PETROLEUM PRODUCTS
+3.1. Applicable energy products
+Unless otherwise specified this data collection applies to all of the following energy products, for which the
+definitions in Annex B Chapter 4 apply: crude oil, NGL, refinery feedstocks, other hydrocarbons, refinery gas (notliquefied), ethane, LPG, naphtha, motor gasoline, aviation gasoline, gasoline type jet fuel (naphtha type jet fuel or
+JP4), kerosene type jet fuel, other kerosene, gas/diesel oil (distillate fuel oil), transport diesel, heating and other
+gasoil, fuel oil (both low and high sulphur content), white spirit and SBP, lubricants, bitumen, paraffin waxes andpetroleum coke.
+Where applicable, motor gasoline must be declared in two categories namely:
+— Unleaded motor gasoline: motor gasoline where lead compounds have not been added to enhance octane
+rating. It may contain traces of organic lead.14.11.2008 EN Official Journal of the European Union L 304/53

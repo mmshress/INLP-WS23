@@ -1,0 +1,1 @@
+Quantities of fuels that correspond to the quantity of heat sold.

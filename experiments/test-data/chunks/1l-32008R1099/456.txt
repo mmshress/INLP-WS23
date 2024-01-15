@@ -1,0 +1,1 @@
+Quantities used in road vehicles.Includes fuel used by agricultural vehicles on highways and lubricants for use in road vehicles.

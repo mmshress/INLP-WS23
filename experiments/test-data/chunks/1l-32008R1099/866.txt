@@ -1,0 +1,1 @@
+installation's auxiliaries which use a hot fluid (space heating, liquid fuel heating etc.) and losses in theinstallation/network heat exchanges, as well as heat from chemical processes used as a primary energy form.

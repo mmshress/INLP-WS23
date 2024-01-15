@@ -1,0 +1,28 @@
+ANNEX D
+SHORT-TERM MONTHLY STATISTICS
+This Annex describes the scope, units, reported period, frequency, deadline and transmission modalities for the short-term
+monthly collection of statistical data.
+Annex A applies for explanations of terms for which a specific explanation is not supplied in this Annex.
+1. NATURAL GAS
+1.1. Applicable energy products
+This chapter covers natural gas only. Natural gas is defined in Chapter 2 of Annex B.
+1.2. List of aggregates
+The following list of aggregates shall be declared.
+1. Production
+2. Imports
+3. Exports4. Stock change
+A stock build is shown as a negative number and a stock draw is shown as a positive number.
+5. Supply
+This is calculated as:production + imports −exports + stock change.
+1.3. Units of measurement
+Quantities of natural gas must be declared in TJ, based on the gross calorific value.
+1.4. Other applicable provisions
+1. Reported period:
+A calendar month.
+2. Frequency:
+Monthly.
+3. Deadline for transmission of data:
+Within one month following the reported month.
+4. Transmission format and method:
+The transmission format shall conform to an appropriate interchange standard specified by Eurostat.
+Data shall be transmitted or uploaded by electronic means to the single entry point for data at Eurostat.14.11.2008 EN Official Journal of the European Union L 304/59

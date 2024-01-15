@@ -1,0 +1,1 @@
+Heat originating from processes without input energy, such as a chemical reaction.Excludes waste heat originating from energy-driven processes, which should be reported as heat produced

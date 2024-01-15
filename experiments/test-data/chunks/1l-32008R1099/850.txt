@@ -1,0 +1,1 @@
+capacity106m3, assuming reference gas conditions (15oC, 101,325 kPa).

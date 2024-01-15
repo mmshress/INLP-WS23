@@ -1,0 +1,1 @@
+Defined as the calculated gross inland delivery minus the observed one.

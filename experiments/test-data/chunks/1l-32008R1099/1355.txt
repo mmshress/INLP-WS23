@@ -1,0 +1,1 @@
+Imports by country of origin, and exports by country of destination. See also notes under point 4.2.1, aggregate 5.

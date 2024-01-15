@@ -1,0 +1,21 @@
+2.9. Of which: pulp, paper and printing
+2.10. Of which: wood and wood products2.11. Of which: construction2.12. Of which: textile and leather2.13. Of which: not elsewhere specified —industry
+3. Transport sector:
+3.1. Of which: rail
+3.2. Of which: not elsewhere specified —transport
+4. Other sectors:4.1. Of which: commercial and public services4.2. Of which: residential4.3. Of which: agriculture/forestry
+4.4. Of which: fishing
+4.5. Of which: not elsewhere specified
+3.3. Structural data on electricity and heat generation
+3.3.1. Net maximum electrical capacity and peak load
+The capacity should be reported at 31 December of the relevant reported year.
+Includes electrical capacity of both electricity (only) and CHP plants.
+The net maximum electrical capacity is the sum of the net maximum capacities of all stations taken individually
+throughout a given period of operation. The period of operation assumed for present purposes is continuousrunning: in practice 15 hours or more per day. The net maximum capacity is the maximum power assumed to besolely active power that can be supplied, continuously, with all plant running, at the point of outlet to the network.The peak load is defined as the highest value of the power absorbed or supplied by a network or combination ofnetworks within the country.
+The following quantities must be declared only for the network:
+1. Total
+2. Nuclear3. Hydro3.1. Of which: pumped storage
+4. Geothermal
+5. Solar6. Tide, wave, ocean7. Wind8. Combustible fuels8.1. Of which: steam
+8.2. Of which: internal combustion
+8.3. Of which: gas turbine14.11.2008 EN Official Journal of the European Union L 304/31

@@ -1,0 +1,28 @@
+7.4. Of which: autoproducer electricity plants
+7.5. Of which: autoproducer CHP plants7.6. Of which: autoproducer heat plants7.7. Of which: patent fuel plants
+Quantities of renewables and wastes used to produce patent fuel. Renewables and wastes used for heating
+and operation of equipment must be reported as consumption in the energy sector.
+7.8. Of which: BKB/PB plants
+Quantities of renewables and wastes used to produce BKB. Renewables and wastes used for heating and
+operation of equipment must be reported as consumption in the energy sector.
+7.9. Of which: gasworks gas
+Quantities of renewables and wastes used to produce gasworks gas. Renewables and wastes used for
+heating and operation of equipment must be reported as consumption in the energy sector.
+7.10. Of which: for blended natural gas
+Quantities of biogases blended with natural gas.
+7.11. Of which: for blending to motor gasoline/diesel
+Quantities of liquid biofuels which are not delivered for final consumption but are used with other
+petroleum products reported as per Chapter 4 of this Annex.
+7.12. Of which: charcoal production plants
+Quantities of wood used for the production of charcoal.
+7.13. Of which: not elsewhere specified —transformation
+5.2.3. Energy sector
+Quantities of energy products that are mentioned in Section 5.1 (except for hydro power, solar photovoltaic energy,
+energy from tides, waves and oceans and wind energy) and used in the energy sector or for final consumption mustbe declared for the following aggregates:
+1. Total energy sector
+Renewable energies and wastes consumed by the energy industry to support the transformation activity.
+For example renewable energies and wastes used for heating, lighting or operating pumps/compressors.
+Quantities of renewable energies and wastes transformed into another energy form should be reported
+under the transformation sector.
+1.1. Of which: gasification plants1.2. Of which: public electric, CHP and heat plants1.3. Of which: coal mines1.4. Of which: patent fuel plants1.5. Of which: coke ovens1.6. Of which: petroleum refineries1.7. Of which: BKB/PB plants1.8. Of which: gasworks gas1.9. Of which: blast furnaces1.10. Of which: charcoal production plants1.11. Of which: not elsewhere specified2. Distribution losses
+All losses occurred due to transport and distribution.L 304/44 EN Official Journal of the European Union 14.11.2008

@@ -1,0 +1,45 @@
+ANNEX C
+MONTHLY ENERGY STATISTICS
+This Annex describes the scope, units, reported period, frequency, deadline and transmission modalities for the monthly
+collection of energy statistics.
+Annex A applies for explanations of terms for which a specific explanation is not supplied in this Annex.
+1. SOLID FUELS
+1.1. Applicable energy products
+Unless otherwise specified this data collection applies to all of the following energy products:
+Energy product Definition
+1. Hard coal Black, combustible, solid, organic, fossil sediment with a gross calorific value greater
+than 24 MJ/kg in ash-free condition with the moisture content obtained at a
+temperature of 30oC and a relative air humidity of 96 %.
+2. Lignite Combustible, brown to black, organic fossil sediment with a gross calorific value
+lower than 24 MJ/kg in ash-free condition with the moisture content obtained at a
+temperature of 30oC and a relative air humidity of 96 %.
+2.1. Of which: black lig-
+niteLignite with a moisture content of 20 to 25 % and an ash content of 9 to 13 %. Black
+lignite was formed in the secondary era. Within the Union, it is now produced only
+by France from deep mining in Provence.
+2.2. Of which: brown
+coalLignite with a moisture content of 40 to 70 % and an ash content normally between
+2 and 6 %; the latter, however, may be as high as 12 % depending on the deposit.
+Brown coal was mainly formed in the tertiary era. This fuel is mostly mined in
+opencast workings.
+3. Peat Soft, loose to compressed, natural, combustible sediment of vegetable origin with a
+high moisture content (up to 90 %), light to dark brown in colour.
+This definition is without prejudice to the definition of renewable energy sources in
+Directive 2001/77/EC and to the 2006 IPCC Guidelines for National Greenhouse
+Gas Inventories.
+4. Patent fuel Patent fuels of hard coal are artefacts of specified shape produced by hot milling
+under pressure, with the addition of binding material (pitch).
+5. Lignite briquettes Artefacts of even shape produced after crushing and drying of lignite, moulded
+under high pressure without the addition of binders. This includes dried lignite and
+lignite breeze.
+6. Coke derived from
+hard coalArtificial solid fuel derived from hard coal and obtained by dry distillation of the coal
+in the total or partial absence of air.
+Includes:— hard coke: obtained by carbonisation at high temperatures,
+— semi-coke: obtained by carbonisation at low temperatures,
+— gasworks coke: produced in gasworks.
+7. Lignite coke Solid residue obtained by dry distillation of lignite in the absence of air.
+1.2. List of aggregates
+The following list of aggregates shall be declared for all energy products listed in the previous paragraph unless
+otherwise specified.
+Annex A applies for explanations of terms for which a specific explanation is not supplied in this Annex.14.11.2008 EN Official Journal of the European Union L 304/49

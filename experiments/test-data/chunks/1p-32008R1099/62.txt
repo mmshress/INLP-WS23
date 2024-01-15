@@ -1,0 +1,9 @@
+2. Frequency:
+Monthly.
+3. Deadline for transmission of data:
+Within 25 days following the reported month.
+4. Transmission format and method:
+The transmission format shall conform to an appropriate interchange standard specified by Eurostat.
+Data shall be transmitted or uploaded by electronic means to the single entry point for data at Eurostat.
+3.5. Derogations and exemptions
+Not applicable.L 304/62 EN Official Journal of the European Union 14.11.2008

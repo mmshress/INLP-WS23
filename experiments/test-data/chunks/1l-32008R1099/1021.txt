@@ -1,0 +1,1 @@
+Includes electrical capacity of both electricity (only) and CHP plants.

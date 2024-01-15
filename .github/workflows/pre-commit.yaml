@@ -1,5 +1,5 @@
 name: Code Quality
-run-name: Pull Requests / Push from ${{ github.ref }} to main, created by by ${{ github.actor }}. This action ensures that the code quality is maintained.
+run-name: This action ensures that the code quality is maintained.
 
 on:
   push:
@@ -16,3 +16,6 @@ jobs:
         with:
           python-version: "3.11"
       - uses: pre-commit/action@v3.0.0
+      - name: Update requirements
+        run: |
+          pdm update-requirements

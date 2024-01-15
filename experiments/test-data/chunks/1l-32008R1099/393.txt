@@ -1,0 +1,1 @@
+Excludes quantities of fuels transformed into another energy form (which should be reported under the

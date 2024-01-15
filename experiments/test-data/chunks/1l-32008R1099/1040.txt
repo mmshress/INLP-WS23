@@ -1,0 +1,1 @@
+Includes coke oven gas, blast furnace and oxygen steel furnace gas capacity.

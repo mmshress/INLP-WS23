@@ -1,0 +1,1 @@
+For the following aggregates both gross and net quantities must be declared:

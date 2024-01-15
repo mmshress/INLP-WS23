@@ -1,0 +1,25 @@
+2.4.1. From 2.4, of which: Russia
+2.4.2. From 2.4, of which: Ukraine2.5. Of which: Canada2.6. Of which: Colombia2.7. Of which: China2.8. Of which: other extra-EU
+The relevant countries must be specified.
+1.3. Units of measurement
+All product quantities are expressed in 10
+3tonnes.
+1.4. Derogations and exemptions
+Not applicable.
+2. ELECTRICITY
+2.1. Applicable energy products
+This chapter covers electrical energy.
+2.2. List of aggregates
+The following list of aggregates shall be declared.
+2.2.1. Production sector
+For the following aggregates both gross and net quantities must be declared:
+1. Total electricity production
+1.1. Of which: nuclear1.2. Of which: hydro1.2.1. From 1.2, of which: part of hydro produced from pumped storage
+1.3. Of which: geothermal
+1.4. Of which: conventional thermal1.5. Of which: wind
+Also the following quantities of electrical energy must be declared:
+2. Imports
+2.1. Of which: intra-EU imports3. Exports3.1. Of which: extra-EU exports
+4. Used for pumped storage
+5. Used for the internal market
+This is calculated as:total net production + imports −exports −used for pumped storageL 304/52 EN Official Journal of the European Union 14.11.2008

@@ -1,0 +1,48 @@
+Autoproducer heat plants
+Quantities of fuels that correspond to the quantity of heat sold.
+Patent fuel plants
+Quantities used to produce fuels.Quantities used for heating and operation of equipment should not be declared here, but declared as consumption in
+the energy sector.
+Coke ovens
+Quantities used in coke ovens.Quantities used for heating and operation of equipment should not be declared here, but declared as consumption in
+the energy sector.
+BKB/PB plants
+Quantities of lignite or brown coal used to produce brown coal briquettes (BKB) or of peat to produce peat briquettes
+(PB).
+Quantities used for heating and operation of equipment should not be declared here, but declared as consumption in
+the energy sector.
+Gasworks
+Quantities used to produce gas in gasworks and coal gasification plants.Quantities used as a fuel for heating and operation of equipment should not be included here, but declared as
+consumption in the energy sector.
+Blast furnace
+Quantities of coking coal and/or bituminous coal (generally referred to as PCI) and coke oven coke transformed in
+blast furnaces.
+Quantities used as a fuel for heating and operation of blast furnaces (e.g. blast furnaces gas) should not be included
+here, but declared as consumption in the energy sector.
+Coal liquefaction
+Quantities of fuel used to produce synthetic oil.
+Petroleum refineries
+Quantities used to produce petroleum products.
+Quantities used as a fuel for heating and operation of equipment should not be declared here, but declared as
+consumption in the energy sector.
+Not elsewhere specified —transformation
+Quantities used for transformation activities not included elsewhere. If used, what is included under this heading
+should be explained in the report.
+2.2. Energy sector and final consumption
+Total energy sector
+Quantities consumed by the energy industry to support the extraction (mining, oil and gas production) or plant
+operations of transformation activities.
+Excludes quantities of fuels transformed into another energy form (which should be reported under the
+transformation sector) or used in support of the operation of oil, gas and coal slurry pipelines (which should be
+reported in the transport sector).
+Includes the manufacture of chemical materials for atomic fission and fusion and the products of these processes.
+Electricity, CHP and heat plants
+Quantities consumed as energy at electricity plants, combined heat and power plants (CHP) and heat plants.
+Coal mines
+Quantities consumed as energy to support the extraction and preparation of coal within the coal mining industry.Coal burned in pithead power stations should be reported in the transformation sector.
+Patent fuel plants
+Quantities consumed as energy at patent fuel plants.
+Coke ovens
+Quantities consumed as energy at coking plants.
+BKB/PB plants
+Quantities used as energy in BKP/PB plants.L 304/8 EN Official Journal of the European Union 14.11.2008

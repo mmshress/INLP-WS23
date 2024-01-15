@@ -1,0 +1,35 @@
+2. From other sources
+Fuels which are blended with natural gas, and consumed as a blend.
+2.1. Of which: from oil products
+LPG for upgrading the quality e.g. heat content.
+2.2. Of which: from coal
+Manufactured gas for blending with natural gas.
+2.3. Of which: from renewables
+Biogas for blending with natural gas.
+3. Imports
+4. Exports
+5. International marine bunkers6. Stock changes
+A stock build is shown as a negative number and a stock draw is shown as a positive number.
+7. Gross consumption
+8. Statistical differences
+The requirement of declaring calorific values is not applicable here.
+9. Recoverable gas: opening and closing stocks
+Quantities of gas available for delivery during any input-output cycle. This refers to recoverable natural gas
+stored in special storage facilities (depleted gas and/or oil field, aquifer, salt cavity, mixed caverns, or other)
+as well as liquefied natural gas storage. Cushion gas should be excluded.
+The requirement of declaring calorific values is not applicable here.
+10. Gas vented
+The volume of gas released into the air on the production site or at the gas processing plant.The requirement of declaring calorific values is not applicable here.
+11. Gas flared
+The volume of gas burned in flares on the production site or at the gas processing plant.
+The requirement of declaring calorific values is not applicable here.
+12. Total transformation sector
+Quantities of fuels used for the primary or secondary conversion of energy (e.g. natural gas to electricity) or
+used for the transformation to derived energy products (e.g. natural gas to methanol).
+12.1. Of which: main activity producer electricity plants
+12.2. Of which: autoproducer electricity plants12.3. Of which: main activity producer CHP plants12.4. Of which: autoproducer CHP plants12.5. Of which: main activity producer heat plants
+12.6. Of which: autoproducer heat plants
+12.7. Of which: gasworks12.8. Of which: coke ovens12.9. Of which: blast furnaces12.10. Of which: gas-to-liquids
+Quantities of natural gas used as feedstock for the conversion to liquids e.g. the quantities of fuel entering
+the methanol production process for transformation into methanol.
+12.11. Of which: non-specified —transformation14.11.2008 EN Official Journal of the European Union L 304/19

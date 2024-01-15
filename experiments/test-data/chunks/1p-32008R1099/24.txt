@@ -1,0 +1,24 @@
+3. Total net production
+4. Imports
+See also explanation under 5 ‘Exports’.
+5. Exports
+Amounts of electricity are considered as imported or exported when they have crossed the political
+boundaries of the country, whether customs clearance has taken place or not. If electricity is transited
+through a country, the amount should be reported as both an import and an export.
+6. Used for heat pumps7. Used for electric powered steam boilers8. Used for pumped storage9. Used for electricity production10. Energy supplied
+For electricity: the sum of the net electrical energy production supplied by all power stations within the
+country, reduced by the amount used simultaneously for heat pumps, electrically powered steam boilers,
+pumping and reduced or increased by exports to or imports from abroad.
+For heat: the sum of the net heat production for sale by all plants within a country, reduced by heat used
+for electricity production and reduced or increased by exports or imports from abroad.
+11. Transmission and distribution losses
+All losses due to transport and distribution of electrical energy and heat.For electricity, includes losses in transformers which are not considered as integral parts of the power
+plants.
+12. Total consumption (calculated)13. Statistical difference14. Total consumption (observed)
+The electricity produced, the heat sold and the fuel quantities used, including their corresponding total energy
+(based on their net calorific value except for natural gas which is based on gross calorific value) from the
+combustibles listed in the next table must be declared separately for main activity producer plants and forautoproducer plants. Within these two types of plants, this electricity and heat production must be declared forelectricity (only) plants, for CHP and for heat (only) plants separately wherever applicable:
+1. Solid fuels and manufactured gases:
+1.1. Anthracite1.2. Coking coal1.3. Other bituminous coal1.4. Sub-bituminous coal
+1.5. Lignite/brown coal
+1.6. Peat1.7. Patent fuel1.8. Coke oven coke1.9. Gas coke1.10. Coal tar1.11. BKB (brown coal briquettes)1.12. Gasworks gas1.13. Coke oven gas1.14. Blast furnace gasL 304/24 EN Official Journal of the European Union 14.11.2008

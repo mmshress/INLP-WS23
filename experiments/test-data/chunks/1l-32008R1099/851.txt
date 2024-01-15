@@ -1,0 +1,1 @@
+4. Peak output 106m3/day, assuming reference gas conditions (15oC, 101,325 kPa).

@@ -1,0 +1,1 @@
+combustibles listed in the next table must be declared separately for main activity producer plants and forautoproducer plants. Within these two types of plants, this electricity and heat production must be declared forelectricity (only) plants, for CHP and for heat (only) plants separately wherever applicable:

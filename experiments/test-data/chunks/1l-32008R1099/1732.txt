@@ -1,0 +1,1 @@
+By main activity producers are meant public utilities generating electricity by using fuels. The following closing

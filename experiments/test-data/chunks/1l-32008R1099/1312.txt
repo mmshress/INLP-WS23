@@ -1,0 +1,1 @@
+Includes crude oil and NGL used for direct burn, if applicable.

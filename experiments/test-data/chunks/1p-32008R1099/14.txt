@@ -1,0 +1,41 @@
+2.1. Of which: from oil products
+Not applicable for anthracite, coking coal, other bituminous coal, sub-bituminous coal and lignite/brown
+coal and peat.
+E.g. petroleum coke addition to coking coal for coke ovens.
+2.2. Of which: from natural gas
+Not applicable for anthracite, coking coal, other bituminous coal, sub-bituminous coal and lignite/brown
+coal and peat.
+E.g. natural gas addition to gasworks gas for direct final consumption.
+2.3. Of which: from renewables
+Not applicable for anthracite, coking coal, other bituminous coal, sub-bituminous coal and lignite/brown
+coal and peat.
+E.g. industrial waste as binding agent in the manufacturing of patent fuel.
+3. Imports
+4. Exports
+5. International marine bunkers
+6. Stock changes
+A stock build is shown as a negative number and a stock draw is shown as a positive number.
+7. Gross consumption
+8. Statistical differences
+9. Total transformation sector
+Quantities of fuels used for the primary or secondary conversion of energy (e.g. coal to electricity, coke
+oven gas to electricity) or used for the transformation to derived energy products (e.g. coking coal to coke).
+9.1. Of which: main activity producer electricity plants9.2. Of which: main activity producer CHP plants
+9.3. Of which: main activity producer heat plants
+9.4. Of which: autoproducer electricity plants
+9.5. Of which: autoproducer CHP plants
+9.6. Of which: autoproducer heat plants
+9.7. Of which: patent fuel plants
+9.8. Of which: coke ovens
+9.9. Of which: BKB/PB plants
+9.10. Of which: gasworks
+9.11. Of which: blast furnaces
+Quantities of coking coal and/or bituminous coal (generally referred to as PCI) and coke oven coke
+transformed in blast furnaces. Amounts used as a fuel for heating and operation of blast furnaces (e.g. blast
+furnaces gas) should not be included in the transformation sector, but reported as consumption in the
+energy sector.
+9.12. Of which: coal liquefaction
+Shale oil and other products derived from liquefaction should be reported as per Chapter 4 of this Annex.
+9.13. Of which: for blended natural gas
+Quantities of coal gases blended with natural gas.
+9.14. Of which: not elsewhere specified —transformationL 304/14 EN Official Journal of the European Union 14.11.2008

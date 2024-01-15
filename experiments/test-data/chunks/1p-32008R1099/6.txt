@@ -1,0 +1,31 @@
+ANNEX A
+CLARIFICATIONS OF TERMINOLOGY
+This Annex supplies explanations or definitions of terms that are used in the other Annexes.
+1. GEOGRAPHICAL NOTES
+For statistical reporting purposes only, the following geographical definitions apply:
+— Australia excludes the overseas territories,
+— Denmark excludes the Faeroe Islands and Greenland,
+— France includes Monaco and excludes the French overseas territories Guadeloupe, Martinique, French Guiana,
+Réunion, Saint Pierre and Miquelon, New Caledonia, French Polynesia, Wallis and Futuna, Mayotte,
+— Italy includes San Marino and the Vatican,
+— Japan includes Okinawa,
+— The Netherlands excludes Suriname and the Netherlands Antilles,
+— Portugal includes the Azores and Madeira,
+— Spain includes the Canary Islands, the Balearic Islands, and Ceuta and Melilla,
+— Switzerland does not include Liechtenstein,
+— United States includes the 50 States, the District of Columbia, the US Virgin Islands, Puerto Rico and Guam.
+2. AGGREGATES
+Producers are classified according to the purpose of production:
+— Main activity producer: enterprises, both privately or publicly owned, which generate electricity and/or heat for
+sale to third parties, as their principal activity.
+— Autoproducers: enterprises, both privately or publicly owned, which generate electricity and/or heat wholly or
+partly for their own use as an activity which supports their primary activity.
+Note: the Commission may further clarify terminology by adding relevant NACE references in accordance with the
+regulatory procedure with scrutiny referred to in Article 11(2) after a revision of the NACE classification has entered
+into force.
+2.1. Supply and transformation sectors
+Production/indigenous production
+Quantities of fuels extracted or produced, calculated after any operation for removal of inert matter. Production
+includes the quantities consumed by the producer in the production process (e.g. for heating or operation of
+equipment and auxiliaries) as well as supplies to other producers of energy for transformation or other uses.
+Indigenous means: production from resources within the concerned state.L 304/6 EN Official Journal of the European Union 14.11.2008

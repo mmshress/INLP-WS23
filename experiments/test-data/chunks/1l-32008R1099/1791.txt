@@ -1,0 +1,1 @@
+Total amount of product calculated to have entered the refinery process. It is defined as:indigenous production + from other sources + backflows from industry + products transferred + imports −

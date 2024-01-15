@@ -1,0 +1,33 @@
+8.4. Of which: combined cycle
+8.5. Of which: other
+To be specified if declared.
+9. Peak load10. Available capacity at time of peak11. Date and time of peak load occurrence
+3.3.2. Net maximum electrical capacity of combustible fuels
+Net maximum electrical capacity of combustible fuels must be declared for both main activity producers and
+autoproducers, and separately for each type of single-fired or multi-fired plant mentioned in the next table.
+Indications on which type of fuel is used as primary and alternate fuels must be added for all cases of multi-firedplants.
+1. Single fuel fired:
+1.1. Fired with coal or coal products
+Includes coke oven gas, blast furnace and oxygen steel furnace gas capacity.
+1.2. Fired with liquid fuels
+Includes refinery gas capacity.
+1.3. Fired with natural gas
+Includes gasworks gas capacity.
+1.4. Fired with peat
+1.5. Fired with combustible renewables and wastes
+2. Multi-fired, solids and liquids3. Multi-fired, solids and natural gas4. Multi-fired, liquids and natural gas5. Multi-fired, solids, liquids and natural gas
+Multi-fired systems include only units which can burn more than one fuel type on a continuous basis. Stations
+which have separate units using different fuels should be divided into the appropriate single-fuel categories.
+3.4. Units of measurement
+1. Energy quantities Electricity: GWh
+Heat: TJSolid fuels and manufactured gases: the units of measurement in Chapter 1 of this
+Annex apply.
+Natural gas: the units of measurement in Chapter 2 of this Annex apply.
+Oil and petroleum products: the units of measurement in Chapter 4 of this Annex
+apply.
+Renewables and waste: the units of measurement in Chapter 5 of this Annex apply.
+2. Capacity Electrical generation capacity: MWe
+Heat generation capacity: MWt
+3.5. Derogations and exemptions
+France has a derogation for reporting the aggregates relating to heat. That derogation shall lapse as soon as France is
+able to forward this report and, at all events, no more than four years after the date of entry into force of thisRegulation.L 304/32 EN Official Journal of the European Union 14.11.2008

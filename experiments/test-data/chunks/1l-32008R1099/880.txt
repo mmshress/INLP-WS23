@@ -1,0 +1,1 @@
+Heat output from heat pumps only where the heat is sold to third parties (i.e. in cases where production

@@ -1,0 +1,1 @@
+furnaces gas) should not be included in the transformation sector, but reported as consumption in the

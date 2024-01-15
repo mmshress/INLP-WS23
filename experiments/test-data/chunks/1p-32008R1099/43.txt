@@ -1,0 +1,38 @@
+Energy product Definition
+10.1. Of which: biogaso-
+lineThis category includes bioethanol (ethanol produced from biomass and/or the
+biodegradable fraction of waste), biomethanol (methanol produced from biomass
+and/or the biodegradable fraction of waste), bioETBE (ethyl-tertio-butyl-ether
+produced on the basis of bioethanol; the percentage by volume of bioETBE that is
+calculated as biofuel is 47 %) and bioMTBE (methyl-tertio-butyl-ether produced on
+the basis of biomethanol: the percentage by volume of bioMTBE that is calculated asbiofuel is 36 %).
+10.2. Of which: bio-die-
+selsThis category includes bio-diesel (a methyl-ester produced from vegetable or animal
+oil, of diesel quality), biodimethylether (dimethylether produced from biomass),
+Fischer-Tropsch (Fischer-Tropsch produced from biomass), cold extracted bio-oil (oil
+produced from oil seed through mechanical processing only) and all other liquidbiofuels which are added to, blended with or used straight as transport diesel.
+10.3. Of which: other
+liquid biofuelsLiquid biofuels, used directly as fuel, not included in biogasoline or bio-diesels.
+5.2. List of aggregates
+The following list of aggregates shall be declared for all energy products listed in the previous paragraph unless
+otherwise specified.
+5.2.1. Gross electricity and heat production
+Electricity and heat produced from the energy products mentioned in Section 5.1 (except for charcoal and including
+the total sum only of the liquid biofuels) must be declared, wherever applicable, separately:
+— for main activity producer plants and for autoproducer plants,
+— for electricity-only producing plants, for heat-only producing plants, and for combined heat and power (CHP)
+plants.
+5.2.2. Supply and transformation sectors
+Quantities of energy products that are mentioned in Section 5.1 (except for hydro power, solar photovoltaic energy,
+energy from tides, waves and oceans and wind energy) and used in the supply and transformation sectors must bedeclared for the following aggregates:
+1. Production
+2. Imports
+3. Exports
+4. Stock changes
+A stock build is shown as a negative number and a stock draw is shown as a positive number.
+5. Gross consumption6. Statistical differences7. Total transformation sector
+Quantities of renewables and wastes used for the conversion of primary forms of energy to secondary (e.g.
+landfill gases to electricity) or used for the transformation to derived energy products (e.g. biogas used for
+blended natural gas).
+7.1. Of which: main activity producer electricity plants7.2. Of which: main activity producer CHP plants
+7.3. Of which: main activity producer heat plants14.11.2008 EN Official Journal of the European Union L 304/43
