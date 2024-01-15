@@ -1,0 +1,37 @@
+3. From other sources
+4. Stocks at end of period4.1. Of which: stocks at mines
+1.5. Units of measurement
+1. Energy quantities 10
+3tonnes
+Exception: for gases (gasworks gas, coke oven gas, blast furnace gas, oxygen steel
+furnace gas) the measurement is directly in energy content and the unit to be used is
+therefore TJ (based on gross calorific values).
+2. Calorific values MJ/tonne
+1.6. Derogations and exemptions
+Not applicable.
+2. NATURAL GAS
+2.1. Applicable energy products
+This data collection applies to natural gas, which comprises gases occurring in underground deposits, whether
+liquefied or gaseous, consisting mainly of methane.
+It includes both ‘non-associated’ gas originating from fields producing hydrocarbons only in gaseous form, and
+‘associated’ gas produced in association with crude oil as well as methane recovered from coal mines (colliery gas)
+or from coal seams (coal seam gas).
+It does not include gases created by anaerobic digestion of biomass (e.g. municipal or sewage gas) nor gasworks gas.
+2.2. List of aggregates
+The following list of aggregates shall be declared for all energy products listed in the previous paragraph unless
+otherwise specified.
+2.2.1. Supply and transformation sectors
+To be declared are quantities expressed in both volume and energy units, and including the gross and net calorific
+values, for the following aggregates:
+1. Indigenous production
+All dry marketable production within national boundaries, including offshore production. Production is
+measured after purification and extraction of NGLs and sulphur.
+Excludes extraction losses and quantities reinjected, vented or flared.Includes quantities used within the natural gas industry; in gas extraction, pipeline systems and processing
+plants.
+1.1. Of which: associated gas
+Natural gas produced in association with crude oil.
+1.2. Of which: non-associated gas
+Natural gas originating from fields producing hydrocarbons only in gaseous form.
+1.3. Of which: colliery gas
+Methane produced at coal mines or from coal seams, piped to the surface and consumed at collieries or
+transmitted by pipeline to consumers.L 304/18 EN Official Journal of the European Union 14.11.2008

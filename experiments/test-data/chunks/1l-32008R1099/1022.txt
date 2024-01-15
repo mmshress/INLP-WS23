@@ -1,0 +1,1 @@
+The net maximum electrical capacity is the sum of the net maximum capacities of all stations taken individually

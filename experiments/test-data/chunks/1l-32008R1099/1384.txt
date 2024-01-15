@@ -1,0 +1,1 @@
+aggregates defined in Section 4.2.3 under point 2 (Industry sector) and point 3 (Transport sector); only the total

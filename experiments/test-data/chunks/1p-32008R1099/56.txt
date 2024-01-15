@@ -1,0 +1,51 @@
+13. Backflows from petrochemical sector to refineries
+14. Total net inland deliveries
+3.2.2. Stocks
+The following opening and closing stocks must be declared for all energy products except for refinery gas:
+1. Stocks on national territory
+Stocks in the following locations: refinery tanks, bulk terminals, pipeline tankage, barges and coastal
+tankers (when port of departure and destination are in the same country), tankers in a port of a member
+country (if their cargo is to be discharged at the port), inland ship bunkers. Exclude stocks of oil held in
+pipelines, in rail tanks cars, in truck tanks cars, in sea-going ships' bunkers, in service stations, in retail
+stores and in bunkers at sea.
+2. Stocks held for other countries under bilateral government agreements
+Stocks on national territory which belong to another country and to which the access is guaranteed by an
+agreement between the respective governments.
+3. Stocks with known foreign destination
+Stocks not included in point 2 on national territory which belong to and are destined for another country.
+These stocks may be located inside or outside bonded areas.
+4. Other stocks held in bonded areas
+Includes stocks neither included in point 2 nor 3 irrespective of whether they have received customs
+clearance or not.
+5. Stocks held by major consumers
+Include stocks which are subject to government control. This definition does not include other consumer
+stocks.
+6. Stocks held on board incoming ocean vessels in port or at mooring
+Stocks irrespective of whether they have been cleared by customs or not. This category excludes stocks on
+board vessels at high seas.
+Includes oil in coastal tankers if both their port of departure and destination are in the same country. In the
+case of incoming vessels with more than one port of unloading, only report the amount to be unloaded in
+the reporting country.
+7. Stocks held by government on national territory
+Includes non-military stocks held within the national territory by government, which are government-
+owned or controlled and held exclusively for emergency purposes.
+Excludes stocks held by state oil companies or electric utilities or stocks held directly by oil companies on
+behalf of governments.
+8. Stocks held by stock holding organisation on national territory
+Stocks held by both public and private corporations established to maintain stocks exclusively for
+emergency purposes.
+Excludes mandatory stocks held by private companies.
+9. All other stocks held on national territory
+All other stocks satisfying the conditions described in point 1 above.
+10. Stocks held abroad under bilateral government agreements
+Stocks belonging to the reporting country but held in another country, to which access is guaranteed by an
+agreement between the respective governments.
+10.1. Of which: government stocks10.2. Of which: holding organisation's stocks10.3. Of which: other stocks
+11. Stocks held abroad designated definitely for import stocks
+Stocks not included in category 10 which belong to the reporting state but which are held in another state
+and awaiting import there.
+12. Other stocks in bonded areas
+Other stocks in the national territory not included in the above categories.
+13. Pipeline fill
+Oil (crude oil and petroleum products) contained in pipelines, necessary to maintain the flow in the
+pipelines.L 304/56 EN Official Journal of the European Union 14.11.2008

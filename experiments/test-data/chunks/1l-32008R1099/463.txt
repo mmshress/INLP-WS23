@@ -1,0 +1,1 @@
+Includes energy used for pump stations and maintenance of the pipeline.Excludes energy used for the pipeline distribution of natural or manufactured gas, hot water or steam from the

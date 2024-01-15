@@ -1,0 +1,28 @@
+1.2.1. Supply sector
+The following aggregates apply to hard coal, total and black lignite, brown coal and peat:
+1. Production
+2. Recovered products
+Slurries and waste-heap shale recovered by mines.
+3. Imports
+3.1. Of which: intra-EU imports
+4. Exports4.1. Of which: intra-EU exports5. Stock changes
+Quantities held by mines and importers.Excludes consumer stocks (e.g. those held in power stations and coking plants) except stocks held by
+consumers who import directly.
+A stock build is shown as a negative number and a stock draw is shown as a positive number.
+6. Calculated inland deliveries
+Total amount of product calculated to have been delivered for inland consumption. It is defined as:production + recovered products + imports −exports + stock changes
+7. Observed internal deliveries
+Quantities delivered to the internal market. Equal to the total of the deliveries to the different types of
+consumers. A difference may occur between the calculated and observed deliveries.
+7.1. Of which: producers' own use
+Internal use in production units.Excludes consumption in pit-head power stations, pit-head patent fuel plants, pit-head coke oven plants
+and deliveries to colliery staff.
+7.2. Of which: main activity power stations7.3. Of which: autoproducer power stations in coal mines7.4. Of which: coking plants7.5. Of which: patent fuel plants
+Quantities used for transformation in patent fuel plants (pithead and independent).
+7.6. Of which: total industry (without iron and steel industry)
+7.7. Of which: iron and steel industry7.8. Of which: others (services, households, etc.)
+Quantities of fuel to households (including colliery coal supplied to workers in mines and associated
+plants) and services (administrations, shops, etc.) and also to sectors not elsewhere specified (district
+heating, transport, etc.).
+8. Closing stocks8.1. Of which: mines8.2. Of which: importers8.3. Of which: at coking plants
+Applies to hard coal only.L 304/50 EN Official Journal of the European Union 14.11.2008

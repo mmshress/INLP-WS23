@@ -1,0 +1,1 @@
+Excludes own use by plant, used for pumped storage, heat pumps and electric boilers.

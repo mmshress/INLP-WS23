@@ -1,0 +1,1 @@
+Include stocks which are subject to government control. This definition does not include other consumer

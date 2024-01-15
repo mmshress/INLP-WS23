@@ -1,0 +1,1 @@
+Quantities used as a fuel for heating and operation of equipment should not be declared here, but declared as

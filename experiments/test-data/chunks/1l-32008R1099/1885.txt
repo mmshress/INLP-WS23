@@ -1,0 +1,1 @@
+Stocks not included in category 10 which belong to the reporting state but which are held in another state

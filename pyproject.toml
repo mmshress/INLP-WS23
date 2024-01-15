@@ -20,7 +20,8 @@ dev = [
     "pytest",
     "pytest-cov",
     "mypy",
-    "flake8"
+    "flake8",
+    "pdm"
 ]
 
 [project.scripts]

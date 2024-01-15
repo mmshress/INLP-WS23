@@ -1,0 +1,1 @@
+Quantities of fuels used to produce electricity.Fuels used by plants containing at least one CHP unit are to be reported under Autoproducer CHP plants.

@@ -1,0 +1,40 @@
+Gasworks/gasification works
+Quantities consumed as energy at gasworks and coal gasification plants.
+Blast furnaces
+Quantities consumed as energy at blast furnaces.
+Coal liquefaction
+Quantities consumed as energy at coal liquefaction plants.
+Petroleum refineries
+Quantities consumed as energy at petroleum refineries.
+Oil and gas extraction
+Quantities consumed as fuel in the oil and gas extraction process and in natural gas processing plants.Excludes pipeline losses (to be reported as distribution losses) and energy quantities used to operate pipelines (to be
+reported in the transport sector).
+Total final consumption
+Defined (calculated) as:= total non-energy use + final energy consumption (industry + transport + other sectors)It excludes deliveries for transformation, use by the energy producing industries, and distribution losses.
+Non-energy use
+Energy products used as raw materials in the different sectors; that is, not consumed as a fuel or transformed into
+another fuel.
+2.3. Energy end-use specification
+Final energy consumption
+Total energy consumption in industry, transport and other sectors.
+Industry sector
+This refers to fuel quantities consumed by the industrial undertaking in support of its primary activities.For heat-only or CHP plants, only quantities of fuels consumed for the production of heat used by the plant itself are
+applicable. Quantities of fuels consumed for the production of heat that is sold, and for the production of electricity,
+should be reported under the appropriate transformation sector.
+Iron and steelChemical (including petrochemical)
+Chemical and petrochemical industries.
+Non-ferrous metals
+Non-ferrous metals industries.
+Non-metallic minerals
+Glass, ceramic, cement and other building materials industries.
+Transport equipment
+Industries related to the equipment used for transport.
+Machinery
+Fabricated metal products, machinery and equipment other than transport equipment.
+Mining and quarrying
+Excludes energy producing industries.
+Food, beverages and tobaccoPulp, paper and printing
+Includes production of recorded media.
+Wood and wood products (other than pulp and paper)
+Construction
+Textile and leather14.11.2008 EN Official Journal of the European Union L 304/9

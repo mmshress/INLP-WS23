@@ -1,0 +1,47 @@
+Energy product Definition
+17. White spirit and SBP Refined distillate intermediates with a distillation in the naphtha/kerosene range.
+They are subdivided as:
+— Industrial spirit (SBP): light oils distilling between 30oC and 200oC. There are
+7 or 8 grades of industrial spirit, depending on the position of the cut in the
+distillation range. The grades are defined according to the temperaturedifference between the 5 % volume and 90 % volume distillation points (which
+is not more than 60
+oC).
+— White spirit: industrial spirit with a flash point above 30oC. The distillation
+range of white spirit is 135oC to 200oC.
+18. Lubricants Hydrocarbons produced from distillate by-product; they are mainly used to reduce
+friction between bearing surfaces.
+Includes all finished grades of lubricating oil, from spindle oil to cylinder oil, and
+those used in greases, motor oils and all grades of lubricating oil base stocks.
+19. Bitumen Solid, semi-solid or viscous hydrocarbon with a colloidal structure, being brown to
+black in colour, obtained as a residue in the distillation of crude oil, by vacuumdistillation of oil residues from atmospheric distillation. Bitumen is often referred to
+as asphalt and is primarily used for construction of roads and for roofing material.
+Includes fluidised and cut back bitumen.
+20. Paraffin waxes These are saturated aliphatic hydrocarbons. These waxes are residues extracted when
+dewaxing lubricant oils. They have a crystalline structure which is more-or-less fine
+according to the grade. Their main characteristics are as follows: they are colourless,odourless and translucent, with a melting point above 45
+oC.
+21. Petroleum coke Black solid by-product, obtained mainly by cracking and carbonising petroleum
+derived feedstock, vacuum bottoms, tar and pitches in processes such as delayed
+coking or fluid coking. It consists mainly of carbon (90 to 95 %) and has a low ash
+content. It is used as a feedstock in coke ovens for the steel industry, for heatingpurposes, for electrode manufacture and for production of chemicals. The two most
+important qualities are ‘green coke’ and ‘calcinated coke’.
+Includes ‘catalyst coke’ deposited on the catalyst during refining processes; this coke
+is not recoverable and is usually burned as refinery fuel.
+22. Other products All products not specifically mentioned above, for example: tar and sulphur.
+Includes aromatics (e.g. BTX or benzene, toluene and xylene) and olefins (e.g.
+propylene) produced within refineries.
+4.2. List of aggregates
+The following list of aggregates shall be declared for all energy products listed in the previous paragraph unless
+otherwise specified.
+4.2.1. Supply and transformation sectors
+The following table applies to crude oil, NGL, refinery feedstocks, additives, biofuels and other hydrocarbons only:
+1. Indigenous production
+Not applicable for refinery feedstocks and for biofuels.
+2. From other sources additives, biofuels and other hydrocarbons, the production of which has already been
+covered in other fuel balances.
+Not applicable for crude oil, NGL and refinery feedstocks.
+2.1. Of which: from coal
+Includes liquids produced from coal liquefaction plants, liquid output from coke ovens.
+2.2. Of which: from natural gas
+The manufacture of synthetic gasoline may require natural gas as feedstock. The amount of gas for
+methanol manufacture is declared according to Chapter 2, while the receipts of methanol are declared here.14.11.2008 EN Official Journal of the European Union L 304/35

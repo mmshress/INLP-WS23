@@ -1,0 +1,1 @@
+Total gas storage capacity, minus the cushion gas. The cushion gas is the total volume of gas required as a

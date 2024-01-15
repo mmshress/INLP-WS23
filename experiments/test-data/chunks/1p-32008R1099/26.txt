@@ -1,0 +1,22 @@
+1.11. Of which: liquefaction (LNG)/regasification plants
+1.12. Of which: gasification plants (biogas)1.13. Of which: gas-to-liquids1.14. Of which: not elsewhere specified —energy
+3.2.3. Energy end-use specification
+1. Industry sector
+1.1. Of which: iron and steel
+1.2. Of which: chemical and petrochemical
+1.3. Of which: non-ferrous metals1.4. Of which: non-metallic minerals1.5. Of which: transport equipment1.6. Of which: machinery1.7. Of which: mining and quarrying
+1.8. Of which: food, beverages and tobacco
+1.9. Of which: pulp, paper and printing1.10. Of which: wood and wood products1.11. Of which: construction1.12. Of which: textile and leather1.13. Of which: not elsewhere specified —industry
+2. Transport sector
+2.1. Of which: rail2.2. Of which: pipeline transport2.3. Of which: not elsewhere specified —transport
+3. Residential sector4. Commercial and public services
+5. Agriculture/forestry
+6. Fishing7. Not elsewhere specified —other
+3.2.4. Imports and exports
+Imports and exports of energy quantities of electricity and heat by country.
+3.2.5. Net production of electricity generation and net heat production from autoproducers
+Net production of electricity and net generation of heat from autoproducers of electricity generation and heat
+production are to be declared, for CHP plants, for electricity (only) plants and for heat (only) plants separately, in the
+following plants or activities:
+1. Total energy sector
+1.1. Of which: coal minesL 304/26 EN Official Journal of the European Union 14.11.2008

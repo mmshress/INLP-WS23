@@ -1,8 +1,12 @@
 .idea/
 
 LLMLegalAssistantDataset/
-dataset*/
-*key.txt
+dataset/
+datasets/
+repilcate-api-key.*
+hf-api-key.*
+*api-key*
+api.*
 
 __pycache__/
 .mypy_cache/

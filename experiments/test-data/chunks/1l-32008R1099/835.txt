@@ -1,0 +1,1 @@
+Type of storage, such as depleted gas field, salt cavern, etc.

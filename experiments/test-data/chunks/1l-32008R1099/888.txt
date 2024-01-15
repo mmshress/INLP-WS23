@@ -1,0 +1,1 @@
+The aggregates mentioned in the next table must be declared as totals, for electricity and heat separately, wherever

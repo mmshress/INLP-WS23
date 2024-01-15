@@ -1,0 +1,1 @@
+actual amount of coal consumed in the transformation process.

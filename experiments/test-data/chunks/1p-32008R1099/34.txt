@@ -1,0 +1,51 @@
+Energy product Definition
+9. Naphtha Naphtha is a feedstock destined for either the petrochemical industry (e.g. ethylene
+manufacture or aromatics production) or for gasoline production by reforming or
+isomerisation within the refinery.
+Naphtha comprises material in the 30oC and 210oC distillation range or part of this
+range.
+10. Motor gasoline Motor gasoline consists of a mixture of light hydrocarbons distilling between 35oC
+and 215oC. It is used as a fuel for land based spark ignition engines. Motor gasoline
+may include additives, oxygenates and octane enhancers, including lead compounds
+such as TEL and TML.
+Includes motor gasoline blending components (excluding additives/oxygenates), e.g.
+alkylates, isomerate, reformate, cracked gasoline destined for use as finished motor
+gasoline.
+10.1. Of which: biogaso-
+lineThe definitions of Chapter 5, Renewable energy and energy from waste, apply.
+11. Aviation gasoline Motor spirit prepared especially for aviation piston engines, with an octane number
+suited to the engine, a freezing point of - 60oC and a distillation range usually within
+the limits of 30oC and 180oC.
+12. Gasoline type jet fuel
+(naphtha type jet
+fuel or JP4)This includes all light hydrocarbon oils for use in aviation turbine power units,
+distilling between 100oC and 250oC. They are obtained by blending kerosenes and
+gasoline or naphthas in such a way that the aromatic content does not exceed 25 %
+in volume, and the vapour pressure is between 13,7 kPa and 20,6 kPa.
+13. Kerosene type jet
+fuelDistillate used for aviation turbine power units. It has the same distillation
+characteristics between 150oC and 300oC (generally not above 250oC) and flash
+point as kerosene. In addition, it has particular specifications (such as freezing point)
+which are established by the International Air Transport Association (IATA).
+Includes kerosene blending components.
+14. Other kerosene Refined petroleum distillate used in sectors other than aircraft transport. It distils
+between 150oC and 300oC.
+15. Gas/diesel oil (distil-
+late fuel oil)Gas/diesel oil is primarily a medium distillate distilling between 180oC and 380oC.
+Includes blending components. Several grades are available depending on uses.
+15.1. Of which: transport
+dieselOn-road diesel oil for diesel compression ignition (cars, trucks, etc.), usually of low
+sulphur content.
+15.1.1. From 15.1, of
+which: bio-dieselsThe definitions of Chapter 5, Renewable energy and energy from waste, apply.
+15.2 Of which: heating
+and other gasoilLight heating oil for industrial and commercial uses, marine diesel and diesel used in
+rail traffic, other gas oil, including heavy gas oils which distil between 380oC and
+540oC and which are used as petrochemical feedstocks.
+16. Fuel oil All residual (heavy) fuel oils (including those obtained by blending). Kinematic
+viscosity is above 10 cSt at 80oC. The flash point is always above 50oC and density
+is always more than 0,90 kg/l.
+16.1. Of which: low
+sulphur contentHeavy fuel oil with sulphur content lower than 1 %.
+16.2. Of which: high
+sulphur contentHeavy fuel oil with sulphur content of 1 % or higher.L 304/34 EN Official Journal of the European Union 14.11.2008

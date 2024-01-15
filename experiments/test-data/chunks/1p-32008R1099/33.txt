@@ -1,0 +1,55 @@
+4. OIL AND PETROLEUM PRODUCTS
+4.1. Applicable energy products
+Unless otherwise specified this data collection applies to all of the following energy products:
+Energy product Definition
+1. Crude oil Crude oil is a mineral oil of natural origin comprising a mixture of hydrocarbons and
+associated impurities, such as sulphur. It exists in the liquid phase under normalsurface temperature and pressure and its physical characteristics (density, viscosity,
+etc.) are highly variable. This category includes field or lease condensate recovered
+from associated and non-associated gas where it is commingled with the commercial
+crude oil stream.
+2. NGL NGL are liquid or liquefied hydrocarbons recovered from natural gas in separation
+facilities or gas processing plants. Natural gas liquids include ethane, propane, butane
+(normal and iso-), (iso) pentane and pentanes plus (sometimes referred to as natural
+gasoline or plant condensate).
+3. Refinery feedstocks A refinery feedstock is a processed oil destined for further processing (e.g. straight
+run fuel oil or vacuum gas oil) excluding blending. With further processing, it will be
+transformed into one or more components and/or finished products. This definition
+also covers returns from the petrochemical industry to the refining industry (e.g.
+pyrolysis gasoline, C4 fractions, gasoil and fuel oil fractions).
+4. Additives/oxygen-
+atesAdditives are non-hydrocarbon compounds added to or blended with a product to
+modify fuel properties (octane, cetane, cold properties, etc.):
+— oxygenates, such as alcohols (methanol, ethanol), ethers (such as MTBE (methyl
+tertiary butyl ether), ETBE (ethyl tertiary butyl ether), TAME (tertiary amyl
+methyl ether)),
+— esters (e.g. rapeseed or dimethylester, etc.),
+— chemical compounds (such as TML, TEL and detergents).
+Note: quantities of additives/oxygenates (alcohols, ethers, esters and other chemical
+compounds) reported in this category should relate to the quantities destined for
+blending with fuels or for fuel use.
+4.1. Of which: biofuels Biogasoline and bio-diesels. The definitions of Chapter 5, Renewable energy and
+energy from waste, apply.
+Quantities of liquid biofuels reported in this category relate to the biofuel and not to
+the total volume of liquids into which the biofuels are blended.
+Excludes all trade of biofuels which have not been blended with transport fuels (i.e.
+in their pure form); these should be reported as per Chapter 5. The biofuels traded as
+part of transport fuels should be reported in the appropriate product indicating the
+biofuel portion.
+5. Other hydrocarbons Synthetic crude oil from tar sands, shale oil, etc., liquids from coal liquefaction (see
+Chapter 1), output of liquids from natural gas conversion into gasoline (see
+Chapter 2), hydrogen and emulsified oils (e.g. orimulsion).
+Excludes oil shale production, for which Chapter 1 applies.The production of shale oil (secondary product) is to be reported as ‘from other
+sources’ in the ‘other hydrocarbons category’.
+6. Refinery gas (not
+liquefied)Refinery gas includes a mixture of non-condensible gases mainly consisting of
+hydrogen, methane, ethane and olefins obtained during distillation of crude oil or
+treatment of oil products (e.g. cracking) in refineries. This also includes gases which
+are returned from the petrochemical industry.
+7. Ethane A naturally gaseous straight-chain hydrocarbon (C
+2H6) extracted from natural gas
+and refinery gas streams.
+8. LPG LPG are light paraffinic hydrocarbons derived from the refinery processes, crude oil
+stabilisation and natural gas processing plants. They consist mainly of propane
+(C3H8) and butane (C 4Hl0) or a combination of the two. They could also include
+propylene, butylene, isopropylene and isobutylene. LPG are normally liquefied under
+pressure for transportation and storage.14.11.2008 EN Official Journal of the European Union L 304/33

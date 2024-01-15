@@ -1,0 +1,20 @@
+1.2. Of which: oil and gas extraction
+1.3. Of which: patent fuel plants1.4. Of which: coke ovens1.5. Of which: BKB/PB plants1.6. Of which: gasworks1.7. Of which: blast furnaces
+1.8. Of which: petroleum refineries
+1.9. Of which: coal liquefaction plants1.10. Of which: liquefaction (LNG)/regasification plants1.11. Of which: gasification plants (biogas)1.12. Of which: gas-to-liquids1.13. Of which: charcoal production plants
+1.14. Of which: not elsewhere specified —energy
+2. All other sectors: identical to the aggregate list as per ‘3.2.3 Energy end-use specification’.
+3.2.6. Inputs to autoproducers of electricity and heat generation
+Inputs to autoproducers of electricity and heat generation are to be declared separately for autoproducer electricity
+plants, autoproducer CHP plants and autoproducer heat plants.
+1. For solid fuels and manufactured gases used by autoproducers, quantities must be reported from the
+following energy products: anthracite, coking coal, other bituminous coal, sub-bituminous coal, lignite/brown coal, peat, patent fuel, coke oven coke, gas coke, coal tar, BKB/PB, gasworks gas, coke oven gas, blastfurnace gas and oxygen steel furnace gas. Their input quantities must be reported for the plants in thefollowing activities:
+1. Total energy sector
+1.1. Of which: coal mines
+1.2. Of which: patent fuel plants
+1.3. Of which: coke ovens1.4. Of which: BKB/PB plants1.5. Of which: gasworks1.6. Of which: blast furnaces1.7. Of which: petroleum refineries
+1.8. Of which: coal liquefaction
+1.9. Of which: not elsewhere specified —energy
+2. Industry sector2.1. Of which: iron and steel2.2. Of which: chemical and petrochemical2.3. Of which: non-ferrous metals
+2.4. Of which: non-metallic minerals
+2.5. Of which: transport equipment14.11.2008 EN Official Journal of the European Union L 304/27

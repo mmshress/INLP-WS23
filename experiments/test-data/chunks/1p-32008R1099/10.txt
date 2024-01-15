@@ -1,0 +1,42 @@
+Not elsewhere specified —industry
+Consumption in sectors which is not covered above.
+Transport sector
+Energy used in all transport activities irrespective of the economic sector in which the activity occurs.
+Transport sector —rail
+All consumption for use in rail traffic, including industrial railways.
+Transport sector —domestic navigation
+Quantities delivered to vessels of all flags not engaged in international navigation (see International marine bunkers).
+The domestic/international split should be determined on the basis of port of departure and port of arrival and not by
+the flag or nationality of the ship.
+Transport sector —road
+Quantities used in road vehicles.Includes fuel used by agricultural vehicles on highways and lubricants for use in road vehicles.
+Excludes energy used in stationary engines (see other sectors), for non-highway use in tractors (see agriculture),
+military use in road vehicles (see other sectors —not elsewhere specified), bitumen used in road surfacing and energy
+used in engines at construction sites (see industry subsector construction).
+Transport sector —pipeline transport
+Quantities used as energy in the support and operation of pipelines transporting gases, liquids, slurries and other
+commodities.
+Includes energy used for pump stations and maintenance of the pipeline.Excludes energy used for the pipeline distribution of natural or manufactured gas, hot water or steam from the
+distributor to final users (to be reported in the energy sector), energy used for the final distribution of water tohousehold, industrial, commercial and other users (to be included in commercial and public services) and losses
+occurring during this transport between distributor and final users (to be reported as distribution losses).
+Transport sector —international aviation
+Quantities of aviation fuels delivered to aircraft for international aviation. The domestic/international split should be
+determined on the basis of departure and landing locations and not by the nationality of the airline.
+Excludes fuels used by airlines for their road vehicles (to be reported in the transport sector —not elsewhere specified)
+and military use of aviation fuels (to be reported in the other sectors —not elsewhere specified).
+Transport sector —domestic aviation
+Quantities of aviation fuels delivered to aircraft for domestic aviation —commercial, private, agricultural, etc.
+Includes fuel used for purposes other than flying, e.g. bench testing of engines. The domestic/international split should
+be determined on the basis of departure and landing locations and not by the nationality of the airline.
+Excludes fuels used by airlines for their road vehicles (to be reported in the transport sector —not elsewhere specified)
+and military use of aviation fuels (to be reported in the other sector —not elsewhere specified).
+Transport sector —not elsewhere specified
+Quantities used for transport activities not included elsewhere.Includes fuels used by airlines for their road vehicles and fuels used in ports for ships' unloaders, various types of
+cranes.
+To be declared is what is included under this heading.
+Other sectors
+Sectors not specifically mentioned or not belonging to energy, industry or transport.
+Other sectors —commercial and public services
+Fuels consumed by business and offices in the public and private sectors.
+Other sectors —residential
+To be declared are fuels consumed by all households, including ‘households with employed persons’.L 304/10 EN Official Journal of the European Union 14.11.2008

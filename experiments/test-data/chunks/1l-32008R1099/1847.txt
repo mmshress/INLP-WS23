@@ -1,0 +1,1 @@
+tankers (when port of departure and destination are in the same country), tankers in a port of a member

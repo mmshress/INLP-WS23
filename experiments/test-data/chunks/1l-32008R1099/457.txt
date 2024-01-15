@@ -1,0 +1,1 @@
+Excludes energy used in stationary engines (see other sectors), for non-highway use in tractors (see agriculture),

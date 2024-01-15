@@ -1,0 +1,53 @@
+Energy product Definition
+10. Coal tar A result of the destructive distillation of bituminous coal. Coal tar is the liquid by-
+product of the distillation of coal to make coke in the coke oven process or it is
+produced from brown coal (low-temperature tar). Coal tar can be further distilled
+into different organic products (e.g. benzene, toluene, naphthalene), which normally
+would be reported as a feedstock to the petrochemical industry.
+11. BKB
+(brown coal bri-
+quettes)BKB is a composition fuel manufactured from lignite/brown coal, produced by
+briquetting under high pressure without the addition of a binding agent. These
+figures include peat briquettes, dried lignite fines and dust.
+12. Gasworks gas Covers all types of gases produced in public utility or private plants, whose main
+purpose is manufacture, transport and distribution of gas. It includes gas produced
+by carbonisation (including gas produced by coke ovens and transferred to gasworks
+gas), by total gasification with or without enrichment with oil products (LPG,
+residual fuel oil, etc.), and by reforming and simple mixing of gases and/or air,
+reported under the rows ‘from other sources’. Under the transformation sector
+identify amounts of gasworks gas transferred to blended natural gas which will bedistributed and consumed through the natural gas grid.
+The production of other coal gases (i.e. coke oven gas, blast furnace gas and oxygen
+steel furnace gas) should be reported in the columns concerning such gases, and not
+as production of gasworks gas. The coal gases transferred to gasworks plants should
+then be reported (in their own column) in the transformation sector in the gasworks
+plants row. The total amount of gasworks gas resulting from transfers of other coal
+gases should appear in the production line for gasworks gas.
+13. Coke oven gas Obtained as a by-product of the manufacture of coke oven coke for the production
+of iron and steel.
+14. Blast furnace gas Produced during the combustion of coke in blast furnaces in the iron and steel
+industry. It is recovered and used as a fuel partly within the plant and partly in othersteel industry processes or in power stations equipped to burn it. The quantity of fuel
+should be reported on a gross calorific value basis.
+15. Oxygen steel furnace
+gasBy-product of the production of steel in an oxygen furnace, recovered on leaving the
+furnace. The gas is also known as converter gas, LD gas or BOS gas.
+16. Hard coal The term ‘hard coal’ refers to coal of gross calorific value greater than 23 865 kJ/kg
+(5 700 kcal/kg) on an ashfree but moist basis and with a mean random reflectance of
+vitrinite of at least 0,6. Hard coal comprises all energy products from 1 to 3 together
+(anthracite, coking coal and other bituminous coal).
+1.2. List of aggregates
+The following list of aggregates shall be declared for all energy products listed in the previous paragraph unless
+otherwise specified.
+Annex A applies for explanations of terms for which a specific explanation is not supplied in this Annex.
+1.2.1. Supply and transformation sectors
+1. Production
+1.1. Of which: underground
+Applicable only for anthracite, coking coal, other bituminous coal, sub-bituminous coal and lignite/brown
+coal.
+1.2. Of which: surface
+Applicable only for anthracite, coking coal, other bituminous coal, sub-bituminous coal and lignite/brown
+coal.
+2. From other sources
+This consists of two components:— recovered slurries, middlings and other low-grade coal products, which cannot be classified
+according to type of coal. This includes coal recovered from waste piles and other waste receptacles,
+— supplies of fuel of which production is covered in other fuel energy balances, but for which
+consumption will occur in the coal energy balance.14.11.2008 EN Official Journal of the European Union L 304/13

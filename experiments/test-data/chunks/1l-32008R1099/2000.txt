@@ -1,0 +1,1 @@
+Energy quantities must be expressed in GWh.

@@ -1,0 +1,1 @@
+Quantities used to produce gas in gasworks and coal gasification plants.Quantities used as a fuel for heating and operation of equipment should not be included here, but declared as
