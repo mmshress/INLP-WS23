@@ -10,10 +10,10 @@ services:
       - 9300:9300
 
   opensearch-dashboards:
-    image: opensearchproject-dashboards/opensearch:latest
+    image: opensearchproject/opensearch-dashboards:latest
     container_name: opensearchdashboards_llmla
     environment:
-      OPENSEARCH_HOSTS=["https://opensearch:9200", "https://localhost:9200"]
+      OPENSEARCH_HOSTS: '["https://opensearch:9200", "https://localhost:9200"]'
     ports:
       - 5601:5601
     expose:
