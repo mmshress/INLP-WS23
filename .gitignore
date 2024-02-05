@@ -8,9 +8,9 @@ datasets
 # keys
 *api-key*
 
+# cache
 __pycache__/
 .mypy_cache/
-
 LLMLegalAssistant.egg-info/
 
 # add environment name here if created in project directory
