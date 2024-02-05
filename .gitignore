@@ -1,7 +1,12 @@
 .idea/
 
+# datasets
 LLMLegalAssistantDataset/
-dataset/
+dataset
+datasets
+
+# keys
+*api-key*
 
 __pycache__/
 .mypy_cache/
