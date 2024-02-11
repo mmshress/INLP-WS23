@@ -1,6 +1,11 @@
 <h1 align="center" style="margin-top: 0px;"><b>LLM Legal Assistant</b> - A assistant that gives opinion on the questions that falls under EU law</h2>
 
-<h2 align="center" style="margin-top: 0px;">Natural Language Processing using Transformers</h2>
+<h2 align="center" style="margin-top: 0px;">Natural Language Processing using Transformers <br>
+ asmaM1 - Asma Motmem 3769398
+ <br> KushalGaywala - Kushal Gaywala 3769104
+<br> mmshress - Mohit Shrestha 3769398
+ <br> sid-code14 - Siddhant Tripathi 3768501
+</h2>
 
 ### Requirements
 
