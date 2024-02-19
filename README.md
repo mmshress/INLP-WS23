@@ -48,14 +48,14 @@ which python3.11
 - Now, use that path to create a virtual environment
 
 ```bash
-/path/to/python3.11 -m venv .llmcoder.env
+/path/to/python3.11 -m venv .env
 # on windows,
 ## in powershell
-.llmcoder.env/Scripts/activate
+.env/Scripts/activate
 ## in cmd
-.llmcoder.env/Scripts/activate.bat
+.env/Scripts/activate.bat
 # on linux
-source .llmcoder.env/bin/activate
+source .env/bin/activate
 ```
 
 #### Setup package
