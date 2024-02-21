@@ -5,7 +5,8 @@ from bs4 import BeautifulSoup
 from markdownify import markdownify as md
 from tqdm import tqdm
 
-from llmlegalassistant.utils import Utils
+from llmlegalassistant.utils import get_articles_uri, get_column, \
+    get_file_dir, get_metadata
 
 
 class ArticlesScraper:
@@ -15,16 +16,14 @@ class ArticlesScraper:
         # EUR-LEX doesn't return a 404 status code
         self.DOES_NOT_EXIST_STRING = "The requested document does not exist."
 
-        self.utils = Utils(self.verbose)
-
     def fetch(self, output_file_type: str, no_samples: int) -> None:
         # contains celex number and category of the article
-        metadata_df = self.utils.get_metadata()
+        metadata_df = get_metadata()
         if metadata_df is None:
             return
 
         # get all or specified number of samples
-        celex_column = self.utils.get_column(
+        celex_column = get_column(
             metadata_df.head(no_samples) if no_samples != 0 else metadata_df,
             "celexnumber",
         )
@@ -36,7 +35,7 @@ class ArticlesScraper:
             print("[ArticlesScraper] Downloading articles...")
 
         # Create output dir or remove all files inside it
-        output_dir = self.utils.get_file_dir(output_file_type)
+        output_dir = get_file_dir(output_file_type)
         for celex_number in tqdm(celex_column, desc="Downloading", unit="article"):
             # Fetch the articles
             origin_article = self.fetch_article(celex_number)
@@ -58,7 +57,7 @@ class ArticlesScraper:
             print(f"[ArticleScraper] {output_file_type} Articles Downloaded!")
 
     def fetch_article(self, celex_number: str) -> requests.Response | None:
-        response = requests.get("".join([self.utils.get_articles_uri(), celex_number]))
+        response = requests.get("".join([get_articles_uri(), celex_number]))
         if response is not None and self.DOES_NOT_EXIST_STRING not in response.text:
             return response
 
