@@ -2,6 +2,7 @@ import os
 import shutil
 
 import pandas as pd
+import yaml
 
 from llmlegalassistant.config import Config
 
@@ -16,6 +17,7 @@ class Utils:
         self.CELEX_URI = self.config.CELEX_URI
         self.ARTICLES_DIR = self.config.ARTICLES_DIR
         self.DATASET_DIR = self.config.DATASET_DIR
+        self.CONFIG_DIR = self.config.CONFIG_DIR
         self.ARTICLES_URI = self.config.ARTICLES_URI
         self.ARTICLE_FILE_DIR = self.ARTICLES_DIR
 
@@ -35,6 +37,32 @@ class Utils:
 
     def get_articles_dir(self) -> str:
         return self.ARTICLES_DIR
+
+    def load_configs(self, configurations: list[str] | None = None) -> list[dict]:
+        """
+        This function returns the corresponding configuration from
+        the config file at the project root the configuration file
+        is used for evaluation
+
+        Parameters
+        ----------
+        configurations : list[str]
+            list of configurations that are needed if none is passed
+            then all the configurations are expected
+
+        Returns
+        -------
+        list[dict]
+            returns all configurations or only the ones that are requested
+        """
+        config_file = os.path.join(self.CONFIG_DIR, "configs.yaml")
+        with open(config_file, "r") as configfile:
+            configs = yaml.safe_load(configfile)
+
+        if configurations is not None:
+            return [config for config in configs if config["config"] in configurations]
+
+        return configs
 
     def get_file_dir(self, file_type: str) -> str:
         self.ARTICLE_FILE_DIR = self.get_article_file_dir(

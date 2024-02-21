@@ -1,14 +1,15 @@
 from typing import List
-import langchain_core.embeddings
-from langchain.embeddings.huggingface import HuggingFaceEmbeddings
-from llama_index.embeddings import OpenAIEmbedding
 
-class EmbedWrapper(langchain_core.embeddings.Embeddings):
-    def __init__(self, model_name: str, source: str):
-        if source == 'huggingface':
+from langchain.embeddings.huggingface import HuggingFaceEmbeddings
+from langchain.embeddings.openai import OpenAIEmbeddings
+
+
+class EmbedWrapper:
+    def __init__(self, model_name: str, source: str) -> None:
+        if source == "huggingface":
             self.model = HuggingFaceEmbeddings(model_name=model_name)
-        elif source == 'openai':
-            self.model = OpenAIEmbedding(model=model_name)
+        elif source == "openai":
+            self.model = OpenAIEmbeddings(model=model_name)
         else:
             raise ValueError("Unsupported source. Choose 'huggingface' or 'openai'.")
 
