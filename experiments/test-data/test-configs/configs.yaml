@@ -1,0 +1,32 @@
+- config: "recursive_512_50__gpt4all__vindex_10_1__llama_7b"
+  splitter:
+    type: "RecursiveCharacterTextSplitter"
+    chunk_size: 512
+    overlap_size: 50
+  embed: "GPT4All"
+  store:
+    type: "Opensearch"
+    index: "recursive_gpt4all_512_50"
+  retriever:
+    type: "VectorIndexRetriever"
+    top_k: 10
+    num_queries: 1
+  model:
+    name: "llama"
+    type: "7b"
+- config: "sentence_512_50__gpt4all__vindex_10_1__llama_7b"
+  splitter:
+    type: "SentenceSplitter"
+    chunk_size: 512
+    overlap_size: 50
+  embed: "GPT4All"
+  store:
+    type: "Opensearch"
+    index: "sentence_gpt4all_512_50"
+  retriever:
+    type: "VectorIndexRetriever"
+    top_k: 10
+    num_queries: 1
+  model:
+    name: "llama"
+    type: "7b"
