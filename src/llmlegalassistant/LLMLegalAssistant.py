@@ -1,0 +1,6 @@
+class LLMLegalAssistant:
+    def __init__(self) -> None:
+        ...
+
+    def generate_query(self, question: str) -> list[str] | None:
+        ...

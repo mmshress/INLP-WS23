@@ -2,114 +2,132 @@ import os
 import shutil
 
 import pandas as pd
+import yaml
 
 from llmlegalassistant.config import Config
 
+config = Config()
 
-class Utils:
-    def __init__(self, verbose: bool = False):
-        self.verbose = verbose
 
-        self.config = Config()
+PROJECT_DIR = config.PROJECT_DIR
+CELEX_URI = config.CELEX_URI
+ARTICLES_DIR = config.ARTICLES_DIR
+DATASET_DIR = config.DATASET_DIR
+ARTICLES_URI = config.ARTICLES_URI
+CONFIG_DIR = config.CONFIG_DIR
+ARTICLE_FILE_DIR = ARTICLES_DIR
 
-        self.PROJECT_DIR = self.config.PROJECT_DIR
-        self.CELEX_URI = self.config.CELEX_URI
-        self.ARTICLES_DIR = self.config.ARTICLES_DIR
-        self.DATASET_DIR = self.config.DATASET_DIR
-        self.ARTICLES_URI = self.config.ARTICLES_URI
-        self.ARTICLE_FILE_DIR = self.ARTICLES_DIR
 
-        self.REPLICATE_API_KEY = self.config.REPLICATE_API_KEY
-        self.HF_API_KEY = self.config.HF_API_KEY
+def get_project_dir() -> str:
+    return PROJECT_DIR
 
-        self.get_article_file_dir = self.config.get_article_file_dir
 
-    def get_project_dir(self) -> str:
-        return self.PROJECT_DIR
+def get_articles_uri() -> str:
+    return ARTICLES_URI
 
-    def get_articles_uri(self) -> str:
-        return self.ARTICLES_URI
 
-    def get_dataset_dir(self) -> str:
-        return self.DATASET_DIR
+def get_dataset_dir() -> str:
+    return DATASET_DIR
 
-    def get_articles_dir(self) -> str:
-        return self.ARTICLES_DIR
 
-    def get_file_dir(self, file_type: str) -> str:
-        self.ARTICLE_FILE_DIR = self.get_article_file_dir(
-            self.ARTICLES_DIR, "".join([file_type, "s"])
-        )
-        try:
-            # makes article file type dir if doesn't exists
-            os.makedirs(self.ARTICLE_FILE_DIR, exist_ok=False)
-        except OSError:
-            # If article file type dir already exists,
-            # removes all old articles
-            if self.verbose:
-                print("[Utils] File directory already exists!")
+def get_articles_dir() -> str:
+    return ARTICLES_DIR
 
-            if self.verbose:
-                print("[Utils] Removing old articles...")
 
-            shutil.rmtree(self.ARTICLE_FILE_DIR)
+def get_file_dir(file_type: str) -> str:
+    # get article directory based on the file type
+    ARTICLE_FILE_DIR = config.get_article_file_dir(
+        ARTICLES_DIR, "".join([file_type, "s"])
+    )
 
-            if self.verbose:
-                print("[Utils] Removed old articles!")
+    return ARTICLE_FILE_DIR
 
-            if self.verbose:
-                print("[Utils] Creating new articles...")
 
-            os.makedirs(self.ARTICLE_FILE_DIR, exist_ok=True)
+def load_configurations(configurations: list[str] | None = None) -> list[dict]:
+    """
+    This function returns the corresponding configuration from
+    the config file at the project root the configuration file
+    is used for evaluation
 
-            if self.verbose:
-                print("[Utils] Created new articles!")
+    Parameters
+    ----------
+    configurations : list[str]
+        list of configurations that are needed if none is passed
+        then all the configurations are expected
 
-        return self.ARTICLE_FILE_DIR
+    Returns
+    -------
+    list[dict]
+        returns all configurations or only the ones that are requested
+    """
+    configs = []
 
-    def get_metadata(self) -> pd.DataFrame | None:
-        if self.verbose:
-            print("[Utils] Loading metadata...")
+    config_file = os.path.join(CONFIG_DIR, "configs.yaml")
+    with open(config_file, "r") as config_file:
+        configs = yaml.safe_load(config_file)
 
-        metadata_df = pd.read_csv(self.CELEX_URI)
-        if len(metadata_df):
-            if self.verbose:
-                print("[Utils] Metadata loaded!")
-            return metadata_df
+    if configurations is not None:
+        return [config for config in configs if config["config"] in configurations]
 
-        if self.verbose:
-            print("[Utils] Metadata not found!")
+    return configs
 
+
+def get_files(file_type: str) -> list[str]:
+    # get article directory based on the file type
+    ARTICLE_FILE_DIR = config.get_article_file_dir(
+        ARTICLES_DIR, "".join([file_type, "s"])
+    )
+
+    return os.listdir(ARTICLE_FILE_DIR)
+
+
+def create_and_get_empty_file_dir(file_type: str) -> str:
+    # get article directory based on the file type
+    ARTICLE_FILE_DIR = config.get_article_file_dir(
+        ARTICLES_DIR, "".join([file_type, "s"])
+    )
+
+    try:
+        # makes article file type dir if doesn't exists
+        os.makedirs(ARTICLE_FILE_DIR, exist_ok=False)
+    except OSError:
+        # If article file type dir already exists,
+        # removes all old articles
+        shutil.rmtree(ARTICLE_FILE_DIR)
+        os.makedirs(ARTICLE_FILE_DIR, exist_ok=True)
+
+    return ARTICLE_FILE_DIR
+
+
+def get_metadata() -> pd.DataFrame | None:
+    metadata_df = pd.read_csv(CELEX_URI)
+    if len(metadata_df):
+        return metadata_df
+
+    return None
+
+
+def get_column(df: pd.DataFrame, column: str) -> pd.Series | None:
+    try:
+        column_series = df[column]
+        if not len(column_series):
+            raise KeyError(f"Column {column} is empty!")
+    except KeyError:
         return None
 
-    def get_column(self, df: pd.DataFrame, column: str) -> pd.Series | None:
-        if self.verbose:
-            print(f"[Utils] Loading {column} column...")
+    return column_series
 
-        try:
-            column_series = df[column]
-            if not len(column_series):
-                raise KeyError(f"Column {column} is empty!")
 
-            if self.verbose:
-                print(f"[Utils] Column {column} loaded!")
-        except KeyError:
-            if self.verbose:
-                print(f"[Utils] Column {column} not found!")
+def get_api_key(service: str) -> str | None:
+    api_key = ""
+    match service:
+        case "HuggingFace":
+            with open(config.HF_API_KEY, "r") as file:
+                api_key = file.read()
+        case "Replicate":
+            with open(config.REPLICATE_API_KEY, "r") as file:
+                api_key = file.read()
+        case _:
             return None
 
-        return column_series
-
-    def get_api_key(self, service: str) -> str | None:
-        api_key = ""
-        match service:
-            case "HuggingFace":
-                with open(self.HF_API_KEY, "r") as file:
-                    api_key = file.read()
-            case "Replicate":
-                with open(self.REPLICATE_API_KEY, "r") as file:
-                    api_key = file.read()
-            case _:
-                return None
-
-        return api_key
+    return api_key

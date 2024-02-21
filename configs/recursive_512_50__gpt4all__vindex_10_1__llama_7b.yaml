@@ -1,0 +1,15 @@
+splitter:
+  type: "RecursiveCharacterTextSplitter"
+  chunk_size: 512
+  overlap_size: 50
+embed: "GPT4All"
+store:
+  type: "opensearch"
+  index: "recursive_gpt4all_50"
+retriever:
+  type: "VectorIndexRetriever"
+  top_k: 10
+  num_queries: 1
+model:
+  name: "llama"
+  type: "7b"

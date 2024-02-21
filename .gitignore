@@ -1,11 +1,16 @@
 .idea/
 
+# datasets
 LLMLegalAssistantDataset/
-dataset/
+dataset
+datasets
 
+# keys
+*api-key*
+
+# cache
 __pycache__/
 .mypy_cache/
-
 LLMLegalAssistant.egg-info/
 
 # add environment name here if created in project directory
@@ -13,3 +18,6 @@ LLMLegalAssistant.egg-info/
 llmcoder.env/
 venv/
 .venv/
+
+# tests
+*test*.py

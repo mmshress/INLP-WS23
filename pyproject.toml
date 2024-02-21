@@ -51,11 +51,13 @@ exclude = '''
     \.git
     |env_setup
     |__pycache__
+    |\.venv
+    |experiments
 )/
 '''
 
 [tool.flake8]
-max-line-length = 200
+max-line-length = 500
 ignore = ["W501"]
 exclude = [
     ".git",
