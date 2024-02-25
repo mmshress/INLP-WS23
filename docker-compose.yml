@@ -5,16 +5,25 @@ services:
     container_name: opensearch_llmla
     environment:
       - discovery.type=single-node
+      - plugins.security.disabled=true
     ports:
       - 9200:9200
       - 9300:9300
+    networks:
+      - opensearch-net
 
   opensearch-dashboards:
     image: opensearchproject/opensearch-dashboards:latest
     container_name: opensearchdashboards_llmla
     environment:
-      OPENSEARCH_HOSTS: '["https://opensearch:9200", "https://localhost:9200"]'
+      OPENSEARCH_HOSTS: '["http://opensearch_llmla:9200"]'
+      DISABLE_SECURITY_DASHBOARDS_PLUGIN: true
     ports:
       - 5601:5601
     expose:
       - "5601"
+    networks:
+      - opensearch-net
+
+networks:
+  opensearch-net:

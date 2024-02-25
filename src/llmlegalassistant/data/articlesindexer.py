@@ -1,77 +1,82 @@
-# import os
+from langchain_core.embeddings import Embeddings
+from llama_index import ServiceContext, SimpleDirectoryReader, \
+    StorageContext, VectorStoreIndex
+from llama_index.vector_stores import OpensearchVectorClient, \
+    OpensearchVectorStore
 
-# from elasticsearch import Elasticsearch
+from llmlegalassistant.utils import Utils
 
-# from llmlegalassistant.utils import Utils
-
-
-# class ArticlesIndexer:
-#     def __init__(self, verbose=False,  host='localhost', port=9200):
-#         self.verbose = verbose
-
-#         # self.es = Elasticsearch([{'host': host, 'port': port}])
-#         self.elasticsearch = Elasticsearch("http://localhost:9200")
-#         self.utils = Utils()
-
-#     def index(self, index_name):
-#         files_dir = self.utils.get_file_dir("txt")
-
-#         self._create_index()
-#         for filename in os.listdir(files_dir):
-#             if filename.endswith(".txt"):
-#                 file_path = os.path.join(files_dir, filename)
-
-#                 with open(file_path, "r", encoding="utf-8") as file:
-#                     article = file.read()
-#                     celex_number = filename.split(".")[0]
-#                     result = self._upload_document(article, celex_number)
-
-#     def _create_index(self) -> None:
-#         schema = {
-#             "mappings": {
-#                 "properties": {
-#                     "legal_text": {"type": "text"},
-#                     "celex_number": {"type": "keyword"}
-#                 }
-#             }
-#         }
-
-#         # headers = self.es.transport.headers
-#         self.elasticsearch.indices.create(index=self.index_name, body=schema)
-
-#     def upload_document(self, document, id) -> any | None:
-#         body = {
-#             "celex": id,
-#             "document": document
-#         }
-
-#         result = self.elasticsearch.index(index=self.index_name, body=body)
-#         return result
-
-#     def upload_documents(self, index) -> None:
+# def metadata_add(x: str) -> str:
+#     if type(x) is str:
+#         return ", ".join(x)
 
 
-#     # Example usage
-#     def upload_documents(index_name):
+class ArticlesIndexer:
+    def __init__(
+        self,
+        embedding_model: Embeddings,
+        chunking_strategy: str,
+        verbose: bool = False,
+        host: str = "localhost",
+        port: int = 9200,
+    ) -> None:
+        embedding_model_index = embedding_model.model_name.split("/")[1].lower()
+        self.INDEX_NAME = f"{0}-{1}"
+        self.INDEX_BODY = {"settings": {"index": {"number_of_shards": 2}}}
+        self.verbose = verbose
+        self.client = OpensearchVectorClient(
+            f"http://{host}:{port}",
+            f"{embedding_model_index}-{chunking_strategy}",
+            dim=1024,
+            embedding_field="embedding",
+            text_field="chunk",
+            search_pipeline="hybrid-search-pipeline",
+        )
 
-#         es_populator = ElasticsearchPopulator(index_name='text')
-#         utils = Utils()
+        self.vector_store = OpensearchVectorStore(self.client)
+        self.storage_context = StorageContext.from_defaults(
+            vector_store=self.vector_store
+        )
+        self.service_context = ServiceContext.from_defaults(
+            embed_model=embedding_model, llm=None
+        )
+        self.utils = Utils()
+        # self.metadata_dataframe = self.create_metadata_dataframe()
 
-#         es_populator.create_index()
+    # def get_metadata(self, filename):
+    #     # This merged dataframe might contain duplicate rows, for metadata extraction we only use the first row found
+    #     celex_number = filename.split("/")[-1].split(".")[0]
+    #     metadata_row = self.metadata_dataframe[self.metadata_dataframe['CELEX number'] == celex_number].iloc[0]
+    #     return {"celex_number": celex_number,
+    #             'title': metadata_row["Title"],
+    #             'published_date': metadata_row["Date of publication"],
+    #             'start_date': metadata_row["Date of effect"],
+    #             'end_date': metadata_row["Date of end of validity"]
+    #             }
+    #
+    # def create_metadata_dataframe(self) -> pandas.DataFrame:
+    #     csv_dir = self.utils.get_dataset_dir() + "/rawfiles/"
+    #     dataframes = []
+    #     for filename in os.listdir(csv_dir):
+    #         if filename.endswith(".csv"):
+    #             file_path = os.path.join(csv_dir, filename)
+    #             dataframes.append(pandas.read_csv(file_path))
+    #     merged_df = pandas.concat(dataframes)
+    #     merged_df.replace('', pandas.NA, inplace=True)
+    #     merged_df = merged_df.groupby('CELEX number').agg({'Title': 'first',
+    #                                                        'Date of publication': 'first',
+    #                                                        'Date of effect': 'first',
+    #                                                        'Date of end of validity': 'first'}).reset_index()
+    #     return merged_df
 
-#         text_files_directory = utils.get_file_dir("txt")
+    def index_documents(self) -> VectorStoreIndex:
+        files_dir = self.utils.get_dataset_dir() + "/articles/txts/"
+        documents = SimpleDirectoryReader(files_dir).load_data()
+        return VectorStoreIndex.from_documents(
+            documents=documents,
+            storage_context=self.storage_context,
+            service_context=self.service_context,
+        )
 
-#         # Iterate over each text file in the directory  and extract celexnumber
-#         for filename in os.listdir(text_files_directory):
-#             if filename.endswith(".txt"):
-#                 file_path = os.path.join(text_files_directory, filename)
-
-#                 with open(file_path, 'r', encoding='utf-8') as file:
-#                     legal_text = file.read()
-
-#                     celex_number = os.path.splitext(filename)[0]
-
-#                     # Push the document to Elasticsearch
-#                     es_populator.push_document(legal_text=legal_text, celex_number=celex_number)
-#                     print("Index created successfully")
-# noqa: 401
+    def upload_documents(self) -> None:
+        pass
