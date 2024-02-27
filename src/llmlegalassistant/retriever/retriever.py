@@ -22,8 +22,7 @@ class RetrieverFactory:
 
                 return BM25Retriever(docstore=index.docstore, similarity_top_k=top_k)
             case "QueryFusionRetriever":
-                from llama_index.retrievers import BM25Retriever, \
-                    QueryFusionRetriever
+                from llama_index.retrievers import BM25Retriever, QueryFusionRetriever
 
                 vector_retriever = index.as_retriever(similarity_top_k=top_k)
                 bm25_retriever = BM25Retriever.from_defaults(

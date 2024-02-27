@@ -22,8 +22,8 @@ def get_project_dir() -> str:
     return PROJECT_DIR
 
 
-def get_articles_uri() -> str:
-    return ARTICLES_URI
+def get_articles_uri(type: str = "HTML") -> str:
+    return ARTICLES_URI.format(TYPE=type)
 
 
 def get_dataset_dir() -> str:
@@ -63,8 +63,8 @@ def load_configurations(configurations: list[str] | None = None) -> list[dict]:
     configs = []
 
     config_file = os.path.join(CONFIG_DIR, "configs.yaml")
-    with open(config_file, "r") as config_file:
-        configs = yaml.safe_load(config_file)
+    with open(config_file, "r") as file:
+        configs = yaml.safe_load(file)
 
     if configurations is not None:
         return [config for config in configs if config["config"] in configurations]
@@ -107,7 +107,7 @@ def get_metadata() -> pd.DataFrame | None:
     return None
 
 
-def get_column(df: pd.DataFrame, column: str) -> pd.Series | None:
+def get_column(df: pd.DataFrame, column: str) -> pd.Series | pd.DataFrame | None:
     try:
         column_series = df[column]
         if not len(column_series):
