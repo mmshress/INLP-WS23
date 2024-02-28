@@ -1,8 +1,8 @@
 from typing import Sequence
 
-from langchain_core.embeddings import Embeddings
 from llama_index.core import ServiceContext, StorageContext, VectorStoreIndex
 from llama_index.core.schema import Document
+from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.vector_stores.opensearch import (
     OpensearchVectorClient,
     OpensearchVectorStore,
@@ -12,7 +12,7 @@ from llama_index.vector_stores.opensearch import (
 class ArticlesIndexer:
     def __init__(
         self,
-        embedding_model: Embeddings,
+        embedding_model: HuggingFaceEmbedding | None,
         index_name: str,
         verbose: bool = False,
         host: str = "localhost",
@@ -39,8 +39,8 @@ class ArticlesIndexer:
         )
 
     def index_documents(self, documents: Sequence[Document]) -> VectorStoreIndex:
-        return VectorStoreIndex.from_documents(
-            documents=documents,
+        return VectorStoreIndex(
+            nodes=documents,
             storage_context=self.storage_context,
             service_context=self.service_context,
         )

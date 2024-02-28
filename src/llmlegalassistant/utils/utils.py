@@ -1,5 +1,6 @@
 import os
 import shutil
+from typing import List, Optional
 
 import pandas as pd
 import yaml
@@ -15,6 +16,7 @@ ARTICLES_DIR = config.ARTICLES_DIR
 DATASET_DIR = config.DATASET_DIR
 ARTICLES_URI = config.ARTICLES_URI
 CONFIG_DIR = config.CONFIG_DIR
+EVALUATION_DIR = config.EVALUATION_DIR
 ARTICLE_FILE_DIR = ARTICLES_DIR
 
 
@@ -34,6 +36,13 @@ def get_articles_dir() -> str:
     return ARTICLES_DIR
 
 
+def get_evaluation_dataset_dir(database_type: str = "") -> str | None:
+    if database_type not in ["databases", "documents"]:
+        return None
+
+    return os.path.join(EVALUATION_DIR, database_type)
+
+
 def get_file_dir(file_type: str) -> str:
     # get article directory based on the file type
     ARTICLE_FILE_DIR = config.get_article_file_dir(
@@ -43,7 +52,7 @@ def get_file_dir(file_type: str) -> str:
     return ARTICLE_FILE_DIR
 
 
-def load_configurations(configurations: list[str] | None = None) -> list[dict]:
+def load_configurations() -> list[dict]:
     """
     This function returns the corresponding configuration from
     the config file at the project root the configuration file
@@ -66,8 +75,8 @@ def load_configurations(configurations: list[str] | None = None) -> list[dict]:
     with open(config_file, "r") as file:
         configs = yaml.safe_load(file)
 
-    if configurations is not None:
-        return [config for config in configs if config["config"] in configurations]
+    # if configurations is not None:
+    #     return [config for config in configs if config["config"] in configurations]
 
     return configs
 

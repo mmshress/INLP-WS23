@@ -46,21 +46,20 @@ def main() -> None:
     )
 
     evaluate_parser = subparsers.add_parser("evaluate")
-    evaluate_parser.add_argument(
-        "-c",
-        "--configurations",
-        dest="configurations",
-        type=list,
-        help="List out the configurations that are required to evaluate",
-        default=None,
-    )
+    # evaluate_parser.add_argument(
+    #     "-c",
+    #     "--configs",
+    #     dest="configurations",
+    #     type=list,
+    #     help="List out the configurations that are required to evaluate",
+    #     default=None,
+    # )
     evaluate_parser.add_argument(
         "-v",
         "--verbose",
         dest="verbose",
-        type=bool,
         help="Be more verbose",
-        default=False,
+        action="store_true",
     )
 
     try:
@@ -79,11 +78,19 @@ def main() -> None:
             #     articles_indexer.create_index()
             #     articles_indexer.index(args.index_name)
             case "evaluate":
+                if args.verbose:
+                    print("Evaluation Starting...")
+
                 from llmlegalassistant import LLMLegalAssistant
 
-                llmlegalassistant = LLMLegalAssistant(verbose=args.verbose)
-                llmlegalassistant.evaluate(args.configurations)
+                if args.verbose:
+                    print("Evaluation Started!")
 
+                llmlegalassistant = LLMLegalAssistant(args.verbose)
+                llmlegalassistant.evaluate()
+
+                if args.verbose:
+                    print("Evaluation Finished!")
             case _:
                 raise OSError(f"Unknown Command: {args.command}")
     except OSError:

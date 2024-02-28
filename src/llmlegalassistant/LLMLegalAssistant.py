@@ -3,90 +3,78 @@ from typing import Any
 
 from llama_index.core import SimpleDirectoryReader
 from llama_index.core.query_engine import RetrieverQueryEngine
-from llama_index.core.retrievers import BaseRetriever
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 
-from llmlegalassistant.data import ArticlesIndexer
+from llmlegalassistant.data import ArticlesIndexer, IndexerFactory
 from llmlegalassistant.retriever import RetrieverFactory
 from llmlegalassistant.splitter import SplitterFactory
-from llmlegalassistant.utils import get_articles_dir, load_configurations
+from llmlegalassistant.utils import (
+    get_articles_dir,
+    get_evaluation_dataset_dir,
+    load_configurations,
+)
 
 
 class LLMLegalAssistant:
     def __init__(self, verbose: bool = False) -> None:
         self.verbose = verbose
 
-    def evaluate(self, configurations: list[str] | None = None) -> None:
-        configs = load_configurations(configurations)
+    def evaluate(self) -> None:
+        configs = load_configurations()
+        if self.verbose:
+            print("[LLMLegalAssistant] Configurations loaded")
 
         for config in configs:
-            text_splitter = None
-            embed_model = None
-
-            splitter = config["splitter"]["type"]
+            splitter = config["splitter"]["method"]
             model_name = config["embed"]
+            retriever_type = config["retriever"]["method"]
+            response_synthesizer = config["retriever"]["response_synthesizer"]
+
+            embed_model = HuggingFaceEmbedding(model_name=model_name)
+
+            database_name = config["store"]["type"]
             index_name = config["store"]["index"]
-            retriever = config["retriever"]["type"]
-            # will need later when we add llm models
-            # llm_model = config["model"]["name"]
-            if model_name is not None:
-                embed_model = HuggingFaceEmbedding(model_name=model_name)
+            chunk_size = config["splitter"]["chunk_size"]
+            overlap_size = config["splitter"]["overlap_size"]
+            text_splitter = SplitterFactory.generate_splitter(
+                splitter=splitter,
+                embed_model=embed_model,
+                chunk_size=chunk_size,
+                overlap_size=overlap_size,
+            )
+            index = self._create_document_index(
+                splitter=text_splitter,
+                embed_model=embed_model,
+                index_name=index_name,
+                database_name=database_name,
+                evaluate=True,
+            )
 
-            if splitter is not None:
-                chunk_size = config["splitter"]["chunk_size"]
-                overlap_size = config["splitter"]["overlap_size"]
-                text_splitter = SplitterFactory.generate_splitter(
-                    splitter=splitter,
-                    chunk_size=chunk_size,
-                    overlap_size=overlap_size,
-                )
+            top_k = config["retriever"]["top_k"]
+            retriever = RetrieverFactory.generate_retriver(
+                retriever_method=retriever_type,
+                index=index,
+                top_k=top_k,
+                verbose=self.verbose,
+            )
 
-            if retriever is not None:
-                top_k = config["retriever"]["top_k"]
-                num_queries = config["retriever"]["num_queries"]
-                retriever = RetrieverFactory.generate_retriver(
-                    retriever_method=retriever,
-                    index=index_name,
-                    top_k=top_k,
-                    num_queries=num_queries,
-                    verbose=True,
-                )
-
-            self._create_document_index(text_splitter, embed_model, index_name)
-            # self._generate_query_engine(
-            #     text_splitter, embed_model, index_name
-            # )
+            return self._generate_query_engine(
+                retriever=retriever, response_synthesizer=response_synthesizer
+            )
 
     def _create_document_index(
-        self, splitter: Any, embed_model: HuggingFaceEmbedding | None, index_name: str
-    ) -> Any:
-        """
-        What I think
-        ------------
-        documents, splitter, embed_model, index_name
-
-        What is
-        -------
         self,
-        embedding_model: Embeddings,
-        chunking_strategy: str,
-        verbose: bool = False,
-        host: str = "localhost",
-        port: int = 9200,
+        splitter: Any,
+        embed_model: HuggingFaceEmbedding | None,
+        index_name: str,
+        database_name: str,
+        evaluate: bool = False,
+    ) -> Any:
+        if not evaluate:
+            document_dir = os.path.join(get_articles_dir(), "txts")
+        else:
+            document_dir = get_evaluation_dataset_dir("documents")
 
-        def index_documents(self) -> VectorStoreIndex:
-            files_dir = get_dataset_dir() + "/articles/txts/"
-            documents = SimpleDirectoryReader(files_dir).load_data()
-            return VectorStoreIndex.from_documents(
-                documents=documents,
-                storage_context=self.storage_context,
-                service_context=self.service_context,
-            )
-        """
-        # 1.  index: splitter, text_files, embed_model
-        # 1.1 splitter: text_files
-        # 1.2 embed_model and index: text_files
-        document_dir = os.path.join(get_articles_dir(), "txts")
         documents = SimpleDirectoryReader(input_dir=document_dir).load_data()
         if self.verbose:
             print(f"[LLMLegalAssistant] Number of Documents Loaded: {len(documents)}")
@@ -97,21 +85,39 @@ class LLMLegalAssistant:
                 f"[LLMLegalAssistant] Nodes created from documents: {len(documents_nodes)}"
             )
 
-        article_indexer = ArticlesIndexer(self.verbose)
-        article_indexer.index_documents(documents_nodes)
+        IndexerFactory.create_index(
+            documents=documents_nodes,
+            index_name=index_name,
+            database=database_name,
+            embed_model=embed_model,
+        )
 
-        return documents_nodes
+        article_indexer = ArticlesIndexer(
+            embedding_model=embed_model, index_name=index_name, verbose=self.verbose
+        )
+
+        index = article_indexer.index_documents(documents_nodes)
+        if self.verbose:
+            print("[LLMLegalAssistant] Documents are indexed!")
+
+        return index
 
     def _generate_query_engine(
         self,
-        retriever: BaseRetriever,
-        response_synthesiser: Any,
+        retriever: Any,
+        response_synthesizer: Any,
         node_postprocessor: Any = None,
     ) -> Any:
-        query_engine = RetrieverQueryEngine(
-            retriever=retriever,
-            response_synthesizer=response_synthesiser,
-            node_postprocessors=node_postprocessor,
-        )
+        if node_postprocessor is not None:
+            query_engine = RetrieverQueryEngine(
+                retriever=retriever,
+                response_synthesizer=response_synthesizer,
+                node_postprocessors=node_postprocessor,
+            )
+        else:
+            query_engine = RetrieverQueryEngine(
+                retriever=retriever,
+                response_synthesizer=response_synthesizer,
+            )
 
         return query_engine

@@ -11,6 +11,9 @@ class Config:
     # Change this to your configs directory path
     CONFIG_DIR = os.path.join(PROJECT_DIR, "configs")  # default, can change
 
+    # Evaluation dir
+    EVALUATION_DIR = os.path.join(DATASET_DIR, "evaluation")  # default, can change
+
     METADATA_URI = os.path.join(
         DATASET_DIR, "metadata"
     )  # don't change, contains celex to fetch articles

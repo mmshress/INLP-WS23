@@ -1,0 +1,17 @@
+- config: "20__recursive_512_50__UAE-Large-V1__vindex_10_1__llama_7b"
+  docs_no: 20
+  splitter:
+    method: "RecursiveCharacterTextSplitter"
+    chunk_size: 512
+    overlap_size: 50
+  embed: "WhereIsAI/UAE-Large-V1"
+  store:
+    type: "Chromadb"
+    index: "recursive_UAE-Large-V1_512_50"
+  retriever:
+    method: "VectorIndexRetriever"
+    response_synthesizer: "compact"
+    top_k: 4
+  model:
+    name: "llama"
+    type: "7b"
