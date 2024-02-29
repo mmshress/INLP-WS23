@@ -1,6 +1,7 @@
 build
 
 .idea/
+.ipynb_checkpoints
 
 # datasets
 LLMLegalAssistantDataset/

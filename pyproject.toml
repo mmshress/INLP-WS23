@@ -1,6 +1,6 @@
 [project]
 name = "LLMLegalAssistant"
-description = "Not a Legal Advisor Legal Question and Answering Assistant"
+description = "Legal Question and Answering Assistant"
 authors = [
     {name = "Asma Motmem"},
     {name = "Siddhant Tripathi"},
@@ -46,7 +46,7 @@ build-backend = "setuptools.build_meta"
 
 [tool.black]
 target-version = ['py311', 'py312']
-line-lengh = 250
+line-lengh = 150
 exclude = '''
 /(
     \.git
@@ -54,11 +54,15 @@ exclude = '''
     |__pycache__
     |\.venv
     |experiments
+    |build
+    |venv
+    |env
+    |dist
 )/
 '''
 
 [tool.flake8]
-max-line-length = 250
+max-line-length = 150
 ignore = ["F401"]
 exclude = [
     ".git",
@@ -88,3 +92,4 @@ exclude = [
 
 [tool.isort]
 profile = "black"
+line_length = 150
