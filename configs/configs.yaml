@@ -13,5 +13,4 @@
     response_synthesizer: "compact"
     top_k: 4
   model:
-    name: "llama"
-    type: "7b"
+    name: "ggml-model-Q4_K_M.gguf"

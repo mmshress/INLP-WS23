@@ -5,13 +5,14 @@ isort
 markdownify
 pandas
 requests
-torch
 pypdf
 chromadb
-llama-index
+torch
 transformers
-llama-index-core
 sentence-transformers
+llama-index
+llama-index-core
+llama-index-llms-llama-cpp
 llama-index-readers-elasticsearch
 llama-index-vector-stores-opensearch
 llama-index-retrievers-bm25

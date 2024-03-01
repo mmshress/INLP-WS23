@@ -52,6 +52,10 @@ def get_file_dir(file_type: str) -> str:
     return ARTICLE_FILE_DIR
 
 
+def get_models_dir() -> str:
+    return os.path.join(PROJECT_DIR, "models")
+
+
 def load_configurations() -> list[dict]:
     """
     This function returns the corresponding configuration from

@@ -24,3 +24,6 @@ venv/
 
 # tests
 *test*.py
+
+# models
+models/*
