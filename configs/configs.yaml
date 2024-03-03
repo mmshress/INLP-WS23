@@ -11,6 +11,72 @@
   retriever:
     method: "VectorIndexRetriever"
     response_synthesizer: "compact"
-    top_k: 4
+    top_k: 6
+  model:
+    name: "ggml-model-Q4_K_M.gguf"
+  dataset:
+    name: "recursive_UAE-Large-V1_512_50_vectorindex"
+- config: "20__recursive_512_50__UAE-Large-V1__vindex_10_1__llama_7b_f16"
+  docs_no: 20
+  splitter:
+    method: "RecursiveCharacterTextSplitter"
+    chunk_size: 512
+    overlap_size: 50
+  embed: "WhereIsAI/UAE-Large-V1"
+  store:
+    type: "Chromadb"
+    index: "recursive_UAE-Large-V1_512_50"
+  retriever:
+    method: "VectorIndexRetriever"
+    response_synthesizer: "compact"
+    top_k: 6
+  model:
+    name: "ggml-model-f16.gguf"
+- config: "20__semantic_512_50__UAE-Large-V1__vindex_10_1__llama_7b"
+  docs_no: 20
+  splitter:
+    method: "SemanticSplitterNodeParser"
+    chunk_size: 512
+    overlap_size: 50
+  embed: "WhereIsAI/UAE-Large-V1"
+  store:
+    type: "Chromadb"
+    index: "semantic_UAE-Large-V1_512_50"
+  retriever:
+    method: "VectorIndexRetriever"
+    response_synthesizer: "compact"
+    top_k: 2
+  model:
+    name: "ggml-model-Q4_K_M.gguf"
+- config: "20__sentence_512_50__UAE-Large-V1__vindex_10_1__llama_7b"
+  docs_no: 20
+  splitter:
+    method: "SentenceSplitter"
+    chunk_size: 512
+    overlap_size: 50
+  embed: "WhereIsAI/UAE-Large-V1"
+  store:
+    type: "Chromadb"
+    index: "sentence_UAE-Large-V1_512_50"
+  retriever:
+    method: "VectorIndexRetriever"
+    response_synthesizer: "compact"
+    top_k: 6
+  model:
+    name: "ggml-model-Q4_K_M.gguf"
+- config: "20__token_512_50__UAE-Large-V1__vindex_10_1__llama_7b"
+  docs_no: 20
+  splitter:
+    method: "TokenTextSplitter"
+    chunk_size: 512
+    overlap_size: 50
+  embed: "WhereIsAI/UAE-Large-V1"
+  store:
+    type: "Chromadb"
+    index: "token_UAE-Large-V1_512_50"
+  retriever:
+    method: "VectorIndexRetriever"
+    response_synthesizer: "compact"
+    top_k: 6
   model:
     name: "ggml-model-Q4_K_M.gguf"

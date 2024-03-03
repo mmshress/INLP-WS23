@@ -45,37 +45,20 @@ class IndexerFactory:
                 is_index = False
                 if index_name in db.list_collections():
                     if verbose:
-                        print(f"[Chromadb] Index {index_name} Already exists!")
+                        print(f"[Chromadb] Index {index_name} Already exists in {db.list_collections}!")
                     is_index = True
 
-                if verbose:
-                    print(f"[Chromadb] Loading Index {index_name}...")
                 chroma_collection = db.get_or_create_collection(index_name)
-                if verbose:
-                    print(f"[Chromadb] Index {index_name} loaded!")
-
-                if verbose:
-                    print(f"[Chromadb] Creating Vector Store of index {index_name}...")
                 vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
-                if verbose:
-                    print(f"[Chromadb] Vector Store of index {index_name} created!")
-
-                if verbose:
-                    print(f"[Chromadb] Creating Storage Context of index {index_name}...")
                 storage_context = StorageContext.from_defaults(
                     vector_store=vector_store
                 )
-                if verbose:
-                    print(f"[Chromadb] Storage Context of index {index_name} created!")
-
-                if verbose:
-                    print(f"[Chromadb] Creating Vector Store Index of index {index_name}...")
                 if is_index:
                     index = VectorStoreIndex.from_vector_store(vector_store=vector_store, storage_context=storage_context)
                 else:
                     index = VectorStoreIndex(nodes=documents, storage_context=storage_context, embed_model=embed_model)
                 if verbose:
-                    print(f"[Chromadb] Vector Store Index of index {index_name} created!")
+                    print(f"[Chromadb] Vector Store Index of index {index_name} Loaded/Created!")
 
                 return index
             case _:

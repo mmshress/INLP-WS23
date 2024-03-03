@@ -8,7 +8,7 @@ from typing import Any
 class SplitterFactory:
     @staticmethod
     def generate_splitter(
-        splitter: str, embed_model: Any, chunk_size: int = 512, overlap_size: int = 50
+        splitter: str, embed_model: Any, model_name: str = None, chunk_size: int = 512, overlap_size: int = 50
     ) -> Any:
         """
         Sets up the chunk size and overlap size
@@ -45,8 +45,11 @@ class SplitterFactory:
                     chunk_size=chunk_size, chunk_overlap=overlap_size
                 )
             case "SemanticSplitterNodeParser":
-                from llama_index.core.node_parser import SemanticSplitterNodeParser
+                from langchain.embeddings.huggingface import HuggingFaceEmbeddings
+                from langchain_experimental.text_splitter import SemanticChunker
+                from llama_index.core.node_parser import LangchainNodeParser
 
-                return SemanticSplitterNodeParser(embed_model=embed_model)
+                embeddings = HuggingFaceEmbeddings(model_name=model_name)
+                return LangchainNodeParser(SemanticChunker(embeddings))
             case _:
                 return None
