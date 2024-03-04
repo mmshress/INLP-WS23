@@ -1,18 +1,22 @@
 from typing import Any
 
-from llama_index.node_parser import NodeParser, TextSplitter
+# from llama_index.core.node_parser import NodeParser, TextSplitter
+# from llama_index.embeddings.huggingface import HuggingFaceEmbedding
+# from llama_index.core.base.embeddings.base import BaseEmbedding
 
 
 class SplitterFactory:
     @staticmethod
     def generate_splitter(
-        splitter: str, embed_model: Any, chunk_size: int = 512, overlap_size: int = 50
-    ) -> NodeParser | TextSplitter | None:
+        splitter: str, embed_model: Any, model_name: str = None, chunk_size: int = 512, overlap_size: int = 50
+    ) -> Any:
         """
         Sets up the chunk size and overlap size
 
         Parameters:
         -----------
+        splitter : str
+            The type of splitter to be instanciated
         chunk_size : int
             The size of the chunk
         chunk_overlap : int
@@ -20,21 +24,32 @@ class SplitterFactory:
         """
         match splitter:
             case "RecursiveCharacterTextSplitter":
-                from langchain.text_splitter import \
-                    RecursiveCharacterTextSplitter
+                from langchain.text_splitter import RecursiveCharacterTextSplitter
+                from llama_index.core.node_parser import LangchainNodeParser
 
-                return RecursiveCharacterTextSplitter(
-                    chunk_size=chunk_size, chunk_overlap=overlap_size
+                return LangchainNodeParser(
+                    RecursiveCharacterTextSplitter(
+                        chunk_size=chunk_size, chunk_overlap=overlap_size
+                    )
                 )
             case "SentenceSplitter":
-                from llama_index.node_parser import SemanticSplitterNodeParser
+                from llama_index.core.node_parser import SentenceSplitter
 
-                return SemanticSplitterNodeParser(embed_model=embed_model)
+                return SentenceSplitter(
+                    chunk_size=chunk_size, chunk_overlap=overlap_size
+                )
             case "TokenTextSplitter":
-                from llama_index.node_parser import TokenTextSplitter
+                from llama_index.core.node_parser import TokenTextSplitter
 
                 return TokenTextSplitter(
                     chunk_size=chunk_size, chunk_overlap=overlap_size
                 )
+            case "SemanticSplitterNodeParser":
+                from langchain.embeddings.huggingface import HuggingFaceEmbeddings
+                from langchain_experimental.text_splitter import SemanticChunker
+                from llama_index.core.node_parser import LangchainNodeParser
+
+                embeddings = HuggingFaceEmbeddings(model_name=model_name)
+                return LangchainNodeParser(SemanticChunker(embeddings))
             case _:
                 return None

@@ -1,6 +1,6 @@
 [project]
 name = "LLMLegalAssistant"
-description = "Not a Legal Advisor Legal Question and Answering Assistant"
+description = "Legal Question and Answering Assistant"
 authors = [
     {name = "Asma Motmem"},
     {name = "Siddhant Tripathi"},
@@ -44,21 +44,9 @@ requires = [
 ]
 build-backend = "setuptools.build_meta"
 
-[tool.black]
-target-version = ['py311', 'py312']
-exclude = '''
-/(
-    \.git
-    |env_setup
-    |__pycache__
-    |\.venv
-    |experiments
-)/
-'''
-
 [tool.flake8]
-max-line-length = 500
-ignore = ["W501"]
+max-line-length = 150
+ignore = ["F401"]
 exclude = [
     ".git",
     "env_setup",
@@ -75,12 +63,16 @@ no_implicit_optional = true
 disallow_untyped_defs = true
 disallow_incomplete_defs = true
 explicit_package_bases = true
-ignore_missing_imports = true
+ignore_missing_imports = false
 exclude = [
     ".git",
     "env_setup",
+    "*.toml",
+    "*.yaml",
+    "*.yml",
     "__pycache__"
 ]
 
 [tool.isort]
-multi_line_output = 2
+profile = "black"
+line_length = 150

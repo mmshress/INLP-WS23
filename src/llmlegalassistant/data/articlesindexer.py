@@ -1,77 +1,46 @@
-# import os
+from typing import Sequence
 
-# from elasticsearch import Elasticsearch
-
-# from llmlegalassistant.utils import Utils
-
-
-# class ArticlesIndexer:
-#     def __init__(self, verbose=False,  host='localhost', port=9200):
-#         self.verbose = verbose
-
-#         # self.es = Elasticsearch([{'host': host, 'port': port}])
-#         self.elasticsearch = Elasticsearch("http://localhost:9200")
-#         self.utils = Utils()
-
-#     def index(self, index_name):
-#         files_dir = self.utils.get_file_dir("txt")
-
-#         self._create_index()
-#         for filename in os.listdir(files_dir):
-#             if filename.endswith(".txt"):
-#                 file_path = os.path.join(files_dir, filename)
-
-#                 with open(file_path, "r", encoding="utf-8") as file:
-#                     article = file.read()
-#                     celex_number = filename.split(".")[0]
-#                     result = self._upload_document(article, celex_number)
-
-#     def _create_index(self) -> None:
-#         schema = {
-#             "mappings": {
-#                 "properties": {
-#                     "legal_text": {"type": "text"},
-#                     "celex_number": {"type": "keyword"}
-#                 }
-#             }
-#         }
-
-#         # headers = self.es.transport.headers
-#         self.elasticsearch.indices.create(index=self.index_name, body=schema)
-
-#     def upload_document(self, document, id) -> any | None:
-#         body = {
-#             "celex": id,
-#             "document": document
-#         }
-
-#         result = self.elasticsearch.index(index=self.index_name, body=body)
-#         return result
-
-#     def upload_documents(self, index) -> None:
+from llama_index.core import ServiceContext, StorageContext, VectorStoreIndex
+from llama_index.core.schema import Document
+from llama_index.embeddings.huggingface import HuggingFaceEmbedding
+from llama_index.vector_stores.opensearch import (
+    OpensearchVectorClient,
+    OpensearchVectorStore,
+)
 
 
-#     # Example usage
-#     def upload_documents(index_name):
+class ArticlesIndexer:
+    def __init__(
+        self,
+        embedding_model: HuggingFaceEmbedding | None,
+        index_name: str,
+        verbose: bool = False,
+        host: str = "localhost",
+        port: int = 9200,
+    ) -> None:
+        self.INDEX_NAME = index_name
+        self.INDEX_BODY = {"settings": {"index": {"number_of_shards": 2}}}
+        self.verbose = verbose
+        self.client = OpensearchVectorClient(
+            f"http://{host}:{port}",
+            self.INDEX_NAME,
+            dim=1024,
+            embedding_field="embedding",
+            text_field="chunk",
+            search_pipeline="hybrid-search-pipeline",
+        )
 
-#         es_populator = ElasticsearchPopulator(index_name='text')
-#         utils = Utils()
+        self.vector_store = OpensearchVectorStore(self.client)
+        self.storage_context = StorageContext.from_defaults(
+            vector_store=self.vector_store
+        )
+        self.service_context = ServiceContext.from_defaults(
+            embed_model=embedding_model, llm=None
+        )
 
-#         es_populator.create_index()
-
-#         text_files_directory = utils.get_file_dir("txt")
-
-#         # Iterate over each text file in the directory  and extract celexnumber
-#         for filename in os.listdir(text_files_directory):
-#             if filename.endswith(".txt"):
-#                 file_path = os.path.join(text_files_directory, filename)
-
-#                 with open(file_path, 'r', encoding='utf-8') as file:
-#                     legal_text = file.read()
-
-#                     celex_number = os.path.splitext(filename)[0]
-
-#                     # Push the document to Elasticsearch
-#                     es_populator.push_document(legal_text=legal_text, celex_number=celex_number)
-#                     print("Index created successfully")
-# noqa: 401
+    def index_documents(self, documents: Sequence[Document]) -> VectorStoreIndex:
+        return VectorStoreIndex(
+            nodes=documents,
+            storage_context=self.storage_context,
+            service_context=self.service_context,
+        )

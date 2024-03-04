@@ -1,2 +1,1 @@
-from llmlegalassistant.Embeddings.EmbedWrapper import \
-    EmbedWrapper  # noqa: F401
+from llmlegalassistant.Embeddings.EmbedWrapper import EmbedWrapper  # noqa: F401

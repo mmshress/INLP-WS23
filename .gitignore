@@ -1,4 +1,7 @@
+build
+
 .idea/
+.ipynb_checkpoints
 
 # datasets
 LLMLegalAssistantDataset/
@@ -21,3 +24,7 @@ venv/
 
 # tests
 *test*.py
+
+# models
+models/*
+main.log
