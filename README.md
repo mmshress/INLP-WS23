@@ -70,7 +70,7 @@ llmlegalassistant answer --query <query>
 
 - If you want to use OpenAI model for inference then provide a key with `--openapi` flag
 - If you want to use LLaMA from HuggingFace then provide your key with `--huggingface` flag
- - we use `LLaMA-2-Q4_K-Medium` Quantized model
+ - we use `meta-llama/Llama-2-7b-chat-hf` which is Quantized with 4-bit Medium, `Q4_K_M`
 
 ```bash
 llmlegalassistant [commands] [options]
