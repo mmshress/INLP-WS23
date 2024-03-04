@@ -74,7 +74,6 @@ class IndexerFactory:
                 storage_context = StorageContext.from_defaults(
                     vector_store=vector_store,
                 )
-<<<<<<< Updated upstream
                 if is_index:
                     index = VectorStoreIndex.from_vector_store(
                         vector_store=vector_store, storage_context=storage_context
@@ -85,7 +84,6 @@ class IndexerFactory:
                         storage_context=storage_context,
                         embed_model=embed_model,
                     )
-=======
 
                 # if is_index:
                 index = VectorStoreIndex.from_vector_store(
@@ -100,7 +98,6 @@ class IndexerFactory:
                 #         storage_context=storage_context,
                 #         embed_model=embed_model,
                 #     )
->>>>>>> Stashed changes
 
                 if verbose:
                     print(
