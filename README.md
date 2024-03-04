@@ -21,6 +21,24 @@ git clone https://github.com/mmshress/INLP-WS23.git
 cd INLP-WS23
 ```
 
+#### Clone the data
+
+##### Eval dataset
+
+Unprocessed data and relevant data
+
+```bash
+git clone https://huggingface.co/datasets/LLMLegalAssistant/datasets
+```
+
+##### Final dataset
+
+Final 511 corpus Indexed, with evaluation small (20 documents) corpus Indexed.
+
+```bash
+https://heibox.uni-heidelberg.de/d/91fd4895a03c436f9507/
+```
+
 #### Check python version
 
 ```bash
