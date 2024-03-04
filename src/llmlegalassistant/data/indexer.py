@@ -11,7 +11,7 @@ from llmlegalassistant.utils.utils import get_dataset_dir
 class IndexerFactory:
     @staticmethod
     def create_index(
-        nodes: Optional[List[BaseNode]],
+        # nodes: Optional[List[BaseNode]],
         index_name: str,
         database: str,
         embed_model: HuggingFaceEmbedding | None,
@@ -43,10 +43,10 @@ class IndexerFactory:
                     if database_dir is None:
                         print("[LLMLegalAssistant] Evaluation directory doesn't exists")
 
-                if verbose:
-                    print(
-                        f"[Chromadb] Loading Database from {database_dir} directory..."
-                    )
+                # if verbose:
+                #     print(
+                #         f"[Chromadb] Loading Database from {database_dir} directory..."
+                #     )
 
                 if not evaluate:
                     db = chromadb.PersistentClient(
@@ -58,8 +58,8 @@ class IndexerFactory:
                         path=os.path.join(dataset_dir, "datasetv1")
                     )
 
-                if verbose:
-                    print(f"[Chromadb] Database from {database_dir} loaded!")
+                # if verbose:
+                #     print(f"[Chromadb] Database from {database_dir} loaded!")
 
                 is_index = False
                 if index_name in db.list_collections():
@@ -72,8 +72,9 @@ class IndexerFactory:
                 chroma_collection = db.get_or_create_collection(index_name)
                 vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
                 storage_context = StorageContext.from_defaults(
-                    vector_store=vector_store
+                    vector_store=vector_store,
                 )
+<<<<<<< Updated upstream
                 if is_index:
                     index = VectorStoreIndex.from_vector_store(
                         vector_store=vector_store, storage_context=storage_context
@@ -84,6 +85,22 @@ class IndexerFactory:
                         storage_context=storage_context,
                         embed_model=embed_model,
                     )
+=======
+
+                # if is_index:
+                index = VectorStoreIndex.from_vector_store(
+                    vector_store=vector_store,
+                    storage_context=storage_context,
+                    embed_model=embed_model,
+                )
+                print(is_index, "index_index")
+                # else:
+                #     index = VectorStoreIndex(
+                #         nodes=nodes,
+                #         storage_context=storage_context,
+                #         embed_model=embed_model,
+                #     )
+>>>>>>> Stashed changes
 
                 if verbose:
                     print(

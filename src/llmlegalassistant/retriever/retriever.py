@@ -13,8 +13,10 @@ class RetrieverFactory:
     def generate_retriver(
         retriever_method: str,
         index: Any,
-        nodes: Any,
-        top_k: int = 10,
+        docstore: Any,
+        # nodes: Any,
+        llm: Any = None,
+        top_k: int = 1,
         verbose: bool = False,
     ) -> Optional[BaseRetriever]:
         match retriever_method:
@@ -23,7 +25,9 @@ class RetrieverFactory:
             case "BM25Retriever":
                 from llama_index.retrievers.bm25 import BM25Retriever
 
-                return BM25Retriever.from_defaults(nodes=nodes, similarity_top_k=top_k)
+                return BM25Retriever.from_defaults(
+                    docstore=docstore, similarity_top_k=top_k
+                )
             case "QueryFusionRetriever":
                 from llama_index.core.retrievers import QueryFusionRetriever
                 from llama_index.core.retrievers.fusion_retriever import FUSION_MODES
@@ -31,7 +35,7 @@ class RetrieverFactory:
 
                 vector_retriever = index.as_retriever(similarity_top_k=top_k)
                 bm25_retriever = BM25Retriever.from_defaults(
-                    nodes=nodes, similarity_top_k=top_k
+                    docstore=docstore, similarity_top_k=top_k
                 )
 
                 return QueryFusionRetriever(
@@ -41,6 +45,7 @@ class RetrieverFactory:
                     mode=FUSION_MODES.RECIPROCAL_RANK,
                     use_async=True,
                     verbose=verbose,
+                    llm=llm,
                 )
             case _:
                 return None

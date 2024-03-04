@@ -4,9 +4,13 @@ from typing import Any
 import transformers
 from langchain.embeddings.huggingface import HuggingFaceEmbeddings
 from langchain_community.llms import HuggingFacePipeline
-from llama_index.core import SimpleDirectoryReader
+from llama_index.core import Settings, SimpleDirectoryReader
 from llama_index.core.query_engine import RetrieverQueryEngine
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
+<<<<<<< Updated upstream
+=======
+from llama_index.llms import openai
+>>>>>>> Stashed changes
 from llama_index.llms.openai import OpenAI
 from torch import bfloat16
 from transformers import AutoTokenizer
@@ -14,7 +18,18 @@ from transformers import AutoTokenizer
 from llmlegalassistant.data import IndexerFactory
 from llmlegalassistant.retriever import RetrieverFactory
 from llmlegalassistant.splitter import SplitterFactory
+<<<<<<< Updated upstream
 from llmlegalassistant.utils import get_articles_dir, get_evaluation_dataset_dir, load_configurations
+=======
+from llmlegalassistant.utils import (
+    get_articles_dir,
+    get_evaluation_dataset_dir,
+    get_project_dir,
+    load_configurations,
+)
+>>>>>>> Stashed changes
+
+# from openai import OpenAI
 
 
 class LLMLegalAssistant:
@@ -27,8 +42,15 @@ class LLMLegalAssistant:
         if api_key_file is None:
             api_key = os.environ["OPENAI_API_KEY"]
         else:
+<<<<<<< Updated upstream
             with open(api_key_file, "r") as keyfile:
                 api_key = keyfile.read()
+=======
+            print(api_key_file, os.path.join(get_project_dir(), api_key_file))
+            with open(os.path.join(get_project_dir(), api_key_file), "r") as keyfile:
+                api_key = keyfile.read()
+                print(api_key)
+>>>>>>> Stashed changes
 
         if is_openai:
             language_model = "gpt-3.5-turbo"
@@ -36,8 +58,23 @@ class LLMLegalAssistant:
             language_model = "meta-llama/Llama-2-7b-chat-hf"
 
         llm = self._initialize_llm(language_model=language_model, api_key=api_key)
+        Settings.llm = llm
+        Settings.context_window = 4096
 
+<<<<<<< Updated upstream
+=======
+        print("embeding")
+
+>>>>>>> Stashed changes
         embed_model = HuggingFaceEmbedding(model_name="infgrad/stella-base-en-v2")
+        # embed_model = HuggingFaceEmbedding(model_name="Splitter_sentence_stella_emb")
+
+        from llama_index.core.storage.docstore import SimpleDocumentStore
+
+        docstore = SimpleDocumentStore.from_persist_path(
+            "/home/ubuntu/projects/llmlegalassistant/datasets/datasets/docstore/stella_alldocs_semantic.json"
+        )
+        print(docstore)
 
         text_splitter = SplitterFactory.generate_splitter(
             splitter="SemanticTextNodeParser",
@@ -47,8 +84,15 @@ class LLMLegalAssistant:
             overlap_size=20,
         )
 
+<<<<<<< Updated upstream
         index_name = "Splitter_semantic_stella_embd_alldoc"
         nodes, index = self._create_document_index(
+=======
+        print("start index")
+        index_name = "Splitter_sentence_stella_emb"
+        # nodes, index = self._create_document_index(
+        index = self._create_document_index(
+>>>>>>> Stashed changes
             splitter=text_splitter,
             embed_model=embed_model,
             index_name=index_name,
@@ -59,7 +103,8 @@ class LLMLegalAssistant:
         retriever = RetrieverFactory.generate_retriver(
             retriever_method="QueryFusionRetriever",
             index=index,
-            nodes=nodes,
+            docstore=docstore,
+            # nodes=nodes,
             top_k=1,
         )
 
@@ -67,8 +112,9 @@ class LLMLegalAssistant:
             retriever=retriever,
             llm=llm,
         )
-
-        return query_engine.query(prompt)
+        # print("".join[prompt])
+        response = query_engine.query(prompt)
+        return response
 
     def evaluate(self) -> Any:
         configs = load_configurations()
@@ -181,27 +227,33 @@ class LLMLegalAssistant:
         database_name: str,
         evaluate: bool = False,
     ) -> Any:
-        if not evaluate:
-            document_dir = os.path.join(get_articles_dir(), "txts")
-        else:
-            document_dir = get_evaluation_dataset_dir("documents")
-            if document_dir is None:
-                print("[LLMLegalAssistant] Evaluation directory doesn't exists")
+        # if not evaluate:
+        #     document_dir = os.path.join(get_articles_dir(), "txts")
+        # else:
+        document_dir = get_evaluation_dataset_dir("documents")
+        if document_dir is None:
+            print("[LLMLegalAssistant] Evaluation directory doesn't exists")
 
-        documents = SimpleDirectoryReader(input_dir=document_dir).load_data()
-
-        if self.verbose:
-            print("[LLMLegalAssistant] Number of Documents Loaded: {len(documents)}")
-
-        documents_nodes = splitter.get_nodes_from_documents(documents)
+        # documents = SimpleDirectoryReader(input_dir=document_dir).load_data()
+        #
+        # if self.verbose:
+        #     print("[LLMLegalAssistant] Number of Documents Loaded: {len(documents)}")
+        #
+        # documents_nodes = splitter.get_nodes_from_documents(documents)
 
         if self.verbose:
             print(
                 "[LLMLegalAssistant] Nodes created from documents: {len(documents_nodes)}"
             )
 
-        return documents_nodes, IndexerFactory.create_index(
-            nodes=documents_nodes,
+        # return documents_nodes, IndexerFactory.create_index(
+        #     nodes=documents_nodes,
+        #     index_name=index_name,
+        #     database=database_name,
+        #     embed_model=embed_model,
+        # )
+        return IndexerFactory.create_index(
+            # nodes=documents_nodes,
             index_name=index_name,
             database=database_name,
             embed_model=embed_model,
@@ -213,8 +265,16 @@ class LLMLegalAssistant:
     def _initialize_llm(
         self, api_key: str, language_model: str = "meta-llama/Llama-2-7b-chat-hf"
     ) -> Any:
+<<<<<<< Updated upstream
         if language_model == "gpt-3.5-turbo":
             return OpenAI(model="gpt-3.5-turbo", api_key=api_key, temperature=0.01)
+=======
+        # if language_model == "gpt-3.5-turbo":
+        llm = OpenAI(model="gpt-3.5-turbo", api_key=api_key)
+
+        openai.api_key = "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"
+        return llm
+>>>>>>> Stashed changes
 
         hf_auth = api_key
 

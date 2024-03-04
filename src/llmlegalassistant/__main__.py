@@ -64,10 +64,17 @@ def main() -> None:
 
     evaluate_parser = subparsers.add_parser("answer")
     evaluate_parser.add_argument(
+<<<<<<< Updated upstream
         "-p",
         "--prompt",
         dest="prmopt",
         type=list,
+=======
+        "-q",
+        "--query",
+        dest="query",
+        type=str,
+>>>>>>> Stashed changes
         help="Write a prompt that you want to be answered about the EUR-lex corpus",
         default=None,
     )
@@ -116,11 +123,17 @@ def main() -> None:
                 from llmlegalassistant import LLMLegalAssistant
 
                 llmlegalassistant = LLMLegalAssistant()
+<<<<<<< Updated upstream
                 llmlegalassistant.answer(
                     prompt=args.prompt,
+=======
+                answer = llmlegalassistant.answer(
+                    prompt=args.query,
+>>>>>>> Stashed changes
                     is_openai=args.use_openai,
                     api_key_file=args.apikey_file,
                 )
+                print(answer)
             case _:
                 raise OSError(f"Unknown Command: {args.command}")
     except OSError:
