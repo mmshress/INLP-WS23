@@ -1,8 +1,6 @@
 import argparse
 import sys
 
-from llmlegalassistant.utils import load_configurations
-
 
 def main() -> None:
     parser = argparse.ArgumentParser(
@@ -48,13 +46,54 @@ def main() -> None:
     )
 
     evaluate_parser = subparsers.add_parser("evaluate")
+    # evaluate_parser.add_argument(
+    #     "-c",
+    #     "--configs",
+    #     dest="configurations",
+    #     type=list,
+    #     help="List out the configurations that are required to evaluate",
+    #     default=None,
+    # )
     evaluate_parser.add_argument(
-        "-c",
-        "--configurations",
-        dest="configurations",
+        "-v",
+        "--verbose",
+        dest="verbose",
+        help="Be more verbose",
+        action="store_true",
+    )
+
+    evaluate_parser = subparsers.add_parser("answer")
+    evaluate_parser.add_argument(
+<<<<<<< Updated upstream
+        "-p",
+        "--prompt",
+        dest="prmopt",
         type=list,
-        help="List out the configurations that are required to evaluate",
+=======
+        "-q",
+        "--query",
+        dest="query",
+        type=str,
+>>>>>>> Stashed changes
+        help="Write a prompt that you want to be answered about the EUR-lex corpus",
         default=None,
+    )
+    evaluate_parser.add_argument(
+        "-o",
+        "--use-openai",
+        dest="use_openai",
+        help="If you want to use `gpt-3.5-turbo`; you should pass this flag, otherwise `meta-llama/Llama-2-7b-chat-hf` from HuggingFace will be",
+        action="store_true",
+    )
+    evaluate_parser.add_argument(
+        "-a",
+        "--apikey-file",
+        dest="apikey_file",
+        type=str,
+        help="""
+        Pass the API key by storing it in a file and pass the location of the file with this option,
+        the API key of OpenAI, if you have selecd `gpt-3.5-turbo` with `--use-openai`, otherwise of API key of `HuggingFace`
+        """,
     )
 
     try:
@@ -66,62 +105,35 @@ def main() -> None:
 
                 articles_scraper = ArticlesScraper(True)
                 articles_scraper.fetch(args.export_type, args.no_samples)
-            case "pushdata":
-                from llmlegalassistant.data import ArticlesIndexer
-
-                articles_indexer = ArticlesIndexer(True, args.host, args.port)
-                articles_indexer.create_index()
-                articles_indexer.index(args.index_name)
             case "evaluate":
+                if args.verbose:
+                    print("Evaluation Starting...")
+
                 from llmlegalassistant import LLMLegalAssistant
 
-                llmlegalassistant = LLMLegalAssistant(verboe=True)
+                if args.verbose:
+                    print("Evaluation Started!")
 
-                configurations = args.configurations
-                configs = load_configurations(configurations)
+                llmlegalassistant = LLMLegalAssistant(args.verbose)
+                llmlegalassistant.evaluate()
 
-                for config in configs:
-                    embed_model = None
+                if args.verbose:
+                    print("Evaluation Finished!")
+            case "answer":
+                from llmlegalassistant import LLMLegalAssistant
 
-                    splitter = config["splitter"]["type"]
-                    model_name = config["embed"]
-                    index_name = config["store"]["index"]
-                    retriever = config["retriever"]["type"]
-                    # will need later when we add llm models
-                    # llm_model = config["model"]["name"]
-                    if model_name is not None:
-                        from langchain.embeddings.huggingface import \
-                            HuggingFaceEmbeddings
-
-                        embed_model = HuggingFaceEmbeddings(model_name=model_name)
-
-                    if splitter is not None:
-                        from llmlegalassistant.splitter import SplitterFactory
-
-                        chunk_size = config["splitter"]["chunk_size"]
-                        overlap_size = config["splitter"]["overlap_size"]
-                        textsplitter = SplitterFactory.generate_splitter(
-                            splitter=splitter,
-                            embed_model=embed_model,
-                            chunk_size=chunk_size,
-                            overlap_size=overlap_size,
-                        )
-
-                    if retriever is not None:
-                        from llmlegalassistant.retriever import \
-                            RetrieverFactory
-
-                        top_k = config["retriever"]["top_k"]
-                        num_queries = config["retriever"]["num_queries"]
-                        retriever = RetrieverFactory.generate_retriver(
-                            document_retriever=retriever,
-                            top_k=top_k,
-                            num_queries=num_queries,
-                        )
-
-                    llmlegalassistant.generate_query(
-                        textsplitter, embed_model, index_name, retriever
-                    )
+                llmlegalassistant = LLMLegalAssistant()
+<<<<<<< Updated upstream
+                llmlegalassistant.answer(
+                    prompt=args.prompt,
+=======
+                answer = llmlegalassistant.answer(
+                    prompt=args.query,
+>>>>>>> Stashed changes
+                    is_openai=args.use_openai,
+                    api_key_file=args.apikey_file,
+                )
+                print(answer)
             case _:
                 raise OSError(f"Unknown Command: {args.command}")
     except OSError:
