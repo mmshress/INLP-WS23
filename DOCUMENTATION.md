@@ -55,7 +55,7 @@ In our approach we tested each of the embedding models mentioned earlier with th
 
 The first level is the token splitter which is implemented in the [llama_index.core.node_parser module](#LlamaDocs). It aims to break text into consistent chunks based on raw token counts. This is achieved by specifying parameters such as chunk size and overlap. For instance, in our code, a TokenTextSplitter instance is created with a chunk size of 512 tokens and a chunk overlap of 20 tokens. Subsequently, the splitter is applied to a collection of documents , resulting in a set of nodes representing the segmented text.
 
-Next level is Recursive Character Text Splitter where  the text is recursively divided into smaller chunks using a set of separators in an iterative manner.If the first attempt to divide the text fails to produce chunks of the appropriate size, the function recursively runs itself on the resultant chunks using alternative separators until the target chunk size is achieved. [Mishra2024](#Mishra2024)
+Next level is Recursive Character Text Splitter where  the text is recursively divided into smaller chunks using a set of separators in an iterative manner.If the first attempt to divide the text fails to produce chunks of the appropriate size, the function recursively runs itself on the resultant chunks using alternative separators until the target chunk size is achieved.
 
 The Sentence Splitter (third level), featured also in [the llama_index.core.node_parser module](#LlamaDocs), endeavors to segment text by adhering to sentence boundaries. Unlike the Token Text Splitter, this class prioritizes keeping sentences and paragraphs intact, reducing the likelihood of incomplete or dangling sentences at the end of each node chunk.
 
@@ -184,7 +184,6 @@ The generated answer has the exact same metrics as the reference answer, \
 <li id="Liu2023">Liu, Y., Iter, D., Xu, Y., Wang, S., Xu, R., & Zhu, C. (2023). Gpteval: Nlg evaluation using gpt-4 with better human alignment. arXiv preprint arXiv:2303.16634.</li>
 <li id="Risch2021">Risch, J., Möller, T., Gutsch, J., & Pietsch, M. (2021). Semantic answer similarity for evaluating question answering models. arXiv preprint arXiv:2108.06130.</li>
 <li id="LlamaDocs">LlamaIndex Documentation, Accessed 2 Mar. 2024. https://docs.llamaindex.ai/en/stable/</li>
-<li id="Mishra2024">Five Levels of Chunking Strategies in RAG. Accessed 2 Mar. 2024. Medium, https://medium.com/@anuragmishra_27746/five-levels-of-chunking-strategies-in-rag-notes-from-gregs-video-7b735895694d</li>
 <li id="LangchainDocs">LangChain Python API documentation. Accessed 2 Mar. 2024. https://api.python.langchain.com/en/latest/</li>
 <li id="Li2023">Li, X., & Li, J. (2023). Angle-optimized text embeddings. arXiv preprint arXiv:2309.12871.</li>
 <li id="StellaHF">Stella Base embedding model - HuggingFace. Accessed 2 Mar. 2024. https://huggingface.co/infgrad/stella-base-en-v2</li>
