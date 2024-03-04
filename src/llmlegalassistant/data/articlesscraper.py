@@ -5,8 +5,12 @@ from bs4 import BeautifulSoup
 from markdownify import markdownify as md
 from tqdm import tqdm
 
-from llmlegalassistant.utils import get_articles_uri, get_column, \
-    get_file_dir, get_metadata
+from llmlegalassistant.utils import (
+    get_articles_uri,
+    get_column,
+    get_file_dir,
+    get_metadata,
+)
 
 
 class ArticlesScraper:
@@ -28,7 +32,7 @@ class ArticlesScraper:
             "celexnumber",
         )
 
-        if len(celex_column) <= 0:
+        if celex_column is None or len(celex_column) <= 0:
             return
 
         if self.verbose:
@@ -38,7 +42,7 @@ class ArticlesScraper:
         output_dir = get_file_dir(output_file_type)
         for celex_number in tqdm(celex_column, desc="Downloading", unit="article"):
             # Fetch the articles
-            origin_article = self.fetch_article(celex_number)
+            origin_article = self.fetch_article(celex_number, output_file_type.upper())
 
             if origin_article is None:
                 continue
@@ -56,8 +60,10 @@ class ArticlesScraper:
         if self.verbose:
             print(f"[ArticleScraper] {output_file_type} Articles Downloaded!")
 
-    def fetch_article(self, celex_number: str) -> requests.Response | None:
-        response = requests.get("".join([get_articles_uri(), celex_number]))
+    def fetch_article(
+        self, celex_number: str, type: str = "HTML"
+    ) -> requests.Response | None:
+        response = requests.get("".join([get_articles_uri(type), celex_number]))
         if response is not None and self.DOES_NOT_EXIST_STRING not in response.text:
             return response
 
@@ -72,7 +78,7 @@ class ArticlesScraper:
         return os.path.join(output_dir, ".".join([celex, output_file_type]))
 
     def save_article(
-        self, file_name: str, article_content: str, mode: str = "w"
+        self, file_name: str, article_content: str | bytes, mode: str = "w"
     ) -> bool:
         try:
             with open(file_name, mode) as article:
@@ -84,7 +90,9 @@ class ArticlesScraper:
 
     def parse_content(
         self, article_content: requests.Response, export_type: str
-    ) -> str | None:
+    ) -> str | bytes | None:
+        if export_type == "pdf":
+            return article_content.content
         content = article_content.text
         if export_type == "md":
             return md(content)

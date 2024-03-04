@@ -5,14 +5,11 @@ repos:
       - id: check-yaml
       - id: end-of-file-fixer
       - id: trailing-whitespace
-  - repo: https://github.com/psf/black
-    rev: 23.12.0
-    hooks:
-      - id: black
   - repo: https://github.com/pycqa/isort
     rev: 5.13.2
     hooks:
       - id: isort
+        args: ["--profile", "black"]
   - repo: https://github.com/pycqa/flake8
     rev: 6.1.0
     hooks:
@@ -22,6 +19,5 @@ repos:
     rev: v1.7.1
     hooks:
       - id: mypy
-        additional_dependencies: [
-          types-requests==2.31.0.10
-        ]
+        args: ["--ignore-missing-imports"]
+        additional_dependencies: [types-requests==2.31.0.10, types-PyYAML]

@@ -1,5 +1,6 @@
 import os
 import shutil
+from typing import List, Optional
 
 import pandas as pd
 import yaml
@@ -15,6 +16,7 @@ ARTICLES_DIR = config.ARTICLES_DIR
 DATASET_DIR = config.DATASET_DIR
 ARTICLES_URI = config.ARTICLES_URI
 CONFIG_DIR = config.CONFIG_DIR
+EVALUATION_DIR = config.EVALUATION_DIR
 ARTICLE_FILE_DIR = ARTICLES_DIR
 
 
@@ -22,8 +24,8 @@ def get_project_dir() -> str:
     return PROJECT_DIR
 
 
-def get_articles_uri() -> str:
-    return ARTICLES_URI
+def get_articles_uri(type: str = "HTML") -> str:
+    return ARTICLES_URI.format(TYPE=type)
 
 
 def get_dataset_dir() -> str:
@@ -32,6 +34,13 @@ def get_dataset_dir() -> str:
 
 def get_articles_dir() -> str:
     return ARTICLES_DIR
+
+
+def get_evaluation_dataset_dir(database_type: str = "") -> str | None:
+    if database_type not in ["databases", "documents"]:
+        return None
+
+    return os.path.join(EVALUATION_DIR, database_type)
 
 
 def get_file_dir(file_type: str) -> str:
@@ -43,7 +52,11 @@ def get_file_dir(file_type: str) -> str:
     return ARTICLE_FILE_DIR
 
 
-def load_configurations(configurations: list[str] | None = None) -> list[dict]:
+def get_models_dir() -> str:
+    return os.path.join(PROJECT_DIR, "models")
+
+
+def load_configurations() -> list[dict]:
     """
     This function returns the corresponding configuration from
     the config file at the project root the configuration file
@@ -63,11 +76,11 @@ def load_configurations(configurations: list[str] | None = None) -> list[dict]:
     configs = []
 
     config_file = os.path.join(CONFIG_DIR, "configs.yaml")
-    with open(config_file, "r") as config_file:
-        configs = yaml.safe_load(config_file)
+    with open(config_file, "r") as file:
+        configs = yaml.safe_load(file)
 
-    if configurations is not None:
-        return [config for config in configs if config["config"] in configurations]
+    # if configurations is not None:
+    #     return [config for config in configs if config["config"] in configurations]
 
     return configs
 
@@ -107,7 +120,7 @@ def get_metadata() -> pd.DataFrame | None:
     return None
 
 
-def get_column(df: pd.DataFrame, column: str) -> pd.Series | None:
+def get_column(df: pd.DataFrame, column: str) -> pd.Series | pd.DataFrame | None:
     try:
         column_series = df[column]
         if not len(column_series):
