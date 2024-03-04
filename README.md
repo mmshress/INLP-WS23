@@ -7,10 +7,6 @@
  <br> sid-code14 - Siddhant Tripathi 3768501
 </h2>
 
-### Requirements
-
-#### Hardware requirements
-
 #### Software requirements
 
 - python >= 3.11
@@ -34,15 +30,6 @@ python --version
 - if not 3.11 then install python 3.11, from [here](https://www.python.org/downloads/release/python-3110/)
 - once installed
 
-#### Note python3.11 path
-
-```bash
-# on windows
-where python3.11
-# on linux
-which python3.11
-```
-
 #### Setup virtual environment
 
 - Now, use that path to create a virtual environment
@@ -51,7 +38,7 @@ which python3.11
 /path/to/python3.11 -m venv .env
 # on windows,
 ## in powershell
-.env/Scripts/activate
+.env/Scripts/Activate.ps1
 ## in cmd
 .env/Scripts/activate.bat
 # on linux
@@ -61,7 +48,7 @@ source .env/bin/activate
 #### Setup package
 
 ```bash
- python -m pip install .
+python -m pip install .
 ```
 
 #### For development
@@ -76,10 +63,18 @@ source .env/bin/activate
 #### Using the CLI
 
 ```bash
-llmlegalassistant [commands] [options]
+llmlegalassistant answer -q <query>
+or
+llmlegalassistant answer --query <query>
 ```
 
-##### Help
+- If you want to use OpenAI model for inference then provide a key with `--openapi` flag
+- If you want to use LLaMA from HuggingFace then provide your key with `--huggingface` flag
+ - we use `LLaMA-2-Q4_K-Medium` Quantized model
+
+```bash
+llmlegalassistant [commands] [options]
+```
 
 ```bash
 llmlegalassistant --help
