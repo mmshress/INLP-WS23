@@ -5,12 +5,14 @@ Team Members:
 Assignment Group 17
 <ul>
 <li>Siddhant Tripathi (siddhant.tripathi@stud.uni-heidelberg.de)</li>
+	Setup the base pipeline for RAG ,to experiment on different configuration, wrote code for different retriever methods and co-authored evaluation pipeline with Kushal Gaywala.
+	Added SemanticChunker as one of chunking strategy. Helped with research for embedding models, chunking strategies and Retreiver Models, co-created with Kushal Gaywala Response Dataset to compare with Ground Truth/Gold Data to facilitate evaluation of RAG pipeline.
 <li>Asma Motmem (asma.motmem@stud.uni-heidelberg.de)</li>
 <li>Kushal Gaywala (kushal.gaywala@stud.uni-heidelberg.de)</li>
 <li>Mohit Shrestha (mohit.shrestha@stud.uni-heidelberg.de)</li>
 Setup the fetching and pre-processing pipelines for the EUR-Lex corpus, setup the Docker compose files for the OpenSearch vector store,
 initial LlamaIndex orchestration, wrote the bulk of the code for indexing and interfacing with the OpenSearch vector store, helped with research for
-proper embedding models and chunking strategies, created synthetic dataset of question/answer/context triplets for fine-tuning the LLM along with engineering the prompt for the same, 
+proper embedding models and chunking strategies, created synthetic dataset of question/answer/context triplets for evaluation of RAG pipeline along with engineering the prompt for the same, 
 general refactoring of the codebase, editing of the majority of the project report
 </ul>
 <h4>Advisor: Prof. Dr. Michael Gertz</h4>
@@ -49,7 +51,7 @@ the files did not share a common data model / structure of any kind. This led to
 To pre-process our dataset, we used some basic regular expressions to clean up lines in the files not relevant to the text, such as XML tags and metadata information. Thereafter, we proceeded with deciding on chunking strategies for our corpus. 
 
 When handling lengthy text, it becomes essential to break it down into smaller chunks. Despite the apparent simplicity of this task, it introduces potential complexities. The goal is to ideally group together text segments that are semantically related. 
-In our approach we tested each of the embedding models mentioned earlier with the 5 different levels of chunking strategies. 
+In our approach we tested each of the embedding models mentioned earlier with the 4 different levels of chunking strategies inspired by <a href="#Greg Kamradt">5 levels of Text Splitting by Greg Kamradt</a>. 
 
 The first level is the token splitter which is implemented in the [llama_index.core.node_parser module](#LlamaDocs). It aims to break text into consistent chunks based on raw token counts. This is achieved by specifying parameters such as chunk size and overlap. For instance, in our code, a TokenTextSplitter instance is created with a chunk size of 512 tokens and a chunk overlap of 20 tokens. Subsequently, the splitter is applied to a collection of documents , resulting in a set of nodes representing the segmented text.
 
@@ -69,9 +71,10 @@ The stella V2 embedding model, recently open-sourced on October 19 2023, offers 
 
 The key difference between the two models is the architecture such that "UAE-v1-large" is  described as an angle-optimized text embedding model focusing on mitigating the adverse effects of the cosine saturation zone. Stella V2, on the other hand, is a general-purpose text encoding model with various main models, building on the stella model by using more training data and incorporating methods like knowledge distillation.
 
-After the embeddings are created and stored in our vector store, the next step is to use a retriever model to interface both with the user query, and then provide the query along with the relevant documents from a vector search to the LLM for question answering. For this we use the well-known [BM25](#BM25) retrieval method provided out of the box by LlamaIndex. The retriever forwards the query and the relevant docs from the similarity search, and then the LLM generates the final answer to be given back to the user. 
+After the embeddings are created and stored in our vector database, the next step is to use a retriever model to interface with the user query, and then provide the query along with the relevant documents from a vector database to the QueryEngine for question answering. The retriever forwards the query and the relevant docs from the similarity search, and then the LLM generates the final answer to be given back to the user. For this we use three different types of retriever model. Firstly, the well-known [BM25](#BM25) keyword based retriever model provided out of the box by LlamaIndex. Secondly, a VectorStoreRetriever model, which is a lightweight wrapper around the vector database class to make it conform to the retriever interface. It uses the search methods implemented by a vector store, like similarity search to retrieve topK similar documents. At the core of VectorStoreRetriever model is a embedding model, which is use to embed the chunks into vectors and then these embedding as stored in vector database. VectoreStoreRetrieval models are also known as DenseRetrieval models as they are based on dense vectors.Finally, we use FusionRetriever model, which combines both keyword and vectorstore retriver models. The topK documents retrieved by both the retriever models are reranked through Reciprocal Rank Fusion (RRF), a technique for combining the ranks of multiple search
+result lists to produce a single, unified ranking. [Cormack et al., 2009](#RRF).
 
-Further details about the queries we use for the LLM are given in the following section. 
+The final step for RAG pipeline is a QueryEngine which is responsible for querying, which is in our a RetrieverQueryEngine. A RetrieverQueryEngine as it's name suggest, build on top on of a retriver and feeds the llm the query and retrieved document as context to LLM and returns a response based on the infromation provided.  
 
 <h2>Experimental Setup and Details</h2>
 <h3>Test Data</h3>
@@ -81,9 +84,9 @@ Subsequently, we utilize the LabelledRagDataset class to organize these triplets
 <h3>Evaluation Method</h3>
 [Liu2023](#Liu2023) suggests that LLM-based evaluation methods have high correlation to human judgement than conventional reference based metrics such as BLEU and ROUGE, although pointing out that LLM-based evaluation can have slight bias towards LLM-generated text in giving higher ratings. 
 
-We use LlamaIndex RagEvaluator pack which offers "LLM-Based" evaluation modules to measure the quality of results. This uses a “gold” LLM (e.g. GPT-4, in our case: Llama2-7b-chat-en) to decide whether the predicted answer is correct in a variety of ways.
+We use LlamaIndex RagEvaluator pack which offers "LLM-Based" evaluation modules to measure the quality of results. This uses a “gold” LLM (e.g. GPT-4, in our case: gpt-3.5-turbo) to decide whether the predicted answer is correct in a variety of ways. Since LLM-Based evaluation can be costly, we first make use of  <a href="#BERTScore"> BERTScore </a>, an automatic evaluation metric for text generation. Analogously to common metrics,BERTScore computes a similarity score for each token in the candidate sentence with each token in the reference sentence. However, instead of exact matches, compute token similarity using contextual embeddings.After comparing BERTScore, we choose top 3 configuration to evaluate using RagEvaluator.
 
-These evaluation modules are in the following forms:
+The LLM-based evaluation metrics are in the following forms:
 <ul>
     <li> Correctness: Whether the generated answer matches that of the reference answer (from dataset) given the query. This is done by giving a prompt to LLM to rate the correctness, by giving a score between 1 to 5, where 5 being the most correct.  
 	<li> Semantic Similarity: Whether the predicted answer is semantically similar to the reference answer (from dataset). This is done using a embedding model which embed both predicted and reference answer and give a score based on normalised dot product between both embeddings 
@@ -91,12 +94,13 @@ These evaluation modules are in the following forms:
 	<li> Faithfulness: Evaluates if the answer (from dataset) is faithful to the retrieved contexts (in other words, whether if there’s hallucination). This also done by giving a prompt to LLM and asking whether the given information is supported by the context and return 1 or 0 for yes and no.
 	<li> Relevancy: Whether retrieved context and generated answer are relevant to the query. Again, done by giving a prompt to LLM asking whether the given information (context and answer) is relevant to the query.
 </ul>
-<h3>Experimental Details</h3> The LLM used for evaluation is LLama2-7b-chat-en, the embedding model is WhereIsAI/UAE-Large-V1.
+<h3>Experimental Details</h3> The LLM used for evaluation is gpt-3.5-turbo, the embedding model is text-embedding-3-large.
 
 The prompts given to Correctness, Faithfulness, and Relevancy are as follows:
 
-<h4>Correctness</h4> """
+<h4>Correctness</h4> 
 
+```
 You are an expert evaluation system for a question answering chatbot.
 
 You are given the following information:
@@ -126,51 +130,48 @@ Example Response:
 
 The generated answer has the exact same metrics as the reference answer, \
     but it is not as concise.
-
-"""
-
-
+```
 
 <h4>Faithfulness</h4>
 
-    "Please tell if a given piece of information "
-    "is supported by the context.\n"
-    "You need to answer with either YES or NO.\n"
-    "Answer YES if any of the context supports the information, even "
-    "if most of the context is unrelated. "
-    "Some examples are provided below. \n\n"
-    "Information: Apple pie is generally double-crusted.\n"
-    "Context: An apple pie is a fruit pie in which the principal filling "
-    "ingredient is apples. \n"
-    "Apple pie is often served with whipped cream, ice cream "
-    "('apple pie à la mode'), custard or cheddar cheese.\n"
-    "It is generally double-crusted, with pastry both above "
-    "and below the filling; the upper crust may be solid or "
-    "latticed (woven of crosswise strips).\n"
-    "Answer: YES\n"
-    "Information: Apple pies tastes bad.\n"
-    "Context: An apple pie is a fruit pie in which the principal filling "
-    "ingredient is apples. \n"
-    "Apple pie is often served with whipped cream, ice cream "
-    "('apple pie à la mode'), custard or cheddar cheese.\n"
-    "It is generally double-crusted, with pastry both above "
-    "and below the filling; the upper crust may be solid or "
-    "latticed (woven of crosswise strips).\n"
-    "Answer: NO\n"
-    "Information: {query_str}\n"
-    "Context: {context_str}\n"
-    "Answer: "
+    Please tell if a given piece of information
+    is supported by the context.
+    You need to answer with either YES or NO.\n
+    Answer YES if any of the context supports the information,even
+    if most of the context is unrelated.
+    Some examples are provided below. \n\n
+    Information: Apple pie is generally double-crusted.\n
+    Context: An apple pie is a fruit pie in which the principal filling 
+    ingredient is apples. \n
+    Apple pie is often served with whipped cream, ice cream 
+    ('apple pie à la mode'), custard or cheddar cheese.\n
+    It is generally double-crusted, with pastry both above
+    and below the filling; the upper crust may be solid or
+    latticed (woven of crosswise strips).\n
+    Answer: YES\n
+    Information: Apple pies tastes bad.\n
+    Context: An apple pie is a fruit pie in which the principal filling 
+    ingredient is apples. \n
+    Apple pie is often served with whipped cream, ice cream
+    ('apple pie à la mode'), custard or cheddar cheese.\n
+    It is generally double-crusted, with pastry both above
+    and below the filling; the upper crust may be solid or
+    latticed (woven of crosswise strips).\n
+    Answer: NO\n
+    Information: {query_str}\n
+    Context: {context_str}\n
+    Answer: 
 
 <h4>Relevancy</h4>
     
-    "Your task is to evaluate if the response for the query \
-    is in line with the context information provided.\n"
-    "You have two options to answer. Either YES/ NO.\n"
-    "Answer - YES, if the response for the query \
+    Your task is to evaluate if the response for the query
+    is in line with the context information provided.\n
+    You have two options to answer. Either YES/ NO.\n
+    Answer - YES, if the response for the query \
     is in line with context information otherwise NO.\n"
-    "Query and Response: \n {query_str}\n"
-    "Context: \n {context_str}\n"
-    "Answer: "
+    Query and Response: \n {query_str}\n
+    Context: \n {context_str}\n
+    Answer: 
 
 
 
@@ -188,5 +189,8 @@ The generated answer has the exact same metrics as the reference answer, \
 <li id="Li2023">Li, X., & Li, J. (2023). Angle-optimized text embeddings. arXiv preprint arXiv:2309.12871.</li>
 <li id="StellaHF">Stella Base embedding model - HuggingFace. Accessed 2 Mar. 2024. https://huggingface.co/infgrad/stella-base-en-v2</li>
 <li id="BM25">Robertson, S., & Zaragoza, H. (2009). The probabilistic relevance framework: BM25 and beyond. Foundations and Trends® in Information Retrieval, 3(4), 333-389.</li>
+<li id ="Greg Kamradt"> https://github.com/FullStackRetrieval-com/RetrievalTutorials/blob/main/5_Levels_Of_Text_Splitting.ipynb </li>
+<li id = "RRF">Gordon V. Cormack, Charles L A Clarke, and Stefan Buettcher. 2009. Reciprocal rank fusion outperforms condorcet and individual rank learning methods. In Proceedings of the 32nd international ACM SIGIR conference on Research and development in information retrieval (SIGIR '09). Association for Computing Machinery, New York, NY, USA, 758–759. https://doi.org/10.1145/1571941.1572114</li>
+<li id ="BERTScore">BERTScore: Evaluating Text Generation with BERT Tianyi Zhang, Varsha Kishore, Felix Wu, Kilian Q. Weinberger, Yoav Artzi https://arxiv.org/abs/1904.09675</li>
 </ul>
     
