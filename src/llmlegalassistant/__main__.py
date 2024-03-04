@@ -62,6 +62,33 @@ def main() -> None:
         action="store_true",
     )
 
+    evaluate_parser = subparsers.add_parser("answer")
+    evaluate_parser.add_argument(
+        "-p",
+        "--prompt",
+        dest="prmopt",
+        type=list,
+        help="Write a prompt that you want to be answered about the EUR-lex corpus",
+        default=None,
+    )
+    evaluate_parser.add_argument(
+        "-o",
+        "--use-openai",
+        dest="use_openai",
+        help="If you want to use `gpt-3.5-turbo`; you should pass this flag, otherwise `meta-llama/Llama-2-7b-chat-hf` from HuggingFace will be",
+        action="store_true",
+    )
+    evaluate_parser.add_argument(
+        "-a",
+        "--apikey-file",
+        dest="apikey_file",
+        type=str,
+        help="""
+        Pass the API key by storing it in a file and pass the location of the file with this option,
+        the API key of OpenAI, if you have selecd `gpt-3.5-turbo` with `--use-openai`, otherwise of API key of `HuggingFace`
+        """,
+    )
+
     try:
         args = parser.parse_args()
 
@@ -71,12 +98,6 @@ def main() -> None:
 
                 articles_scraper = ArticlesScraper(True)
                 articles_scraper.fetch(args.export_type, args.no_samples)
-            # case "pushdata":
-            #     from llmlegalassistant.data import ArticlesIndexer
-            #
-            #     articles_indexer = ArticlesIndexer(True, args.host, args.port)
-            #     articles_indexer.create_index()
-            #     articles_indexer.index(args.index_name)
             case "evaluate":
                 if args.verbose:
                     print("Evaluation Starting...")
@@ -91,6 +112,15 @@ def main() -> None:
 
                 if args.verbose:
                     print("Evaluation Finished!")
+            case "answer":
+                from llmlegalassistant import LLMLegalAssistant
+
+                llmlegalassistant = LLMLegalAssistant()
+                llmlegalassistant.answer(
+                    prompt=args.prompt,
+                    is_openai=args.use_openai,
+                    api_key_file=args.apikey_file,
+                )
             case _:
                 raise OSError(f"Unknown Command: {args.command}")
     except OSError:

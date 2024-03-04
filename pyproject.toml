@@ -44,23 +44,6 @@ requires = [
 ]
 build-backend = "setuptools.build_meta"
 
-[tool.black]
-target-version = ['py311', 'py312']
-line-lengh = 150
-exclude = '''
-/(
-    \.git
-    |env_setup
-    |__pycache__
-    |\.venv
-    |experiments
-    |build
-    |venv
-    |env
-    |dist
-)/
-'''
-
 [tool.flake8]
 max-line-length = 150
 ignore = ["F401"]
