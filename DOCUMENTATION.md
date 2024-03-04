@@ -82,7 +82,7 @@ We created a synthetic dataset. The primary objective of this dataset is to asse
 
 Subsequently, we utilize the LabelledRagDataset class to organize these triplets into a cohesive dataset. This dataset plays a pivotal role in our project as it serves as the foundation for evaluating the effectiveness of our RAG system. By providing queries (questions), reference answers, and context, we can meticulously analyze the system's performance. Specifically, we evaluate the system's ability to generate accurate responses by comparing them against the reference answers. This evaluation process allows us to iteratively refine and enhance the performance of our RAG system.
 <h3>Evaluation Method</h3>
-[Liu2023](#Liu2023) suggests that LLM-based evaluation methods have high correlation to human judgement than conventional reference based metrics such as BLEU and ROUGE, although pointing out that LLM-based evaluation can have slight bias towards LLM-generated text in giving higher ratings. 
+<a href="#Liu2023">[Liu2023]</a> suggests that LLM-based evaluation methods have high correlation to human judgement than conventional reference based metrics such as BLEU and ROUGE, although pointing out that LLM-based evaluation can have slight bias towards LLM-generated text in giving higher ratings. 
 
 We use LlamaIndex RagEvaluator pack which offers "LLM-Based" evaluation modules to measure the quality of results. This uses a “gold” LLM (e.g. GPT-4, in our case: gpt-3.5-turbo) to decide whether the predicted answer is correct in a variety of ways. Since LLM-Based evaluation can be costly, we first make use of  <a href="#BERTScore"> BERTScore </a>, an automatic evaluation metric for text generation. Analogously to common metrics,BERTScore computes a similarity score for each token in the candidate sentence with each token in the reference sentence. However, instead of exact matches, compute token similarity using contextual embeddings.After comparing BERTScore, we choose top 3 configuration to evaluate using RagEvaluator.
 
@@ -181,11 +181,11 @@ The generated answer has the exact same metrics as the reference answer, \
 <li id="Gao2023">Gao, Y., Xiong, Y., Gao, X., Jia, K., Pan, J., Bi, Y., ... & Wang, H. (2023). Retrieval-augmented generation for large language models: A survey. arXiv preprint arXiv:2312.10997.</li>
 <li id="Siriwardhana2023">Siriwardhana, S., Weerasekera, R., Wen, E., Kaluarachchi, T., Rana, R., & Nanayakkara, S. (2023). Improving the domain adaptation of retrieval augmented generation (RAG) models for open domain question answering. Transactions of the Association for Computational Linguistics, 11, 1-17.</li>
 <li id="Lala2023">Lála, J., O'Donoghue, O., Shtedritski, A., Cox, S., Rodriques, S. G., & White, A. D. (2023). Paperqa: Retrieval-augmented generative agent for scientific research. arXiv preprint arXiv:2312.07559.</li>
-<li id="Liu2023">Liu, Y., Iter, D., Xu, Y., Wang, S., Xu, R., & Zhu, C. (2023). Gpteval: Nlg evaluation using gpt-4 with better human alignment. arXiv preprint arXiv:2303.16634.</li>
+<li id="Liu2023"> Liu, Y., Iter, D., Xu, Y., Wang, S., Xu, R., & Zhu, C. (2023). Gpteval: Nlg evaluation using gpt-4 with better human alignment. arXiv preprint arXiv:2303.16634.</li>	
 <li id="Risch2021">Risch, J., Möller, T., Gutsch, J., & Pietsch, M. (2021). Semantic answer similarity for evaluating question answering models. arXiv preprint arXiv:2108.06130.</li>
 <li id="LlamaDocs">LlamaIndex Documentation, Accessed 2 Mar. 2024. https://docs.llamaindex.ai/en/stable/</li>
 <li id="LangchainDocs">LangChain Python API documentation. Accessed 2 Mar. 2024. https://api.python.langchain.com/en/latest/</li>
-<li id="Liu2023">Li, X., & Li, J. (2023). Angle-optimized text embeddings. arXiv preprint arXiv:2309.12871.</li>
+<li id="Li2023">Li, X., & Li, J. (2023). Angle-optimized text embeddings. arXiv preprint arXiv:2309.12871.</li>
 <li id="StellaHF">Stella Base embedding model - HuggingFace. Accessed 2 Mar. 2024. https://huggingface.co/infgrad/stella-base-en-v2</li>
 <li id="BM25">Robertson, S., & Zaragoza, H. (2009). The probabilistic relevance framework: BM25 and beyond. Foundations and Trends® in Information Retrieval, 3(4), 333-389.</li>
 <li id ="Greg Kamradt"> 5 levels of Text Splitting https://github.com/FullStackRetrieval-com/RetrievalTutorials/blob/main/5_Levels_Of_Text_Splitting.ipynb </li>
