@@ -13,46 +13,46 @@ First, downloaded the csv files from the EUR-lex [website](https://eur-lex.europ
 <li>Mohit Shrestha (mohit.shrestha@stud.uni-heidelberg.de)</li>
 Setup the fetching and pre-processing pipelines for the EUR-Lex corpus, setup the Docker compose files for the OpenSearch vector store,
 initial LlamaIndex orchestration, wrote the bulk of the code for indexing and interfacing with the OpenSearch vector store, helped with research for
-proper embedding models and chunking strategies, created synthetic dataset of question/answer/context triplets for evaluation of RAG pipeline along with engineering the prompt for the same, 
+proper embedding models and chunking strategies, created synthetic dataset of question/answer/context triplets for evaluation of RAG pipeline along with engineering the prompt for the same,
 general refactoring of the codebase, editing of the majority of the project report
 </ul>
 <h4>Advisor: Prof. Dr. Michael Gertz</h4>
 We hereby certify that we have written the work ourselves and that we have not used any sources or aids other than those specified and that we have marked what has been taken over from other people's works, either verbatim or in terms of content, as foreign.
 
 <h2>Introduction</h2>
-In this project, we explore a possible approach to create a question answering system for a domain-specific corpus. In our case, the corpus we based our system on is from the legal domain, specifically all the [EUR-Lex](#EURLex) English language articles from the "energy" domain.  
-While large language models (LLMs) have recently become the go-to technology for most chatbot and question answering systems, they come with their own set of limitations. A particular problem that could discourage the use of LLMs for our purpose is the fact that LLMs tend to be trained on a generalized language corpus. This leads to difficulties in receiving answers with information relevant to the specific domain we want answers from. 
+In this project, we explore a possible approach to create a question answering system for a domain-specific corpus. In our case, the corpus we based our system on is from the legal domain, specifically all the [EUR-Lex](#EURLex) English language articles from the "energy" domain.
+While large language models (LLMs) have recently become the go-to technology for most chatbot and question answering systems, they come with their own set of limitations. A particular problem that could discourage the use of LLMs for our purpose is the fact that LLMs tend to be trained on a generalized language corpus. This leads to difficulties in receiving answers with information relevant to the specific domain we want answers from.
 To circumvent this, we employ an approach that has gained a lot of traction in recent times: a retrieval-augmented generation (RAG) pipeline.
-By retrieving relevant information from the domain-specific corpus before using the LLM to answer questions, we ensure that the answers we receive all come from the corpus, instead of from the general parameters of the LLM. To determine the best possible pipeline for our system, we evaluate multiple embedding models, chunking strategies as well as query retrieval strategies. Finally, we package the optimal pipeline from our evaluations in Python for use as a QA system.       
+By retrieving relevant information from the domain-specific corpus before using the LLM to answer questions, we ensure that the answers we receive all come from the corpus, instead of from the general parameters of the LLM. To determine the best possible pipeline for our system, we evaluate multiple embedding models, chunking strategies as well as query retrieval strategies. Finally, we package the optimal pipeline from our evaluations in Python for use as a QA system.
 
 <h2>Related Work</h2>
-[Gao2023](#Gao2023) highlights the limitations of Large Language Models (LLMs), such as hallucination, outdated knowledge, and non-transparent reasoning, 
-and introduces Retrieval-Augmented Generation (RAG) as a promising solution. RAG addresses these issues by incorporating knowledge from external databases, 
-enhancing accuracy and credibility, particularly for knowledge-intensive tasks. The synergy between RAG and LLMs involves merging intrinsic knowledge with 
-dynamic external repositories. Overall, RAG offers a comprehensive solution that combines the strengths of LLMs with external knowledge to overcome their limitations. 
-Our project uses RAG in a similar vein to bypass the limitations of LLMs. 
+[Gao2023](#Gao2023) highlights the limitations of Large Language Models (LLMs), such as hallucination, outdated knowledge, and non-transparent reasoning,
+and introduces Retrieval-Augmented Generation (RAG) as a promising solution. RAG addresses these issues by incorporating knowledge from external databases,
+enhancing accuracy and credibility, particularly for knowledge-intensive tasks. The synergy between RAG and LLMs involves merging intrinsic knowledge with
+dynamic external repositories. Overall, RAG offers a comprehensive solution that combines the strengths of LLMs with external knowledge to overcome their limitations.
+Our project uses RAG in a similar vein to bypass the limitations of LLMs.
 
 The focus of [Lala2023](#Lala2023) is on applying RAG models, specifically demonstrated by PaperQA, to process scientific knowledge systematically. PaperQA, as a question-answering agent,
-conducts information retrieval across full-text scientific articles, evaluates source and passage relevance, and utilizes RAG for answering questions. 
-The performance of PaperQA surpasses existing LLMs and LLM agents on current science question-answering benchmarks. Similar to their work on the scientific domain, 
-our project aims to compare the relative performance of QA systems on the legal domain. 
+conducts information retrieval across full-text scientific articles, evaluates source and passage relevance, and utilizes RAG for answering questions.
+The performance of PaperQA surpasses existing LLMs and LLM agents on current science question-answering benchmarks. Similar to their work on the scientific domain,
+our project aims to compare the relative performance of QA systems on the legal domain.
 
-[Siriwardhan2023](#Siriwardhana2023) also aims to improve the adaptation of RAG systems to a range of domains, and we use similar techniques in our system for the legal domain. 
-Overall, there are almost no standalone papers exploring the performance of RAG systems particularly on the legal domain, and our project aims to provide such a baseline. 
+[Siriwardhan2023](#Siriwardhana2023) also aims to improve the adaptation of RAG systems to a range of domains, and we use similar techniques in our system for the legal domain.
+Overall, there are almost no standalone papers exploring the performance of RAG systems particularly on the legal domain, and our project aims to provide such a baseline.
 <H2>Methods/Approach</h2>
-A rough overview of the system we have designed can be seen in the following diagram: 
+A rough overview of the system we have designed can be seen in the following diagram:
 
 ![Our RAG Pipeline](RAGDiagram.png)
 
-For the overall orchestration of our RAG Pipeline, we used the [Llama Index](#LlamaDocs) framework. 
+For the overall orchestration of our RAG Pipeline, we used the [Llama Index](#LlamaDocs) framework.
 
 The first step in realizing our system was to obtain the EUR-Lex dataset comprising of 511 documents and pre-process it to a digestible format for our embedding models. For this, we tried three different file formats offered by EUR-LEx - plain text, markdown and HTML. Although HTML and Markdown would have given us more contextual information owing to their structured nature,
-the files did not share a common data model / structure of any kind. This led to difficulties for us in parsing the hierarchies present in the documents, so in the end we opted to just use the plain text files. 
+the files did not share a common data model / structure of any kind. This led to difficulties for us in parsing the hierarchies present in the documents, so in the end we opted to just use the plain text files.
 
-To pre-process our dataset, we used some basic regular expressions to clean up lines in the files not relevant to the text, such as XML tags and metadata information. Thereafter, we proceeded with deciding on chunking strategies for our corpus. 
+To pre-process our dataset, we used some basic regular expressions to clean up lines in the files not relevant to the text, such as XML tags and metadata information. Thereafter, we proceeded with deciding on chunking strategies for our corpus.
 
-When handling lengthy text, it becomes essential to break it down into smaller chunks. Despite the apparent simplicity of this task, it introduces potential complexities. The goal is to ideally group together text segments that are semantically related. 
-In our approach we tested each of the embedding models mentioned earlier with the 4 different levels of chunking strategies inspired by <a href="#Greg Kamradt">5 levels of Text Splitting by Greg Kamradt</a>. 
+When handling lengthy text, it becomes essential to break it down into smaller chunks. Despite the apparent simplicity of this task, it introduces potential complexities. The goal is to ideally group together text segments that are semantically related.
+In our approach we tested each of the embedding models mentioned earlier with the 4 different levels of chunking strategies inspired by <a href="#Greg Kamradt">5 levels of Text Splitting by Greg Kamradt</a>.
 
 The first level is the token splitter which is implemented in the [llama_index.core.node_parser module](#LlamaDocs). It aims to break text into consistent chunks based on raw token counts. This is achieved by specifying parameters such as chunk size and overlap. For instance, in our code, a TokenTextSplitter instance is created with a chunk size of 512 tokens and a chunk overlap of 20 tokens. Subsequently, the splitter is applied to a collection of documents , resulting in a set of nodes representing the segmented text.
 
@@ -64,7 +64,7 @@ The final chunking method is implemented as the SemanticChunker within the Llama
 
 To use this method, an instance of the SemanticChunker is created with an embedding model and incorporated into the [LangchainNodeParser](#LangchainDocs).
 
-After the chunking of the documents are done, the next step is to create the vector embeddings for the embeddings and store them. As our vector store, we are using a locally hosted instance of OpenSearch, orchestrated using a Docker Compose file. The embedding models we have used are: 
+After the chunking of the documents are done, the next step is to create the vector embeddings for the embeddings and store them. As our vector store, we are using a locally hosted instance of OpenSearch, orchestrated using a Docker Compose file. The embedding models we have used are:
 
 Text embedding "UAE-v1-large"  is better for tasks that involve understanding the meaning of text, which is important for large language models. Current models struggle with a common issue called vanishing gradients, mainly because of how they use the cosine function in their optimization process. but "UAE-v1-large" overcome this problem [Li 2023](#Li2023).
 
@@ -75,7 +75,7 @@ The key difference between the two models is the architecture such that "UAE-v1-
 After the embeddings are created and stored in our vector database, the next step is to use a retriever model to interface with the user query, and then provide the query along with the relevant documents from a vector database to the QueryEngine for question answering. The retriever forwards the query and the relevant docs from the similarity search, and then the LLM generates the final answer to be given back to the user. For this we use three different types of retriever model. Firstly, the well-known [BM25](#BM25) keyword based retriever model provided out of the box by LlamaIndex. Secondly, a VectorStoreRetriever model, which is a lightweight wrapper around the vector database class to make it conform to the retriever interface. It uses the search methods implemented by a vector store, like similarity search to retrieve topK similar documents. At the core of VectorStoreRetriever model is a embedding model, which is use to embed the chunks into vectors and then these embedding as stored in vector database. VectoreStoreRetrieval models are also known as DenseRetrieval models as they are based on dense vectors.Finally, we use FusionRetriever model, which combines both keyword and vectorstore retriver models. The topK documents retrieved by both the retriever models are reranked through Reciprocal Rank Fusion (RRF), a technique for combining the ranks of multiple search
 result lists to produce a single, unified ranking. [Cormack et al., 2009](#RRF).
 
-The final step for RAG pipeline is a QueryEngine which is responsible for querying, which is in our a RetrieverQueryEngine. A RetrieverQueryEngine as it's name suggest, build on top on of a retriver and feeds the llm the query and retrieved document as context to LLM and returns a response based on the infromation provided.  
+The final step for RAG pipeline is a QueryEngine which is responsible for querying, which is in our a RetrieverQueryEngine. A RetrieverQueryEngine as it's name suggest, build on top on of a retriver and feeds the llm the query and retrieved document as context to LLM and returns a response based on the infromation provided.
 
 <h2>Experimental Setup and Details</h2>
 <h3>Test Data</h3>
@@ -83,23 +83,25 @@ We created a synthetic dataset. The primary objective of this dataset is to asse
 
 Subsequently, we utilize the LabelledRagDataset class to organize these triplets into a cohesive dataset. This dataset plays a pivotal role in our project as it serves as the foundation for evaluating the effectiveness of our RAG system. By providing queries (questions), reference answers, and context, we can meticulously analyze the system's performance. Specifically, we evaluate the system's ability to generate accurate responses by comparing them against the reference answers. This evaluation process allows us to iteratively refine and enhance the performance of our RAG system.
 <h3>Evaluation Method</h3>
-<a href="#Liu2023">[Liu2023]</a> suggests that LLM-based evaluation methods have high correlation to human judgement than conventional reference based metrics such as BLEU and ROUGE, although pointing out that LLM-based evaluation can have slight bias towards LLM-generated text in giving higher ratings. 
+<a href="#Liu2023">[Liu2023]</a> suggests that LLM-based evaluation methods have high correlation to human judgement than conventional reference based metrics such as BLEU and ROUGE, although pointing out that LLM-based evaluation can have slight bias towards LLM-generated text in giving higher ratings.
 
 We use LlamaIndex RagEvaluator pack which offers "LLM-Based" evaluation modules to measure the quality of results. This uses a “gold” LLM (e.g. GPT-4, in our case: gpt-3.5-turbo) to decide whether the predicted answer is correct in a variety of ways. Since LLM-Based evaluation can be costly, we first make use of  <a href="#BERTScore"> BERTScore </a>, an automatic evaluation metric for text generation. Analogously to common metrics,BERTScore computes a similarity score for each token in the candidate sentence with each token in the reference sentence. However, instead of exact matches, compute token similarity using contextual embeddings.After comparing BERTScore, we choose top 3 configuration to evaluate using RagEvaluator.
 
 The LLM-based evaluation metrics are in the following forms:
 <ul>
-    <li> Correctness: Whether the generated answer matches that of the reference answer (from dataset) given the query. This is done by giving a prompt to LLM to rate the correctness, by giving a score between 1 to 5, where 5 being the most correct.  
-	<li> Semantic Similarity: Whether the predicted answer is semantically similar to the reference answer (from dataset). This is done using a embedding model which embed both predicted and reference answer and give a score based on normalised dot product between both embeddings 
+    <li> Correctness: Whether the generated answer matches that of the reference answer (from dataset) given the query. This is done by giving a prompt to LLM to rate the correctness, by giving a score between 1 to 5, where 5 being the most correct.
+	<li> Semantic Similarity: Whether the predicted answer is semantically similar to the reference answer (from dataset). This is done using a embedding model which embed both predicted and reference answer and give a score based on normalised dot product between both embeddings
     Inspired by <a href="#Risch2021">Risch 2021</a>
 	<li> Faithfulness: Evaluates if the answer (from dataset) is faithful to the retrieved contexts (in other words, whether if there’s hallucination). This also done by giving a prompt to LLM and asking whether the given information is supported by the context and return 1 or 0 for yes and no.
 	<li> Relevancy: Whether retrieved context and generated answer are relevant to the query. Again, done by giving a prompt to LLM asking whether the given information (context and answer) is relevant to the query.
 </ul>
-<h3>Experimental Details</h3> The LLM used for evaluation is gpt-3.5-turbo, the embedding model is text-embedding-3-large.
+<h3>Experimental Details</h3>
+
+The LLM used for evaluation is `gpt-3.5-turbo`, the embedding model is `text-embedding-3-large`.
 
 The prompts given to Correctness, Faithfulness, and Relevancy are as follows:
 
-<h4>Correctness</h4> 
+<h4>Correctness</h4>
 
 ```
 You are an expert evaluation system for a question answering chatbot.
@@ -142,16 +144,16 @@ The generated answer has the exact same metrics as the reference answer, \
     if most of the context is unrelated.
     Some examples are provided below. \n\n
     Information: Apple pie is generally double-crusted.\n
-    Context: An apple pie is a fruit pie in which the principal filling 
+    Context: An apple pie is a fruit pie in which the principal filling
     ingredient is apples. \n
-    Apple pie is often served with whipped cream, ice cream 
+    Apple pie is often served with whipped cream, ice cream
     ('apple pie à la mode'), custard or cheddar cheese.\n
     It is generally double-crusted, with pastry both above
     and below the filling; the upper crust may be solid or
     latticed (woven of crosswise strips).\n
     Answer: YES\n
     Information: Apple pies tastes bad.\n
-    Context: An apple pie is a fruit pie in which the principal filling 
+    Context: An apple pie is a fruit pie in which the principal filling
     ingredient is apples. \n
     Apple pie is often served with whipped cream, ice cream
     ('apple pie à la mode'), custard or cheddar cheese.\n
@@ -161,10 +163,10 @@ The generated answer has the exact same metrics as the reference answer, \
     Answer: NO\n
     Information: {query_str}\n
     Context: {context_str}\n
-    Answer: 
+    Answer:
 
 <h4>Relevancy</h4>
-    
+
     Your task is to evaluate if the response for the query
     is in line with the context information provided.\n
     You have two options to answer. Either YES/ NO.\n
@@ -172,7 +174,7 @@ The generated answer has the exact same metrics as the reference answer, \
     is in line with context information otherwise NO.\n"
     Query and Response: \n {query_str}\n
     Context: \n {context_str}\n
-    Answer: 
+    Answer:
 
 
 
@@ -182,7 +184,7 @@ The generated answer has the exact same metrics as the reference answer, \
 <li id="Gao2023">Gao, Y., Xiong, Y., Gao, X., Jia, K., Pan, J., Bi, Y., ... & Wang, H. (2023). Retrieval-augmented generation for large language models: A survey. arXiv preprint arXiv:2312.10997.</li>
 <li id="Siriwardhana2023">Siriwardhana, S., Weerasekera, R., Wen, E., Kaluarachchi, T., Rana, R., & Nanayakkara, S. (2023). Improving the domain adaptation of retrieval augmented generation (RAG) models for open domain question answering. Transactions of the Association for Computational Linguistics, 11, 1-17.</li>
 <li id="Lala2023">Lála, J., O'Donoghue, O., Shtedritski, A., Cox, S., Rodriques, S. G., & White, A. D. (2023). Paperqa: Retrieval-augmented generative agent for scientific research. arXiv preprint arXiv:2312.07559.</li>
-<li id="Liu2023"> Liu, Y., Iter, D., Xu, Y., Wang, S., Xu, R., & Zhu, C. (2023). Gpteval: Nlg evaluation using gpt-4 with better human alignment. arXiv preprint arXiv:2303.16634.</li>	
+<li id="Liu2023"> Liu, Y., Iter, D., Xu, Y., Wang, S., Xu, R., & Zhu, C. (2023). Gpteval: Nlg evaluation using gpt-4 with better human alignment. arXiv preprint arXiv:2303.16634.</li>
 <li id="Risch2021">Risch, J., Möller, T., Gutsch, J., & Pietsch, M. (2021). Semantic answer similarity for evaluating question answering models. arXiv preprint arXiv:2108.06130.</li>
 <li id="LlamaDocs">LlamaIndex Documentation, Accessed 2 Mar. 2024. https://docs.llamaindex.ai/en/stable/</li>
 <li id="LangchainDocs">LangChain Python API documentation. Accessed 2 Mar. 2024. https://api.python.langchain.com/en/latest/</li>
@@ -193,4 +195,3 @@ The generated answer has the exact same metrics as the reference answer, \
 <li id = "RRF">Gordon V. Cormack, Charles L A Clarke, and Stefan Buettcher. 2009. Reciprocal rank fusion outperforms condorcet and individual rank learning methods. In Proceedings of the 32nd international ACM SIGIR conference on Research and development in information retrieval (SIGIR '09). Association for Computing Machinery, New York, NY, USA, 758–759. https://doi.org/10.1145/1571941.1572114</li>
 <li id ="BERTScore">BERTScore: Evaluating Text Generation with BERT Tianyi Zhang, Varsha Kishore, Felix Wu, Kilian Q. Weinberger, Yoav Artzi https://arxiv.org/abs/1904.09675</li>
 </ul>
-    
