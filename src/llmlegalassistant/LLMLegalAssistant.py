@@ -7,10 +7,8 @@ from langchain_community.llms import HuggingFacePipeline
 from llama_index.core import Settings, SimpleDirectoryReader
 from llama_index.core.query_engine import RetrieverQueryEngine
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
-<<<<<<< Updated upstream
-=======
+
 from llama_index.llms import openai
->>>>>>> Stashed changes
 from llama_index.llms.openai import OpenAI
 from torch import bfloat16
 from transformers import AutoTokenizer
@@ -18,16 +16,13 @@ from transformers import AutoTokenizer
 from llmlegalassistant.data import IndexerFactory
 from llmlegalassistant.retriever import RetrieverFactory
 from llmlegalassistant.splitter import SplitterFactory
-<<<<<<< Updated upstream
-from llmlegalassistant.utils import get_articles_dir, get_evaluation_dataset_dir, load_configurations
-=======
+
 from llmlegalassistant.utils import (
     get_articles_dir,
     get_evaluation_dataset_dir,
     get_project_dir,
     load_configurations,
 )
->>>>>>> Stashed changes
 
 # from openai import OpenAI
 
@@ -42,15 +37,10 @@ class LLMLegalAssistant:
         if api_key_file is None:
             api_key = os.environ["OPENAI_API_KEY"]
         else:
-<<<<<<< Updated upstream
-            with open(api_key_file, "r") as keyfile:
-                api_key = keyfile.read()
-=======
             print(api_key_file, os.path.join(get_project_dir(), api_key_file))
             with open(os.path.join(get_project_dir(), api_key_file), "r") as keyfile:
                 api_key = keyfile.read()
                 print(api_key)
->>>>>>> Stashed changes
 
         if is_openai:
             language_model = "gpt-3.5-turbo"
@@ -61,13 +51,9 @@ class LLMLegalAssistant:
         Settings.llm = llm
         Settings.context_window = 4096
 
-<<<<<<< Updated upstream
-=======
         print("embeding")
 
->>>>>>> Stashed changes
         embed_model = HuggingFaceEmbedding(model_name="infgrad/stella-base-en-v2")
-        # embed_model = HuggingFaceEmbedding(model_name="Splitter_sentence_stella_emb")
 
         from llama_index.core.storage.docstore import SimpleDocumentStore
 
@@ -84,15 +70,10 @@ class LLMLegalAssistant:
             overlap_size=20,
         )
 
-<<<<<<< Updated upstream
-        index_name = "Splitter_semantic_stella_embd_alldoc"
-        nodes, index = self._create_document_index(
-=======
         print("start index")
         index_name = "Splitter_sentence_stella_emb"
         # nodes, index = self._create_document_index(
         index = self._create_document_index(
->>>>>>> Stashed changes
             splitter=text_splitter,
             embed_model=embed_model,
             index_name=index_name,
@@ -265,16 +246,8 @@ class LLMLegalAssistant:
     def _initialize_llm(
         self, api_key: str, language_model: str = "meta-llama/Llama-2-7b-chat-hf"
     ) -> Any:
-<<<<<<< Updated upstream
         if language_model == "gpt-3.5-turbo":
             return OpenAI(model="gpt-3.5-turbo", api_key=api_key, temperature=0.01)
-=======
-        # if language_model == "gpt-3.5-turbo":
-        llm = OpenAI(model="gpt-3.5-turbo", api_key=api_key)
-
-        openai.api_key = "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"
-        return llm
->>>>>>> Stashed changes
 
         hf_auth = api_key
 
