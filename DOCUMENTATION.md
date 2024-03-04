@@ -185,7 +185,7 @@ The generated answer has the exact same metrics as the reference answer, \
 <li id="Risch2021">Risch, J., Möller, T., Gutsch, J., & Pietsch, M. (2021). Semantic answer similarity for evaluating question answering models. arXiv preprint arXiv:2108.06130.</li>
 <li id="LlamaDocs">LlamaIndex Documentation, Accessed 2 Mar. 2024. https://docs.llamaindex.ai/en/stable/</li>
 <li id="LangchainDocs">LangChain Python API documentation. Accessed 2 Mar. 2024. https://api.python.langchain.com/en/latest/</li>
-<li id="Li2023">Li, X., & Li, J. (2023). Angle-optimized text embeddings. arXiv preprint arXiv:2309.12871.</li>
+<li id="Liu2023">Li, X., & Li, J. (2023). Angle-optimized text embeddings. arXiv preprint arXiv:2309.12871.</li>
 <li id="StellaHF">Stella Base embedding model - HuggingFace. Accessed 2 Mar. 2024. https://huggingface.co/infgrad/stella-base-en-v2</li>
 <li id="BM25">Robertson, S., & Zaragoza, H. (2009). The probabilistic relevance framework: BM25 and beyond. Foundations and Trends® in Information Retrieval, 3(4), 333-389.</li>
 <li id ="Greg Kamradt"> 5 levels of Text Splitting https://github.com/FullStackRetrieval-com/RetrievalTutorials/blob/main/5_Levels_Of_Text_Splitting.ipynb </li>
